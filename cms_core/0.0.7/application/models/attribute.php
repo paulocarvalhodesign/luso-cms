@@ -13,22 +13,6 @@ class Attribute
 
 
 
-	public static function get($attribute, $page_id, $type)
-	{
-		$at = DB::table('page_atributes')->where('name', '=', $attribute)->first();
-
-		
-		$attribute = DB::table($at->type.'_attribute')->where('page_id', '=', $page_id)->first();
-
-		
-			 return $attribute;
-		
-
-	}
-
-
-
-
 	public static function text($attribute, $page_id)
 		{
 			$at = DB::table('page_atributes')->where('name', '=', $attribute)->first();
