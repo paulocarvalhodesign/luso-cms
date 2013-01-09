@@ -15,6 +15,6 @@
 
 ##Quick Install
 
-Unzip and move all contents inside luso-cms folder to your root folder.
-Follow the setup.
-Enjoy.
+- Unzip and move all contents inside luso-cms folder to your root folder.
+- Follow the setup.
+- Enjoy.
