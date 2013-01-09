@@ -3,7 +3,7 @@
 
 ##Features Overview
 
--Created with Laravel 3.
+-Created with Laravel 3
 -Composer.
 -Themes.
 -Caching system.
