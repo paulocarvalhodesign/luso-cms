@@ -12,6 +12,7 @@ class Attribute
 {
 
 
+
 	public static function text($attribute, $page_id)
 		{
 			$at = DB::table('page_atributes')->where('name', '=', $attribute)->first();
