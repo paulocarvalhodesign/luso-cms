@@ -1,0 +1,1 @@
+<?php $install=false;

@@ -1,0 +1,119 @@
+.login_page{
+	background: url('../img/black_linen_v2.png');
+}
+.login{
+	position:relative;
+	margin-top:40%;
+	background:#ededed;
+	padding: 5px 20px;
+	box-shadow:0px 0px 3px #c5c5c5;
+}
+.login input[type=checkbox]{
+	
+
+
+}
+
+.login label{
+	margin-left:70px;
+	text-shadow:1px 1px 1px #fff;
+
+}
+.remember_me{
+	padding-left:0px;
+}
+.remember_me input[type=checkbox]{
+	position:relative;
+	top:-2px;
+	margin-right:5px;
+}
+.login input[type=text], .login input[type=password]{
+	border-radius:4px;
+	background: #f2f2f2;
+	border:none;
+	margin-left:70px;
+	box-shadow:inset 0px 1px 2px #c5c5c5;
+}
+.login input[type=submit]{
+	margin-left:70px;
+}
+.login_header{
+	color:#d04928;
+	position:relative;
+	top:-33px;
+	left:80px;
+	text-transform: uppercase;
+	text-shadow:1px 1px 1px #fff;
+}
+.alert-error{
+	position:fixed!important;
+	top:1%;
+	right:1%;
+	width:200px;
+}
+html.sign_up, body.sign_up{
+    background: url('../img/black_linen_v2.png');
+    }
+
+.box{
+	margin:50% auto;
+	 background: url('../img/45degreee_fabric.png');
+	border-radius:8px;
+	padding:20px;
+	box-shadow:0px 0px 25px #111, 0px 0px 45px #111;
+}
+
+.box input[type=text], .box input[type=password]{
+	width:95%;
+	height:25px;
+	border-radius:6px;
+	background:#fff;
+	border:none;
+	box-shadow:inset 0px -1px 1px #939393; 
+}
+.box label{
+	text-transform: uppercase;
+	text-shadow:1px 1px 1px #fff;
+	font-weight: bold;
+}
+.step_header{
+	text-transform: uppercase;
+	position:relative;
+	top:-83px;
+	color:#d04928;
+	text-shadow:1px 1px 1px #000;
+
+}
+.step_one{
+	left:-60px;
+}
+.step_one span{
+	font-size:10px;
+	position:absolute;
+	top:25px;
+	right:-40px;
+}
+.step_two{
+	left:45px;
+}
+.step_three{
+	left:14px;
+}
+.step_four{
+	left:120px;
+}
+.step_login{
+	left:25px;
+	font-size:2em;
+	top:-83px;
+}
+
+.version{
+	color:#dedede;
+	text-shadow:1px 1px 1px #000;
+	font-size:0.75em;
+	margin-top:-50%;
+}
+.login_page form, .sign_up form{
+	position:relative;
+	top:-30px;

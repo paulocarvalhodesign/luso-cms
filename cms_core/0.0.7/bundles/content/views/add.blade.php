@@ -1,0 +1,159 @@
+ 
+<?php $files = Files::all();?>
+
+
+<br/>
+<div id="images">
+ <button class="btn btn-primary"  id="close_image_manager">Close</button>
+ <ul class="filemanager" id="uItem" >
+<?php foreach($files as $file):?>
+
+<li>
+  <p>
+  
+  
+                       <img src="<?php echo $file->location;?>"/>
+                        
+                        <span><?php echo $file->location;?></span>
+                          
+  </p>
+</li>
+
+<?php endforeach;?>
+</ul>
+</div>
+            
+<?php echo Form::open('content/add', '',array('class'=>'content_form')) ?>
+
+<?php echo Form::hidden('page_id', $page_id); ?>
+
+<?php echo Form::hidden('global', $global); ?>
+
+<?php echo Form::hidden('area', $area); ?>
+
+<?php echo Form::textarea('content', '', array('id'=>'editor', 'class'=>'ckeditor')); ?>
+<br/>
+<label>Template:</label>
+<?php
+$dir = array();
+
+
+$path = CMS::get_templates(USER_BUNDLE_PATH.'content/views/templates/'); 
+
+$pa = is_dir($path);
+
+  if($pa == true)
+
+$dir[] = $path;    
+
+if(!empty($dir))
+       
+       foreach($dir as $d)
+
+       $ps = CMS::readFolder($d);
+       $content_templates[''] = 'no template';
+      foreach($ps as $key=>$value)
+       $content_templates[$value] =  $value;
+
+
+
+
+
+
+?>
+<?php echo Form::select('template', $content_templates); ?>
+<br/>
+<?php echo Form::submit('Save',array('class'=>'btn  btn-primary bt-max')); ?>
+<?php echo Form::close() ?>
+
+
+<div class="buttons-content">
+<button class="btn btn-info bt-max"  id="media-selector"><i class="icon-picture"></i>Media</button>
+</div>
+                  
+
+
+
+
+<script type="text/javascript">
+
+$('.modal').bind('hidden', function () {
+  //window.location.reload(true);
+});
+
+
+
+      // This call can be placed at any point after the
+      // <textarea>, or inside a <head><script> in a
+      // window.onload event handler.
+
+      // Replace the <textarea id="editor"> with an CKEditor
+      // instance, using default configurations.
+
+      CKEDITOR.replace( 'editor', {
+          extraPlugins : 'internpage',
+          removePlugins : 'devtools',
+          toolbar :
+          [
+            ['Source','oembed','-', 'Bold', 'Italic', 'TextColor', 'BGColor', '-', 'NumberedList', 'BulletedList' ,'-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyFull', '-', 'Link', 'Unlink', "Anchor", 'Image','HorizontalRule','Styles','Format','Font','FontSize' ]
+      ],
+
+
+      });
+
+
+
+
+      
+         
+    
+     $('#uItem p').click(function(){
+      
+      var $this = $(this);
+
+      var text =  $this.text();
+
+      var site_url = '<?php echo url();?>';
+
+      var image_url = site_url+$.trim(text); 
+    
+      CKEDITOR.instances.editor.insertHtml('<img src="'+image_url+'"/>');
+
+      });   
+
+     $("#close_image_manager").click(function () {
+      
+      
+
+      $('#images').hide();
+      
+      $('#media-selector').show();
+
+
+
+      
+
+
+      });   
+
+    
+
+     $("#media-selector").click(function (event) {
+      
+      event.preventDefault();
+
+      $('#images').show();
+      
+      $('#media-selector').hide();
+
+
+
+      
+
+
+      });   
+
+   
+
+</script>
+

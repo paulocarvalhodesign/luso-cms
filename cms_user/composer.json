@@ -1,0 +1,8 @@
+{
+    "require": {
+     
+    },
+    "config" : {
+        "vendor-dir" : "vendor"
+    }
+}
