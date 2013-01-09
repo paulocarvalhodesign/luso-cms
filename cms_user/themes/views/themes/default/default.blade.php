@@ -2,7 +2,7 @@
  
  //example on how to get an attribute
  //$poster = Attribute::image('poster', Config::get('page_id'));
- // $text = Attribute::text('test', Config::get('page_id'));
+ //$text = Attribute::text('test', Config::get('page_id'));
   
 
  ?>
