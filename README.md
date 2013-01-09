@@ -1,4 +1,2 @@
-luso-cms
+LUSO CMS
 ========
-
-Luso CMS
