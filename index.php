@@ -7,7 +7,7 @@
  * @author   Paulo Carvalho <pauloworkmail@gmail.com>
  * @link     http://paulocarvalhodesign.com
  * 
- *///demo on working with git.
+ */
 
 
 
