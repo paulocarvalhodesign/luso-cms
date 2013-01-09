@@ -33,17 +33,18 @@ class Attribute
 		{
 			$at = DB::table('page_atributes')->where('name', '=', $attribute)->first();
 
+			if($at){
 			
 			$attribute = DB::table($at->type.'_attribute')->where('page_id', '=', $page_id)->first();
 
 			if(empty($attribute)){
 
-				 return $content='';
+				 return $content = null ;
 			}
 			else{
 				 return $content = $attribute->content;
 			}
-	   
+	    }
 		
 
 		
@@ -55,6 +56,7 @@ class Attribute
 		{
 			$at = DB::table('page_atributes')->where('name', '=', $attribute)->first();
 
+			if($at){
 			
 			$attribute = DB::table($at->type.'_attribute')->where('page_id', '=', $page_id)->first();
 
@@ -70,7 +72,7 @@ class Attribute
 			}
 	   
 		
-
+		}
 		
 
 	}
