@@ -1,8 +1,8 @@
 <?php  
  
  //example on how to get an attribute
- $poster = Attribute::image('poster', Config::get('page_id'));
- $text = Attribute::text('test', Config::get('page_id'));
+ //$poster = Attribute::image('poster', Config::get('page_id'));
+ //$text = Attribute::text('test', Config::get('page_id'));
   
 
  ?>
@@ -86,7 +86,7 @@
             
             <div class="span8">
                                
-                   
+
                     {{ Area::render('main_left', $page_id) }} 
                    
            </div>  
