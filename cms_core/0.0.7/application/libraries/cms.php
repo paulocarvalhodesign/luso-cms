@@ -280,11 +280,10 @@ class Cms
 
 	public static function set_core_css_assets(){
 
-	   Asset::container('core_css')->add('bootstrap','global/bootstrap/css/bootstrap.css');
-	   Asset::container('core_css')->add('bootstrap-responsive','global/bootstrap/css/bootstrap-responsive.css');
-	   Asset::container('core_css')->add('jquery-ui','jquery-ui/css/lusocms-theme/jquery-ui-1.9.0.custom.min.css');
-
 	   if( Auth::check() == true){
+	   Asset::container('core_css')->add('bootstrap','global/bootstrap/css/bootstrap.css');
+	   Asset::container('core_css')->add('bootstrap-responsive','global/bootstrap/css/bootstrap-responsive.css');	
+	   Asset::container('core_css')->add('jquery-ui','jquery-ui/css/lusocms-theme/jquery-ui-1.9.0.custom.min.css');
 	   Asset::container('core_css')->add('global','global/css/cms.css');
        }
 
