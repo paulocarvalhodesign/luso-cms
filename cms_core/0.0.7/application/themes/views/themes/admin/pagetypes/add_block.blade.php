@@ -3,7 +3,7 @@
     
       @foreach($blocks as $block)
         <li>
-            <a data-toggle="tab" href="#{{ $block->block_name }}">
+            <a data-toggle="tab" href="#cms_{{ $block->block_name }}">
               <i class="{{ $block->icon }}"></i> {{ $block->block_name }}
             </a>
         </li>
@@ -14,7 +14,7 @@
    
     @foreach($blocks as $block)
 
-        <div id="{{ $block->block_name }}" class="tab-pane">
+        <div id="cms_{{ $block->block_name }}" class="tab-pane">
 
 
 <?php

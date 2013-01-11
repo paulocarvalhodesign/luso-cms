@@ -468,6 +468,16 @@ static function Insert_db(){
           $table->string('template', 128);
           $table->timestamps();
         });
+    Schema::create('galleryblocks', function($table) {
+          $table->increments('id');
+          $table->integer('page_id');
+          $table->string('area_id', 128);
+          $table->string('block_handle', 128);
+          $table->string('block_name', 128);
+          $table->string('gallery_id', 128);
+          $table->string('template', 128);
+          $table->timestamps();
+        });
     Schema::create('formblocks', function($table) {
           $table->increments('id');
           $table->integer('page_id');

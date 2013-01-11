@@ -11,6 +11,7 @@ Route::post('slider/add', function() {
   	}
 	$area    = Input::get('area');
 	$content = Input::get('set');
+	$template = Input::get('template');
 
 
 	$content = Slider\Models\Sliderblock::create(array(
@@ -18,7 +19,8 @@ Route::post('slider/add', function() {
 		'area_id'=> $area,
 		'slider_id'=> $content,
 		'block_handle'=>'sliderblock',
-		'block_name'=>'slider'
+		'block_name'=>'slider',
+		'template'=>$template
 
 		));
 
@@ -63,12 +65,13 @@ Route::post('slider/edit', function() {
   		$page_id = Input::get('page_id');
   	}
 	$id = Input::get('id');
-
+	$template = Input::get('template');
     
 	$newcontent = Input::get('set');
 
 	$content = Slider\Models\Sliderblock::find($id);
 	$content->slider_id = $newcontent;
+	$content->template = $template;
 	$content->save();
 
 	
