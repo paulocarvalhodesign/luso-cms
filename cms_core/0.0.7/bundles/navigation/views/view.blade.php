@@ -1,6 +1,6 @@
 {{ Area::open_wrapper($area, $handle, $id, $global) }}
 
-<div class="navigation">
+<div id="navigation-{{$block->id}}" class="navigation">
 
 
 {{  $menu  }}
@@ -35,8 +35,28 @@
 
 
 <script>
+
+
+
+
 	
 $(document).ready(function() {
+
+  $(function(){
+   var root = location.pathname.substring();
+  // var path = location.pathname.substring(1);
+   
+
+     $('#navigation-{{$block->id}} a[href$="' + root + '"]').attr('class', 'selected');
+  
+  
+ 
+ });
+
+
+
+
+
   $("#goto").change(function(){
     if ($(this).val()!='') {
       window.location.href=$(this).val();

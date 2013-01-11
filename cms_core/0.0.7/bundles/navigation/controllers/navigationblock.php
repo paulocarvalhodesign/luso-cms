@@ -95,6 +95,7 @@ class Navigation_Navigationblock_Controller extends Base_Controller {
       ->with('id',$id)->with('handle', $handle)
       ->with('global',$global)
       ->with('area',$area)
+      ->with('block',$block)
       ->with('menu',$navigation);
        
     }
