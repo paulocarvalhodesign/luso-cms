@@ -7,7 +7,10 @@
     <meta name="viewport" content="width=device-width">
     {{ HTML::script('global/js/jquery.js') }} 
     {{ HTML::style('jquery-ui/css/lusocms-theme/jquery-ui-1.9.0.custom.min.css') }} 
+    {{ HTML::style('global/css/timepicker.css') }}
     {{ HTML::script('jquery-ui/js/jquery-ui-1.9.0.custom.min.js') }} 
+    {{ HTML::script('global/js/jquery-ui-timepicker-addon.js') }}
+    {{ HTML::script('global/js/jquery-ui-sliderAccess.js') }}
     {{ HTML::style('global/bootstrap/css/bootstrap.css') }}
     {{ HTML::style('global/bootstrap/css/bootstrap-responsive.css') }}
     {{ HTML::style('themes/admin/css/dashboard.css') }}
@@ -161,10 +164,10 @@
                    {{Form::hidden('page_id',$page->id)}}
 
                    {{Form::hidden('name',$attribute->name)}}
-
+                  
                   <label>Attribute Name: {{$attribute->name}}</label>
                     @if($attribute->type == 'text')
-
+                    <div class="well">
                     <?php 
                     $text = DB::table('text_attribute')->where_page_id_and_name($page->id,$attribute->name)->first();
                     if(empty($text))
@@ -180,10 +183,12 @@
                     ?>
                     {{Form::text('content', $at)}}
                     {{Form::hidden('id', $id)}}
-                    
+                    {{Form::submit('save', array('class'=>'btn'))}}
+                    {{Form::close()}}
+                    </div>
 
                     @elseif($attribute->type == 'image')
-
+                    <div class="well">
                   <?php 
 
                    $img = DB::table('image_attribute')->where_page_id_and_name($page->id,$attribute->name)->first(); ?>
@@ -211,14 +216,43 @@
                         <a class="btn image_submit" id="imageblockmedia-selector-{{$attribute->id}}">Select File</a>
                       </center>
                     </div>
+                  
+                  
+                    @endif
+                    {{Form::submit('save', array('class'=>'btn'))}}
+                    {{Form::close()}}
+                   </div>
+                    @elseif($attribute->type == 'date')
+                    <div class="well">
+                    <?php 
+                    $text = DB::table('date_attribute')->where_page_id_and_name($page->id,$attribute->name)->first();
+                    if(empty($text))
+                      {
+                        $at = '';
+                        $id = '';
+                      }
+                      else
+                      {
+                        $id = $text->id;
+                        $at = $text->content;
+                      } 
+                    ?>
+                    {{Form::text('content', $at, array('class'=>'datepicker'))}}
+                    {{Form::hidden('id', $id)}}
+
+                     <script>
+                      $(function() {
+                      $( ".datepicker" ).datetimepicker();
+                      });
+                      </script>
+                    
+                    {{Form::submit('save', array('class'=>'btn'))}}
+                    {{Form::close()}}
+                   </div>
 
                     @endif
-                 
-      
-                    @endif
                   <br/> 
-                  {{Form::submit('save', array('class'=>'btn'))}}
-                  {{Form::close()}}
+                  
                <br/> 
              
                 @endforeach
@@ -227,8 +261,10 @@
             
             
             </div>
+
         </div>
       </div>
+      <br/>
    </div>
 
 
@@ -279,11 +315,12 @@
                    $('#imageblockuItem p').click(function(){
                     
                     var $this = $(this);
-                    var test = $.trim($this.text());
+                    
+                    var test{{$attribute->id}} = $.trim($this.text());
 
 
-                    $('#field-{{$attribute->id}}').html('<input type="hidden" value="'+test+'" name="file_id" >');
-                    $('#holder-{{$attribute->id}}').html('<img class="image_preview" src="{{url()}}'+test+'"/>');
+                    $('#field-{{$attribute->id}}').html('<input type="hidden" value="'+test{{$attribute->id}}+'" name="file_id" >');
+                    $('#holder-{{$attribute->id}}').html('<img class="image_preview" src="{{url()}}'+test{{$attribute->id}}+'"/>');
                     $('#imageblockimages').hide();
                     $('#imageblockmedia-selector-{{$attribute->id}}').show();
                     });   
