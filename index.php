@@ -12,7 +12,7 @@
 
 
 
-require $_SERVER['DOCUMENT_ROOT'].'/cms_config/version.php';
+require 'cms_config/version.php';
 
 
 define('CMS_VERSION', $version);
@@ -31,7 +31,7 @@ define('LARAVEL_START', microtime(true));
 // --------------------------------------------------------------
 // Set the core Laravel path constants.
 // --------------------------------------------------------------
-require $_SERVER['DOCUMENT_ROOT'].'/cms_core/'.CMS_VERSION.'/paths.php';
+require 'cms_core/'.CMS_VERSION.'/paths.php';
 
 // --------------------------------------------------------------
 // Unset the temporary web variable.
