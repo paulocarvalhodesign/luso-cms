@@ -13,9 +13,11 @@
 
 
 require 'cms_config/version.php';
+require 'cms_config/verify.php';
 
 
 define('CMS_VERSION', $version);
+define('CMS_INSTALL', $install);
 
 
 

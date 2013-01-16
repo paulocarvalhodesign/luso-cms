@@ -1,5 +1,6 @@
 <?php
 
+if(CMS_INSTALL){
 $theme 	= CMS::set_theme();
 
 return array(
@@ -15,3 +16,10 @@ return array(
               
             ),
         );
+}
+
+else{
+
+return array();	
+
+}

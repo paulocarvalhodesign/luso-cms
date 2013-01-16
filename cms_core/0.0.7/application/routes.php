@@ -10,9 +10,9 @@
  */
 
  
-require path('root').'cms_config/verify.php';
 
- if($install == 'true'){
+
+ if(CMS_INSTALL){
     
      Route::get('setup',function(){
         
