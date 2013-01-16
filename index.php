@@ -1,7 +1,7 @@
 <?php
 
 /**
- *Luso CMS - Next generation CMS
+ * Luso CMS - Next generation CMS
  *
  * @package  Luso CMS
  * @author   Paulo Carvalho <pauloworkmail@gmail.com>
@@ -39,6 +39,6 @@ require 'cms_core/'.CMS_VERSION.'/paths.php';
 unset($web);
 
 // --------------------------------------------------------------
-// Launch Laravel.
+// Launch Luso CMS.
 // --------------------------------------------------------------
 require path('sys').'laravel.php';
