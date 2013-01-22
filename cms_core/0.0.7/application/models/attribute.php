@@ -19,7 +19,7 @@ class Attribute
 
 			if($at){
 			
-			$attribute = DB::table($at->type.'_attribute')->where('page_id', '=', $page_id)->first();
+			$attribute = DB::table('text_attribute')->where('page_id', '=', $page_id)->first();
 
 			if(empty($attribute)){
 
@@ -38,11 +38,13 @@ class Attribute
 
 	public static function image($attribute, $page_id)
 		{
-			$at = DB::table('page_atributes')->where('name', '=', $attribute)->first();
+			$at = DB::table('page_atributes')->where_name($attribute)->first();
 
 			if($at){
 			
-			$attribute = DB::table($at->type.'_attribute')->where('page_id', '=', $page_id)->first();
+			$attribute = DB::table('image_attribute')
+			->where_name($at->name)
+			->where_page_id($page_id)->first();
 
 			if(empty($attribute)){
 
@@ -62,7 +64,27 @@ class Attribute
 	}
 
 
+public static function date($attribute, $page_id)
+		{
+			$at = DB::table('page_atributes')->where('name', '=', $attribute)->first();
 
+			if($at){
+			
+			$attribute = DB::table('date_attribute')->where('page_id', '=', $page_id)->first();
+
+			if(empty($attribute)){
+
+				 return $date = null ;
+			}
+			else{
+				 return $date = $attribute->content;
+			}
+	    }
+		
+
+		
+
+	}
 
 
 

@@ -46,10 +46,11 @@
         {{  Elements::get('dashboard_elements') }}
          <ul class="dashboard_navigation">
            <li><i class="icon-globe"></i> {{ HTML::link('', 'Frontend') }} </li>
+            <h6><i class="icon-wrench icon-white"></i> Options</h6>
                 <li><i class="icon-th-large"></i> {{ HTML::link('admin', 'Dashboard') }} </li>
                 <li><i class="icon-file"></i> {{ HTML::link('pages', 'Pages') }} </li>
                 
-                <li class="active"><i class="icon-folder-close"></i> {{ HTML::link('files', 'Files') }}</li>
+                <li><i class="icon-folder-close"></i> {{ HTML::link('files', 'Files') }}</li>
                    <ul class="inner_navigation">
                     <li><a href="#" class="" onclick="$('#upload_modal').modal({backdrop: 'static'});"><i class="icon-plus-sign icon-white"></i> Add New Set </a></li>
                     <li><i class="icon-arrow-left icon-white"></i>  {{ HTML::link('files', 'Back') }}</li>
@@ -57,6 +58,14 @@
                  <li><i class="icon-inbox"></i> {{ HTML::link('form/list', 'Forms') }}</li>
                 <li><i class="icon-user"></i> {{ HTML::link('users', 'Users') }}</li>
                 <li><i class="icon-wrench"></i> {{ HTML::link('settings', 'Settings') }}</li>
+                <?php $user_bundles = DB::table('blocks')->where_core_and_block_active('false', '0')->get();?>
+
+                <h6><i class="icon-wrench icon-white"></i> User Extensions</h6>
+                @foreach($user_bundles as $bundle)
+               
+                 <li><i class="{{$bundle->icon}}"></i> {{ HTML::link($bundle->block_name, ucfirst ($bundle->block_name)) }}</li>
+               
+                @endforeach
                 <li><i class="icon-off"></i> {{ HTML::link('logout', 'Logout') }}</li>
           </ul>
  {{  Elements::get('admin_footer') }}
@@ -125,7 +134,16 @@
               <h4>Reorder position:</h4>
              <ul class="images_in_set sortable" >
               @foreach($files as $f)
-              <li id="item-{{$f->id}}"><i class="icon-resize-vertical"></i>&nbsp;<i class="icon-th-large"></i> image - {{$f->id}}</li>
+
+              <?php $image = DB::table('files')->where_id($f->file_id)->first();?>
+              <li id="item-{{$f->id}}">
+               <i class="icon-resize-vertical"></i>
+                 &nbsp;
+                <img src="{{url($image->thumb_location)}}" width="75" height="75"/>
+                &nbsp;
+                image - {{$image->filename}}
+
+              </li>
               @endforeach
              </ul>
            </div>
