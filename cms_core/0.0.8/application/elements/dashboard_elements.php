@@ -10,9 +10,12 @@
  * 
  */
 ?>
+<div class="span12">
+	<div class="span6">
+   <h3 class="cms_logo"><img src="<?php echo url('public/global/img/logo.png');?>" width="150" height="68"/></h3>
+	</div>
+    <div class="span6">
 
- <h3 class="cms_logo"><img src="<?php echo url('public/global/img/logo.png');?>" width="150" height="68"/></h3>
-<hr class="theme_hr"/>
 <?php 
 $user   = Auth::user();
 $avatar = User::showAvatar($user, '40', '40');
@@ -30,8 +33,9 @@ $avatar = User::showAvatar($user, '40', '40');
 </div>
 <div class="user_details">
 	<?php $user =  Auth::user(); ?>
-	<p>Welcome: <br/><?php echo $user->nickname;?></p>
+	<p>WELCOME: <?php echo $user->nickname;?></p>
+</div>
 </div>
 </div>
 
- <hr class="theme_hr"/>
+</div>

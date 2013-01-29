@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>{{Config::get('cms.site_name')}} :: Admin Login</title>
-    <meta name="viewport" content="width=device-width">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     {{ HTML::script('global/js/jquery.js') }} 
     {{ HTML::style('global/bootstrap/css/bootstrap.css') }}
     {{ HTML::style('global/bootstrap/css/bootstrap-responsive.css') }}
@@ -13,12 +13,22 @@
 </head>
 <body class="login_page sign_up">
     <div class="container">
+      
       <div class="row-fluid"> 
-       <div class="span4"></div>     
-       <div class="span4">
+        <div class="span12">
+        <div class="span4"></div>  
+        <div class="span4">
+          <center><img id="logo" src="<?php echo url('public/global/img/logo.png');?>"/></center>
+        </div>  
+         <div class="span4"></div>  
+        </div>
+       
+        <div class="span12">
+        <div class="span4"></div>     
+        <div class="span4">
         <div class="box">
           
-       <h4 class="step_header step_one"><img src="<?php echo url('public/global/img/logo.png');?>"/><span>Ready to Login</span></h4>
+       <h4 class="step_header step_one">Ready to Login</h4>
         {{ Form::open('login') }}
     
      @if (Session::has('login_errors'))
@@ -45,10 +55,11 @@
     {{ Form::close() }}
 
          </div>
+         <br/>
            {{  Elements::get('admin_footer') }}
         </div>
         <div class="span4"></div>  
-       
+       </div>
         </div>  
     </div>
 

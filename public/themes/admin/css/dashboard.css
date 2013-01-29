@@ -1,6 +1,6 @@
-body{
-	background: url('../img/45degreee_fabric.png');
-
+html,body{
+	
+	background: url('../img/black_linen_v2.png');
 }
 .list_sets li{
 	list-style:none!important;
@@ -10,19 +10,23 @@ body{
 .dashboard-wrapper hr{
 	color:#111;
 }
-.cms_logo{text-align: center!important;}
-#sidebar{
-	height:100%;
-	margin-left:-20px!important;
-	padding:0px 10px;
-	position:fixed;
-	width:200px;
-	box-shadow:inset -2px 0px 5px #111;
-	background: url('../img/black_linen_v2.png');
+.cms_logo{text-align: left!important;padding-left:10px;}
 
+.header_dashboard{
+	
+	background: url('../img/45degreee_fabric.png');
+	box-shadow: 1px 1px 3px #111;
+	border-radius:4px;
+	color:#111;
 }
 .dashboard-wrapper{
-	 background: url('../img/45degreee_fabric.png');
+	 background: url('../img/black_linen_v2.png');
+}
+.container{
+	
+	padding:2px 10px;
+	padding-bottom:20px;
+	
 }
 .inner{
 	margin:15px;
@@ -31,7 +35,7 @@ body{
 	background:#fff;
 	padding:5px;
 	border-radius:4px;
-	box-shadow: 1px 1px 2px #333;
+	box-shadow: 1px 1px 2px #111;
 	overflow:auto;
 	color:#111;
 }
@@ -76,20 +80,13 @@ body{
 	color:#111;
 
 }
-.dashboard_navigation_wrapper{
-	background:#b5b5b5;
-	color:#333;
-	min-height:30px;
-	line-height:30px;
-	text-shadow: 1px 1px 1px #fff;
-	box-shadow:inset 0px 1px 5px #dedede;
 
-}
 .dashboard_main_wrapper li{
 	list-style:none;
 }
 .dashboard_navigation li.active{
 	background:#fff!important;
+	box-shadow:0px 0px 1px #111;
 
 }
 .dashboard_navigation li.active a{
@@ -103,19 +100,25 @@ body{
 	text-shadow: 1px 1px 1px #111;
 }
 .dashboard_navigation{
-	margin-left:-5px;
+	position:relative;
+	top:5px;
+	margin-left:-23px;
+	padding-top:2px;
 }
 
 .dashboard_navigation li{
 	list-style: none;
-	display:list-item;
-	margin:8px 0px;
+	display:inline-block;
+	margin:8px 5px;
 	padding:10px 0px;
 	background:#515151;
-	width:97%;
-	padding-left:10px;
-	box-shadow:0px 0px 4px #111;
+	width:120px;
+	box-shadow:0px 0px 4px #fff;
+	 border-radius:4px;
 	
+}
+.dashboard_navigation{
+	 border-radius:4px;
 }
 .dashboard_navigation li:hover a{
 	-webkit-transition: all 500ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
@@ -123,10 +126,12 @@ body{
     -ms-transition: all 500ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
      -o-transition: all 500ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
         transition: all 500ms cubic-bezier(0.250, 0.250, 0.750, 0.750); 
+
 	
 }
 .inner_navigation li{
 	background:none!important;
+
 
 }
 .inner_navigation li a{
@@ -155,6 +160,7 @@ position:relative;
      -o-transition: all 500ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
         transition: all 500ms cubic-bezier(0.250, 0.250, 0.750, 0.750); 
 	background:#fff;
+	box-shadow:0px 0px 1px #111;
 }
 .dashboard_navigation li:hover a{ 
 	text-shadow: 1px 1px 1px #fff;
@@ -211,8 +217,7 @@ input[type=checkbox]{
 
 }
 .version{
-	position:fixed;
-	bottom:0px;
+	
 }
 .page{
 	background:#fff;
@@ -416,6 +421,8 @@ td{
 
 .user_avatar{
 	position:relative;
+	text-align:right;
+	
 }
 .theme_hr{
  border:0.015em solid rgba(17,21,33,0.7);
@@ -425,14 +432,27 @@ td{
 .user_img img{
 	border:2px solid #fff;
 	box-shadow:0px 0px 2px #111;
-	border-radius:4px;
+	border-radius:50px;
 	width:40px;height:40px;
+	position:absolute;
+	right:2%;
+	top:10px;
+	z-index:3;
 }
 .user_details{
 	position:absolute;
-	left:74px;
-	top:2px;
+	right:35px;
+	top:17px;
 	font-size:12px;
+	background: url('../img/black_linen_v2.png');
+	border-radius:25px;
+	padding:0px 40px;
+	color:#fff;
+	line-height:20px;
+}
+.user_details p{
+	position:relative;
+	top:3px;
 }
 .images_in_set{}
 .images_in_set li{
@@ -451,5 +471,6 @@ td{
 	text-shadow: 1px 1px 1px #111;
 }
 .error{
-	
-}
+	}
+
+.version a{color:#8CC63F;}

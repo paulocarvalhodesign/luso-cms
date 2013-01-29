@@ -56,11 +56,12 @@ html.sign_up, body.sign_up{
     }
 
 .box{
-	margin:50% auto;
-	 background: url('../img/45degreee_fabric.png');
+	margin:10% auto;
+	background: url('../img/45degreee_fabric.png');
 	border-radius:8px;
 	padding:20px;
 	box-shadow:0px 0px 25px #111, 0px 0px 45px #111;
+	position:relative;
 }
 
 .box input[type=text], .box input[type=password]{
@@ -79,19 +80,19 @@ html.sign_up, body.sign_up{
 .step_header{
 	text-transform: uppercase;
 	position:relative;
-	top:-83px;
+	top:-48px;
 	color:#d04928;
 	text-shadow:1px 1px 1px #000;
+	text-align: center;
 
 }
 .step_one{
-	left:-60px;
+	
 }
 .step_one span{
 	font-size:10px;
-	position:absolute;
 	top:25px;
-	right:-40px;
+	text-align:center;
 }
 .step_two{
 	left:45px;
@@ -112,8 +113,12 @@ html.sign_up, body.sign_up{
 	color:#dedede;
 	text-shadow:1px 1px 1px #000;
 	font-size:0.75em;
-	margin-top:-50%;
+	margin-top:0%;
 }
 .login_page form, .sign_up form{
 	position:relative;
-	top:-30px;
+	top:-30px;}
+#logo{
+	
+	text-align:center;
+}	

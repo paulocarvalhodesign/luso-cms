@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>{{Config::get('site_name')}} :: Admin Area</title>
-    <meta name="viewport" content="width=device-width">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     {{ HTML::script('global/js/jquery.js') }} 
     {{ HTML::style('global/bootstrap/css/bootstrap.css') }}
     {{ HTML::style('global/bootstrap/css/bootstrap-responsive.css') }}
@@ -14,43 +14,31 @@
 {{ Session::get('info') }}
 <body class="dashboard">
   <div class="dashboard-wrapper">
-
-  
-<div class="container">
-           
-  
-           
-
-
-
-<div class="row-fluid">
-
-<div class="span2">
- 
-   
-      <div id="sidebar">
-     
+    <div class="container">
+      <div class="header_dashboard">
+      <div class="row-fluid">
         {{  Elements::get('dashboard_elements') }}
-        
-        
-         <ul class="dashboard_navigation">
-                <li><i class="icon-globe"></i> {{ HTML::link('', 'Frontend') }} </li>
-                <li class="active"><i class="icon-th-large"></i> {{ HTML::link('admin', 'Dashboard') }} </li>
-                <li><i class="icon-file"></i> {{ HTML::link('pages', 'Pages') }} </li>
-                <li><i class="icon-folder-close"></i> {{ HTML::link('files', 'Files') }}</li>
-                <li><i class="icon-inbox"></i> {{ HTML::link('form/list', 'Forms') }}</li>
-                <li><i class="icon-user"></i> {{ HTML::link('users', 'Users') }}</li>
-                <li><i class="icon-wrench"></i> {{ HTML::link('settings', 'Settings') }}</li>
-                <li><i class="icon-off"></i> {{ HTML::link('logout', 'Logout') }}</li>
-          </ul>
-      
-       {{  Elements::get('admin_footer') }}
-      
-      </div>                 
-</div>
+        <div class="span12">
+               
+            
+                <ul class="dashboard_navigation">
 
-
-<div class="span10 main">
+                              <li><i class="icon-globe"></i> {{ HTML::link('', 'Frontend') }} </li>
+                              <li class="active"><i class="icon-th-large"></i> {{ HTML::link('admin', 'Dashboard') }} </li>
+                              <li><i class="icon-file"></i> {{ HTML::link('pages', 'Pages') }} </li>
+                              <li><i class="icon-folder-close"></i> {{ HTML::link('files', 'Files') }}</li>
+                              <li><i class="icon-inbox"></i> {{ HTML::link('form/list', 'Forms') }}</li>
+                              <li><i class="icon-user"></i> {{ HTML::link('users', 'Users') }}</li>
+                              <li><i class="icon-wrench"></i> {{ HTML::link('settings', 'Settings') }}</li>
+                              <li><i class="icon-off"></i> {{ HTML::link('logout', 'Logout') }}</li>
+                 </ul>
+            
+                      
+        </div>
+      </div>
+    </div>
+ <div class="row-fluid">
+<div class="span12 main">
 <div class="ajax-message"></div>
  <br/>
 <div class="block header_block">
@@ -130,6 +118,7 @@
 
 @endif
 </div>
+
 <br/>
 
 <br/>
@@ -196,13 +185,18 @@ $upgradable = $xml->upgradable;
 
 
 </div>
+<br/>
+
+<div class="header_dashboard">
+<div class="row-fluid">
+<div class="span12">
+<div class="span4"></div>
+<div class="span4">
+{{  Elements::get('admin_footer') }}
 </div>
-
-
-
-
-  
-
+<div class="span4"></div>
+</div>
+</div>
 </div>
     
     {{ HTML::script('global/bootstrap/js/bootstrap.min.js') }} 

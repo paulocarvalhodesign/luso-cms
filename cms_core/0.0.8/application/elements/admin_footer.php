@@ -12,5 +12,6 @@
 ?>
 
 <center  class="version">
-              Luso CMS Version <?php echo CMS_VERSION ;?><br/> &copy; Paulo Carvalho 2012
+              Luso CMS v-<?php echo CMS_VERSION ;?> <br/>
+              <a href="http://paulocarvalhodesign.com">Paulo Carvalho Design</a>
  </center>

@@ -379,3 +379,4 @@ iframe{
   opacity:0.98;
 }
 .add_block a { text-shadow:1px 1px 1px #111111 !important; }
+.user_img_toolbar img{border-radius:50px;border: 2px solid #fff;}
