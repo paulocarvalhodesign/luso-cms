@@ -490,15 +490,16 @@ td{
 	}
 
 .version a{color:#8CC63F;}
-.dashboard input[type=text], .dashboard select, .dashboard textarea{width:100%;}
-.dashboard label{
+.dashboard input[type=text], .dashboard select, .dashboard textarea{width:98%;}
+.dashboard label span{
 	text-transform: uppercase;
-	color:#8CC63F;
+	
 	text-shadow:1px 1px 1px #fff;
-	background:#dedede;
+	background:#d2f6b4;;
 	padding:2px 5px;
 	border-radius:4px;
 	width:60%!important;
 	font-size:14px;
 	color:#111;
+	margin:5px;
 }

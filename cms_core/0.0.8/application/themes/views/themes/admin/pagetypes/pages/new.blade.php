@@ -63,15 +63,15 @@
 
               <div class="span4"> 
               <p>
-              <label>Page Title:</label>
+              <label><span>Page Title:</span></label>
               {{ Form::text('title', '', array('id'=>'title')) }}
               </p>
               <p>
-              <label>Page Tags</label>
+              <label><span>Page Tags</span></label>
               {{Form::text('tags')}}
               </p>
                <p>
-              <label>Page Keywords</label>
+              <label><span>Page Keywords</span></label>
               {{Form::text('keywords')}}
               </p>
 
@@ -79,11 +79,11 @@
 
               <div class="span4"> 
               <p>
-              <label>Page URL:</label>
+              <label><span>Page URL:</span></label>
               {{ Form::text('url', '', array('id'=>'url')) }}
              </p>
              <p>
-              <label>Exclude from sitemap</label>
+              <label><span>Exclude from sitemap</span></label>
               <?php 
               
               $opts = array('0'=>'FALSE', '1'=>'TRUE');  
@@ -93,7 +93,7 @@
               </p>  
               <p> 
                
-               <label>Exclude from Navigation</label>
+               <label><span>Exclude from Navigation</span></label>
                
               {{ Form::select('exclude_from_navigation', $opts) }}
                </p>
@@ -101,17 +101,17 @@
 
               <div class="span4"> 
               <p>
-              <label>PageType:</label>
+              <label><span>PageType:</span></label>
               {{ Form::select('pagetype', $pagetypes) }}
              </p>
 
              <p>
-              <label>Parent:</label>
+              <label><span>Parent:</span></label>
               
               {{ Form::select('parent_id', $parents) }}
             </p>
              <p>
-               <label>Exclude from pagelist</label>
+               <label><span>Exclude from pagelist</span></label>
                
               {{ Form::select('exclude_from_pagelist', $opts) }}
                </p>
@@ -128,7 +128,7 @@
                  
              <p>
               
-              <label>Description:</label>
+              <label><span>Description:</span></label>
               {{ Form::textarea('description', '', array('class'=>'description', 'width'=>'100%')) }}
             </p>
 
