@@ -110,7 +110,7 @@ html,body{
 	list-style: none;
 	display:inline-block;
 	margin:8px 5px;
-	padding:10px 0px;
+	padding:5px 0px;
 	background:#515151;
 	width:120px;
 	box-shadow:0px 0px 4px #fff;
@@ -129,15 +129,29 @@ html,body{
 
 	
 }
+.header_block{
+	position:relative;
+}
+.inner_navigation{
+	right:10px;
+	top:10px;
+	position:absolute;
+}
 .inner_navigation li{
-	background:none!important;
-
-
+	list-style:none;
+	display:inline-block;
+	margin:0px 10px;
+	background:#333;
+	border-radius:5px;
+	padding:5px;
 }
 .inner_navigation li a{
-	color:#8CC63F!important;
-	text-shadow: 1px 1px 1px #111!important;
-
+	color:#fff;
+	font-size:12px;
+}
+.inner_navigation li i{
+	position:relative;
+	top:6px;
 }
 .inline-list li{
 	display:inline;
@@ -470,7 +484,21 @@ td{
 	color:#fff;
 	text-shadow: 1px 1px 1px #111;
 }
-.error{
+.dashboard label.error{
+	background:red;
+	color:#111;
 	}
 
 .version a{color:#8CC63F;}
+.dashboard input[type=text], .dashboard select, .dashboard textarea{width:100%;}
+.dashboard label{
+	text-transform: uppercase;
+	color:#8CC63F;
+	text-shadow:1px 1px 1px #fff;
+	background:#dedede;
+	padding:2px 5px;
+	border-radius:4px;
+	width:60%!important;
+	font-size:14px;
+	color:#111;
+}

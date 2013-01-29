@@ -14,46 +14,41 @@
     {{ HTML::style('themes/admin/css/dashboard.css') }}
 
 </head>
+{{ Session::get('info') }}
 <body class="dashboard">
   <div class="dashboard-wrapper">
+    <div class="container">
+      <div class="header_dashboard">
+      <div class="row-fluid">
+        {{  Elements::get('dashboard_elements') }}
+        <div class="span12">
 
-  
-<div class="container">
-           
-  
-           
+        {{  Elements::get('dashboard_navigation') }}
+       
+      </div>
 
-
-
-<div class="row-fluid">
- <div class="span12">
-   <div class="span2">
-      <div id="sidebar">
-         {{  Elements::get('dashboard_elements') }}
-         <ul class="dashboard_navigation">
-           <li><i class="icon-globe"></i> {{ HTML::link('', 'Frontend') }} </li>
-                <li><i class="icon-th-large"></i> {{ HTML::link('admin', 'Dashboard') }} </li>
-                <li class="active"><i class="icon-file"></i> {{ HTML::link('pages', 'Pages') }} </li>
-                 <ul class="inner_navigation">
-                    <li><i class="icon-white icon-plus"></i> {{ HTML::link('pages/new', ' Add New Page') }}</li>
-                    <li><i class="icon-white icon-asterisk"></i> {{ HTML::link('pages/attributes', ' Page Atributes') }}</li>
-                  </ul> 
-                <li><i class="icon-folder-close"></i> {{ HTML::link('files', 'Files') }}</li>
-                 <li><i class="icon-inbox"></i> {{ HTML::link('form/list', 'Forms') }}</li>
-                <li><i class="icon-user"></i> {{ HTML::link('users', 'Users') }}</li>
-                <li><i class="icon-wrench"></i> {{ HTML::link('settings', 'Settings') }}</li>
-                <li><i class="icon-off"></i> {{ HTML::link('logout', 'Logout') }}</li>
-          </ul>
-      {{  Elements::get('admin_footer') }}
-     </div>           
-    </div>  
-
-<div class="span10 main">
-
-  <div class="ajax-message"></div>
-     <br/>
+      </div>
+    </div>
+ <div class="row-fluid">
+<div class="span12 main">
+<div class="ajax-message"></div>
+ <br/>
+ 
           <div class="block header_block">
-          <h4> <i class="icon-file"></i> Pages </h4>
+          <h4> 
+            <i class="icon-file"></i> Pages 
+
+             <ul class="inner_navigation">
+               <li>
+                <i class="icon-white icon-plus"></i> {{ HTML::link('pages/new', ' Add New Page') }}
+              </li>
+               <li>
+                 <i class="icon-white icon-asterisk"></i> {{ HTML::link('pages/attributes', ' Page Atributes') }}
+               </li>
+            </ul> 
+
+
+          </h4>
            </div>
            <br/> 
            
@@ -72,6 +67,20 @@
              
         </div>
       </div>
+
+</div>
+<br/>
+
+<div class="header_dashboard">
+<div class="row-fluid">
+<div class="span12">
+<div class="span4"></div>
+<div class="span4">
+{{  Elements::get('admin_footer') }}
+</div>
+<div class="span4"></div>
+</div>
+</div>
 </div>
 
 {{ HTML::script('global/js/tree.jquery.js') }} 

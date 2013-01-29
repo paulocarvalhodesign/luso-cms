@@ -19,21 +19,7 @@
       <div class="row-fluid">
         {{  Elements::get('dashboard_elements') }}
         <div class="span12">
-               
-            
-                <ul class="dashboard_navigation">
-
-                              <li><i class="icon-globe"></i> {{ HTML::link('', 'Frontend') }} </li>
-                              <li class="active"><i class="icon-th-large"></i> {{ HTML::link('admin', 'Dashboard') }} </li>
-                              <li><i class="icon-file"></i> {{ HTML::link('pages', 'Pages') }} </li>
-                              <li><i class="icon-folder-close"></i> {{ HTML::link('files', 'Files') }}</li>
-                              <li><i class="icon-inbox"></i> {{ HTML::link('form/list', 'Forms') }}</li>
-                              <li><i class="icon-user"></i> {{ HTML::link('users', 'Users') }}</li>
-                              <li><i class="icon-wrench"></i> {{ HTML::link('settings', 'Settings') }}</li>
-                              <li><i class="icon-off"></i> {{ HTML::link('logout', 'Logout') }}</li>
-                 </ul>
-            
-                      
+         {{  Elements::get('dashboard_navigation') }}
         </div>
       </div>
     </div>

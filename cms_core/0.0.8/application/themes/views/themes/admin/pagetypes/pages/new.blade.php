@@ -11,42 +11,24 @@
     {{ HTML::style('global/bootstrap/css/bootstrap-responsive.css') }}
     {{ HTML::style('themes/admin/css/dashboard.css') }}
 </head>
+{{ Session::get('info') }}
 <body class="dashboard">
-
-   <div class="dashboard-wrapper">
-
-  
-<div class="container">
-           
-  
-           
-
-
-
-<div class="row-fluid">
-  <div class="span12">
-    <div class="span2">
-      <div id="sidebar">
+  <div class="dashboard-wrapper">
+    <div class="container">
+      <div class="header_dashboard">
+      <div class="row-fluid">
         {{  Elements::get('dashboard_elements') }}
-         <ul class="dashboard_navigation">
-           <li><i class="icon-globe"></i> {{ HTML::link('', 'Frontend') }} </li>
-                <li><i class="icon-th-large"></i> {{ HTML::link('admin', 'Dashboard') }} </li>
-                <li class="active"><i class="icon-file"></i> {{ HTML::link('pages', 'Pages') }} </li>
-                 <ul class="inner_navigation">
-                    <li class="inneractive"><i class="icon-white icon-plus"></i> {{ HTML::link('pages/new', ' Add New Page') }}</li>
-                    <li><i class="icon-white icon-asterisk"></i> {{ HTML::link('pages/attributes', ' Page Atributes') }}</li>
-                  </ul>
-                  
-                <li><i class="icon-folder-close"></i> {{ HTML::link('files', 'Files') }}</li>
-                 <li><i class="icon-inbox"></i> {{ HTML::link('form/list', 'Forms') }}</li>
-                <li><i class="icon-user"></i> {{ HTML::link('users', 'Users') }}</li>
-                <li><i class="icon-wrench"></i> {{ HTML::link('settings', 'Settings') }}</li>
-                <li><i class="icon-off"></i> {{ HTML::link('logout', 'Logout') }}</li>
-          </ul>
-        {{  Elements::get('admin_footer') }}
-      </div>                 
-    </div>  
-<div class="span10 main">
+        <div class="span12">
+
+        {{  Elements::get('dashboard_navigation') }}
+       
+      </div>
+
+      </div>
+    </div>
+ <div class="row-fluid">
+<div class="span12 main">
+<div class="ajax-message"></div>
    @if (Session::has('errors'))
      <div class="alert alert-error">
     <button type="button" class="close" data-dismiss="alert">×</button>
@@ -57,44 +39,50 @@
     </span>
  </div>
     @endif
-
-  <div class="ajax-message"></div>
      <br/>
       <div class="block header_block">
-        <h4><i class="icon-file"></i>Add New Page</h4>
+        <h4>
+
+          <i class="icon-file"></i>Add New Page
+
+          <ul class="inner_navigation">
+               <li>
+                <i class="icon-white icon-arrow-left"></i> <a class="" href="{{url('pages')}}"> Back</a>
+              </li>
+              
+            </ul> 
+
+        </h4>
       </div>
              <br/>
               <div class="block">
-             <div class="row-fluid"> 
-              <div class="span12"> 
-               
-              <div class="span9">
-                <div class="row-fluid">
-                <div class="span12">
-                  
-                 <div class="span1"></div>  
-                   <div class="span4">
-              
-              {{ Form::open('pages/new', '',array('id'=>'new_page_form')) }}
-             <p>
+              <div class="row-fluid"> 
+              <div class="span12">
+
+                {{ Form::open('pages/new', '',array('id'=>'new_page_form')) }}
+
+              <div class="span4"> 
+              <p>
               <label>Page Title:</label>
               {{ Form::text('title', '', array('id'=>'title')) }}
-            </p>
-             <p>
+              </p>
+              <p>
+              <label>Page Tags</label>
+              {{Form::text('tags')}}
+              </p>
+               <p>
+              <label>Page Keywords</label>
+              {{Form::text('keywords')}}
+              </p>
+
+              </div>
+
+              <div class="span4"> 
+              <p>
               <label>Page URL:</label>
               {{ Form::text('url', '', array('id'=>'url')) }}
-            </p>
-               <p>
-              <label>PageType:</label>
-              
-              {{ Form::select('pagetype', $pagetypes) }}
-            </p>
-            <p>
-              <label>Parent:</label>
-              
-              {{ Form::select('parent_id', $parents) }}
-            </p>
-              <p>
+             </p>
+             <p>
               <label>Exclude from sitemap</label>
               <?php 
               
@@ -103,59 +91,79 @@
               ?>
               {{ Form::select('exclude_from_sitemap', $opts) }} 
               </p>  
-              <p>
-              <label>Page Tags</label>
-              {{Form::text('tags')}}
-              </p>
-                 </div>
-                 <div class="span7">
-             <p>
-              
-              <label>Description:</label>
-              {{ Form::textarea('description', '', array('class'=>'description')) }}
-            </p>
-
-               <p> 
+              <p> 
                
                <label>Exclude from Navigation</label>
                
               {{ Form::select('exclude_from_navigation', $opts) }}
-          </p>
-           <p>
+               </p>
+              </div> 
+
+              <div class="span4"> 
+              <p>
+              <label>PageType:</label>
+              {{ Form::select('pagetype', $pagetypes) }}
+             </p>
+
+             <p>
+              <label>Parent:</label>
+              
+              {{ Form::select('parent_id', $parents) }}
+            </p>
+             <p>
                <label>Exclude from pagelist</label>
                
               {{ Form::select('exclude_from_pagelist', $opts) }}
                </p>
-               <p>
-              <label>Page Keywords</label>
-              {{Form::text('keywords')}}
-              </p>
-              </div>
             </div>
-                 
-               </div>
-              </div>
-            <div class="span3">
-
-             <center>
-                <h6><i class="icon-wrench"></i> Options:</h6>
-               <a class="page-options btn btn-max" href="{{url('pages')}}"><i class="icon-white icon-arrow-left"></i> Back</a>
-               <br/>
-                 <br/>
-               {{Form::submit('Create Page', array('class'=>' btn btn-max btn-primary'))}}
-
-               {{ Form::close() }}
               
-              </center> 
-               <!-- submit button -->
-   
+              
+             </div>
+             </div>
+              <div class="row-fluid"> 
+              <div class="span12">  
+              <div class="span8">
+              
+              
+                 
+             <p>
+              
+              <label>Description:</label>
+              {{ Form::textarea('description', '', array('class'=>'description', 'width'=>'100%')) }}
+            </p>
 
-             </div> 
-                 {{ Form::close() }}
+               </div>
+                <div class="span4">
+          
+              
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+
+            
+
+            {{Form::submit('Create Page', array('class'=>'btn'))}}
+
+          
+            {{ Form::close() }}
             </div>
       </div>
+</div>
+</div>
+<br/>
 
-
+<div class="header_dashboard">
+<div class="row-fluid">
+<div class="span12">
+<div class="span4"></div>
+<div class="span4">
+{{  Elements::get('admin_footer') }}
+</div>
+<div class="span4"></div>
+</div>
+</div>
+</div>
 
   
 
