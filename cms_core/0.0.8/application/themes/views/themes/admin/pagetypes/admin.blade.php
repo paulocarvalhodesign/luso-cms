@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>{{Config::get('site_name')}} :: Admin Area</title>
    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+   <link href='http://fonts.googleapis.com/css?family=Quantico:400,700' rel='stylesheet' type='text/css'>
     {{ HTML::script('global/js/jquery.js') }} 
     {{ HTML::style('global/bootstrap/css/bootstrap.css') }}
     {{ HTML::style('global/bootstrap/css/bootstrap-responsive.css') }}

@@ -3,8 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>{{Config::get('site_name')}} :: Admin Area</title>
-    <meta name="viewport" content="width=device-width">
+    <title>{{Config::get('site_name')}} :: New Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+   <link href='http://fonts.googleapis.com/css?family=Quantico:400,700' rel='stylesheet' type='text/css'>
     {{ HTML::script('global/js/jquery.js') }} 
     {{ HTML::script('global/js/jquery.validate.min.js') }} 
     {{ HTML::style('global/bootstrap/css/bootstrap.css') }}
@@ -47,7 +48,7 @@
 
           <ul class="inner_navigation">
                <li>
-                <i class="icon-white icon-arrow-left"></i> <a class="" href="{{url('pages')}}"> Back</a>
+                 <a href="{{url('pages')}}"> <i class="icon icon-arrow-left"></i> Back</a>
               </li>
               
             </ul> 

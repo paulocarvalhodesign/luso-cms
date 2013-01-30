@@ -117,7 +117,7 @@ html.sign_up, body.sign_up{
 }
 .login_page form, .sign_up form{
 	position:relative;
-	top:-30px;}
+	}
 #logo{
 	
 	text-align:center;

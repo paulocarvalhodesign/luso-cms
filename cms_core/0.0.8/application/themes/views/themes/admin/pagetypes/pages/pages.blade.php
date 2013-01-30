@@ -3,8 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>{{Config::get('site_name')}} :: Admin Area</title>
-    <meta name="viewport" content="width=device-width">
+    <title>{{Config::get('site_name')}} :: Pages Area</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <link href='http://fonts.googleapis.com/css?family=Quantico:400,700' rel='stylesheet' type='text/css'>
     {{ HTML::script('global/js/jquery.js') }} 
     {{ HTML::style('jquery-ui/css/lusocms-theme/jquery-ui-1.9.0.custom.min.css') }} 
     {{ HTML::script('jquery-ui/js/jquery-ui-1.9.0.custom.min.js') }} 
@@ -19,17 +20,18 @@
   <div class="dashboard-wrapper">
     <div class="container">
       <div class="header_dashboard">
-      <div class="row-fluid">
+        <div class="row-fluid">
+        
         {{  Elements::get('dashboard_elements') }}
-        <div class="span12">
-
+          <div class="span12">
+       
         {{  Elements::get('dashboard_navigation') }}
        
-      </div>
+        </div>
 
       </div>
     </div>
- <div class="row-fluid">
+  <div class="row-fluid">
 <div class="span12 main">
 <div class="ajax-message"></div>
  <br/>
@@ -40,10 +42,13 @@
 
              <ul class="inner_navigation">
                <li>
-                <i class="icon-white icon-plus"></i> {{ HTML::link('pages/new', ' Add New Page') }}
+               
+                <a href="{{url('pages/new')}}"> <i class="icon icon-plus"></i> Add New Page</a>
+               
               </li>
                <li>
-                 <i class="icon-white icon-asterisk"></i> {{ HTML::link('pages/attributes', ' Page Atributes') }}
+                <a href="{{url('pages/attributes')}}"> <i class="icon icon-asterisk"></i> Page Atributes</a>
+                 
                </li>
             </ul> 
 

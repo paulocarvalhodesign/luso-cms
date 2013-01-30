@@ -3,8 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>{{Config::get('site_name')}} :: Admin Area</title>
-    <meta name="viewport" content="width=device-width">
+    <title>{{Config::get('site_name')}} :: Files Area</title>
+       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+   <link href='http://fonts.googleapis.com/css?family=Quantico:400,700' rel='stylesheet' type='text/css'>
 
         <!--[if lt IE 9]>
           <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -24,54 +25,46 @@
 </head>
 
 {{ Session::get('info') }}
-
 <body class="dashboard">
   <div class="dashboard-wrapper">
     <div class="container">
-           
-  
-           
+      <div class="header_dashboard">
+      <div class="row-fluid">
+        {{  Elements::get('dashboard_elements') }}
+        <div class="span12">
+         {{  Elements::get('dashboard_navigation') }}
+        </div>
+      </div>
+    </div>
+ <div class="row-fluid">
+<div class="span12 main">
+<div class="ajax-message"></div>
 
 
-
-<div class="row-fluid">
-  <div class="span12">
-     <div class="span2">
-      <div id="sidebar">
-          {{  Elements::get('dashboard_elements') }}
-         <ul class="dashboard_navigation">
-                 <li><i class="icon-globe"></i> {{ HTML::link('', 'Frontend') }} </li>
-                <li><i class="icon-th-large"></i> {{ HTML::link('admin', 'Dashboard') }} </li>
-                <li><i class="icon-file"></i> {{ HTML::link('pages', 'Pages') }} </li>
-               
-                <li class="active"><i class="icon-folder-close"></i> {{ HTML::link('files', 'Files') }}</li>
-                   <ul class="inner_navigation">
-                    <li><a href="files/sets" class="" ><i class="icon-folder-open icon-white"></i> File Sets </a>
-</li>
-                   <li>  <a href="#" type="button" class="" onclick="$('#upload_modal').modal({backdrop: 'static'});"><i class="icon-plus-sign icon-white"></i> Upload </a>
-</li>
-                    <li>  <a href="#" type="button" class="" onclick="$('#multi_upload_modal').modal({backdrop: 'static'});"><i class="icon-plus-sign icon-white"></i>Multi-files Upload </a>
-</li>
-                   </ul>
-                 <li><i class="icon-inbox"></i> {{ HTML::link('form/list', 'Forms') }}</li>
-                <li><i class="icon-user"></i> {{ HTML::link('users', 'Users') }}</li>
-                <li><i class="icon-wrench"></i> {{ HTML::link('settings', 'Settings') }}</li>
-                <li><i class="icon-off"></i> {{ HTML::link('logout', 'Logout') }}</li>
-          </ul>
- {{  Elements::get('admin_footer') }}
-      </div>                 
-    </div>         
-
-
-
-
-
-  <div class="span10 main">
-
-  <div class="ajax-message"></div>
+                  
+                 
          <br/>
          <div class="block header_block">
-          <h4> <i class="icon-file"></i> Files </h4>
+          <h4> <i class="icon-file"></i> Files 
+             
+
+             <ul class="inner_navigation">
+                    <li>
+                         <a href="{{url('files/sets')}}"> <i class="icon icon-folder-open"></i> File Sets</a>
+                       
+                    </li>
+                  
+                   <li>  
+                   
+                    <a href="#" type="button" class="" onclick="$('#upload_modal').modal({backdrop: 'static'});"> <i class="icon-plus-sign icon"></i>
+                     Upload </a>
+                 </li>
+                <li>  
+                      
+                        <a href="#" type="button" class="" onclick="$('#multi_upload_modal').modal({backdrop: 'static'});">  <i class="icon-plus-sign icon"></i> Multi-files Upload </a>
+            </li>
+            </ul>
+          </h4>
            </div>
            <br/> 
            
@@ -284,12 +277,21 @@
 
              
           
-        </div>
-       </div>
-
-     </div>
+  </div>  
+</div>
     <br/>
-   
+
+ <div class="header_dashboard">
+<div class="row-fluid">
+<div class="span12">
+<div class="span4"></div>
+<div class="span4">
+{{  Elements::get('admin_footer') }}
+</div>
+<div class="span4"></div>
+</div>
+</div>
+</div>  
   
 </body>
 </html>

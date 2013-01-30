@@ -4,62 +4,42 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>{{Config::get('site_name')}} :: Admin Area</title>
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <link href='http://fonts.googleapis.com/css?family=Quantico:400,700' rel='stylesheet' type='text/css'>
     {{ HTML::script('global/js/jquery.js') }} 
     {{ HTML::style('global/bootstrap/css/bootstrap.css') }}
     {{ HTML::style('global/bootstrap/css/bootstrap-responsive.css') }}
     {{ HTML::style('themes/admin/css/dashboard.css') }}
 </head>
-
-
-
-<body class="dashboard">
-
-
-
 {{ Session::get('info') }}
-
-    <div class="dashboard-wrapper">
+<body class="dashboard">
+  <div class="dashboard-wrapper">
     <div class="container">
-           
-  
-           
+      <div class="header_dashboard">
+        <div class="row-fluid">
+        
+        {{  Elements::get('dashboard_elements') }}
+          <div class="span12">
+       
+        {{  Elements::get('dashboard_navigation') }}
+       
+        </div>
 
+      </div>
+    </div>
+  <div class="row-fluid">
+<div class="span12 main">
+<div class="ajax-message"></div>
+  <br/>
 
-
-<div class="row-fluid">
-  <div class="span12">
-     <div class="span2">
-      <div id="sidebar">
-         {{  Elements::get('dashboard_elements') }}
-         <ul class="dashboard_navigation">
-                <li><i class="icon-globe"></i> {{ HTML::link('', 'Frontend') }} </li>
-                <li><i class="icon-th-large"></i> {{ HTML::link('admin', 'Dashboard') }} </li>
-                <li><i class="icon-file"></i> {{ HTML::link('pages', 'Pages') }} </li>
-                
-                <li><i class="icon-folder-close"></i> {{ HTML::link('files', 'Files') }}</li>  
-                <li><i class="icon-inbox"></i> {{ HTML::link('form/list', 'Forms') }}</li>
-                <li class="active"><i class="icon-user"></i> {{ HTML::link('users', 'Users') }}</li>
-                <ul class="inner_navigation">
-                      <li><a href="#" onclick="$('#new_user_modal').modal({backdrop: 'static'});" class="" ><i class="icon-user icon-white"></i> New User </a>
-                </ul>
-                <li><i class="icon-wrench"></i> {{ HTML::link('settings', 'Settings') }}</li>
-                <li><i class="icon-off"></i> {{ HTML::link('logout', 'Logout') }}</li>
-          </ul>
-       {{  Elements::get('admin_footer') }}
-      </div>                 
-    </div>         
-
-
-
-
-
-  <div class="span10 main">
-
-  <div class="ajax-message"></div>
-         <br/>
          <div class="block header_block">
-          <h4><i class="icon-user"></i> Users</h4>  
+          <h4><i class="icon-user"></i> Users
+
+            <ul class="inner_navigation">
+                      <li><a href="#" onclick="$('#new_user_modal').modal({backdrop: 'static'});" class="" ><i class="icon-user icon"></i> New User </a>
+                </ul>
+
+          </h4>  
           </div>
           <br/>
         <div class="block">
@@ -82,7 +62,7 @@
               <tr> 
                 <td>
                   
-                  <div class="user_img">  
+                  <div class="edit_user_img">  
                   <?php $gravatar = CMS::get_gravatar($user->username)  ;?>
                   <?php if($gravatar):?>
                    <img src="<?php echo $gravatar;?>" width="50" height="50"/>
@@ -199,7 +179,20 @@
                 </form>
                 </div>
                </div>
+</div>
+<br/>
 
+<div class="header_dashboard">
+<div class="row-fluid">
+<div class="span12">
+<div class="span4"></div>
+<div class="span4">
+{{  Elements::get('admin_footer') }}
+</div>
+<div class="span4"></div>
+</div>
+</div>
+</div>
    
 
     {{ HTML::script('global/bootstrap/js/bootstrap.min.js') }} 

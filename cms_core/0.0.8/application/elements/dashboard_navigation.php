@@ -6,5 +6,5 @@
      <li><i class="icon-inbox"></i> <?php echo HTML::link('form/list', 'Forms') ;?></li>
      <li><i class="icon-user"></i> <?php echo HTML::link('users', 'Users') ;?></li>
      <li><i class="icon-wrench"></i> <?php echo HTML::link('settings', 'Settings') ;?></li>
-     <li><i class="icon-off"></i> <?php echo HTML::link('logout', 'Logout') ;?></li>
+     
 </ul>

@@ -37,11 +37,12 @@
 
                   <ul class="inner_navigation">
                     <li>
-                    <i class="icon-white icon-plus"></i>
-                      <a  onclick="$('#upload_modal').modal({backdrop: 'static'});" href="#"> Add Atribute</a></li>
+                  <a onclick="$('#upload_modal').modal({backdrop: 'static'});" href="#"><i class="icon icon-plus"></i> Add Atribute</a>
+                    
+                    </li>
                     <li>
-                      <i class="icon-white icon-arrow-left"></i>
-                      <a  href="{{url('pages')}}"> Back</a></li>        
+                      <a href="{{url('pages')}}"> <i class="icon icon-arrow-left"></i> Back</a>
+                          
                   </ul>
                 </h4>  
               </div>
@@ -59,8 +60,7 @@
             
              <th>Name</th>
              <th>Type</th>
-             <th>Edit</th>
-             <th>Delete</th>
+             <th>Options</th>
              </tr>
              </thead>
              <tbody>
@@ -70,8 +70,8 @@
                 <tr>
                 <td>{{$attribute->type}}</td>
                 <td>{{$attribute->name}}</td>
-                <td><span class="btn btn-info"><a  href="#" onclick="$('#attribute_modal-{{$attribute->id}}').modal({backdrop: 'static'});"><i class="icon-wrench"></i> Edit</a></span></td>
-                <td><span class="btn btn-danger"><a href="{{url('pages/delete_attribute/'.$attribute->id) }}"><i class="icon-minus"></i> Delete</a></span></td>
+                <td><span class="btn btn-info"><a  href="#" onclick="$('#attribute_modal-{{$attribute->id}}').modal({backdrop: 'static'});"><i class="icon-wrench"></i> Edit</a></span>
+                <span class="btn btn-danger"><a href="{{url('pages/delete_attribute/'.$attribute->id) }}"><i class="icon-minus"></i> Delete</a></span></td>
                </tr>
 
                  <div class="modal hide" id="attribute_modal-{{$attribute->id}}">

@@ -28,7 +28,7 @@
         <div class="span4">
         <div class="box">
           
-       <h4 class="step_header step_one">Ready to Login</h4>
+       
         {{ Form::open('login') }}
     
      @if (Session::has('login_errors'))

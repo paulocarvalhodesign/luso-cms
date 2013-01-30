@@ -241,7 +241,9 @@
                    </div>
 
                     @endif
-                 
+                  <br/> 
+                  
+               <br/> 
              
                 @endforeach
               @endif

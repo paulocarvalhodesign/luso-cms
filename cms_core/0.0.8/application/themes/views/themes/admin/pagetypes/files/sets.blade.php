@@ -3,8 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>{{Config::get('site_name')}} :: Admin Area</title>
-    <meta name="viewport" content="width=device-width">
+    <title>{{Config::get('site_name')}} :: File Sets Area</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+   <link href='http://fonts.googleapis.com/css?family=Quantico:400,700' rel='stylesheet' type='text/css'>
 
         <!--[if lt IE 9]>
           <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -28,60 +29,34 @@
      
 
 </head>
-{{ Session::get('info') }}
+
+                   
+                 
+ {{ Session::get('info') }}
 <body class="dashboard">
-
-   <div class="dashboard-wrapper">
+  <div class="dashboard-wrapper">
     <div class="container">
-           
-  
-           
-
-
-
-<div class="row-fluid">
-  <div class="span12">
-     <div class="span2">
-      <div id="sidebar">
+      <div class="header_dashboard">
+      <div class="row-fluid">
         {{  Elements::get('dashboard_elements') }}
-         <ul class="dashboard_navigation">
-           <li><i class="icon-globe"></i> {{ HTML::link('', 'Frontend') }} </li>
-            <h6><i class="icon-wrench icon-white"></i> Options</h6>
-                <li><i class="icon-th-large"></i> {{ HTML::link('admin', 'Dashboard') }} </li>
-                <li><i class="icon-file"></i> {{ HTML::link('pages', 'Pages') }} </li>
-                
-                <li><i class="icon-folder-close"></i> {{ HTML::link('files', 'Files') }}</li>
-                   <ul class="inner_navigation">
-                    <li><a href="#" class="" onclick="$('#upload_modal').modal({backdrop: 'static'});"><i class="icon-plus-sign icon-white"></i> Add New Set </a></li>
-                    <li><i class="icon-arrow-left icon-white"></i>  {{ HTML::link('files', 'Back') }}</li>
-                   </ul>
-                 <li><i class="icon-inbox"></i> {{ HTML::link('form/list', 'Forms') }}</li>
-                <li><i class="icon-user"></i> {{ HTML::link('users', 'Users') }}</li>
-                <li><i class="icon-wrench"></i> {{ HTML::link('settings', 'Settings') }}</li>
-                <?php $user_bundles = DB::table('blocks')->where_core_and_block_active('false', '0')->get();?>
-
-                <h6><i class="icon-wrench icon-white"></i> User Extensions</h6>
-                @foreach($user_bundles as $bundle)
-               
-                 <li><i class="{{$bundle->icon}}"></i> {{ HTML::link($bundle->block_name, ucfirst ($bundle->block_name)) }}</li>
-               
-                @endforeach
-                <li><i class="icon-off"></i> {{ HTML::link('logout', 'Logout') }}</li>
-          </ul>
- {{  Elements::get('admin_footer') }}
-      </div>                 
-    </div>         
-
-
-
-
-
-  <div class="span10 main">
-
-  <div class="ajax-message"></div>
+        <div class="span12">
+         {{  Elements::get('dashboard_navigation') }}
+        </div>
+      </div>
+    </div>
+ <div class="row-fluid">
+<div class="span12 main">
          <br/>
          <div class="block header_block">
-             <h4><i class="icon-folder-close"></i> Files</h4>  
+             <h4><i class="icon-folder-close"></i>File Sets
+
+              <ul class="inner_navigation">
+                    <li><a href="#" class="" onclick="$('#upload_modal').modal({backdrop: 'static'});"><i class="icon-plus-sign icon"></i> Add New Set </a></li>
+                    <li>
+                       <a href="{{url('files')}}"> <i class="icon icon-arrow-left"></i> Back</a>
+                    </li>
+                   </ul>
+             </h4>  
              </div>
              <br/>
          <div class="block">
@@ -194,9 +169,22 @@
 
    </div>   
    </div>
-     
+ 
+ </div>
+ <br/>
+
    
-    
+ <div class="header_dashboard">
+<div class="row-fluid">
+<div class="span12">
+<div class="span4"></div>
+<div class="span4">
+{{  Elements::get('admin_footer') }}
+</div>
+<div class="span4"></div>
+</div>
+</div>
+</div>      
 
 <script language="Javascript">
 

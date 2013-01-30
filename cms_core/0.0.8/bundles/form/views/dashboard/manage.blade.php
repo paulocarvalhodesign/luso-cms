@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>{{Config::get('site_name')}}  :: Admin Area</title>
-    <meta name="viewport" content="width=device-width">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <link href='http://fonts.googleapis.com/css?family=Quantico:400,700' rel='stylesheet' type='text/css'>
     {{ HTML::script('global/js/jquery.js') }} 
     {{ HTML::style('jquery-ui/css/lusocms-theme/jquery-ui-1.9.0.custom.min.css') }} 
     {{ HTML::script('jquery-ui/js/jquery-ui-1.9.0.custom.min.js') }} 
@@ -13,46 +14,35 @@
     {{ HTML::style('themes/admin/css/dashboard.css') }}
     {{ HTML::style('global/css/cms.css') }}
 </head>
-{{ Session::get('info') }}
+                
+  {{ Session::get('info') }}
 <body class="dashboard">
-
   <div class="dashboard-wrapper">
+    <div class="container">
+      <div class="header_dashboard">
+        <div class="row-fluid">
+        
+        {{  Elements::get('dashboard_elements') }}
+          <div class="span12">
+       
+        {{  Elements::get('dashboard_navigation') }}
+       
+        </div>
 
-  
-<div class="container">
-           
-  
-           
+      </div>
+    </div>
+  <div class="row-fluid">
+<div class="span12 main">
+<div class="ajax-message"></div>              
+ <br/>
+<div class="block header_block">
+                <h4><i class="icon-inbox"></i> Forms
 
-
-
-<div class="row-fluid">
-  <div class="span12">
-    <div class="span2">
-      <div id="sidebar">
-       {{  Elements::get('dashboard_elements') }}
-         <ul class="dashboard_navigation">
-               <li><i class="icon-globe"></i> {{ HTML::link('', 'Frontend') }} </li>
-                <li><i class="icon-th-large"></i> {{ HTML::link('admin', 'Dashboard') }} </li>
-                <li><i class="icon-file"></i> {{ HTML::link('pages', 'Pages') }} </li>
-                <li><i class="icon-folder-close"></i> {{ HTML::link('files', 'Files') }}</li>
-                <li class="active"><i class="icon-inbox"></i> {{ HTML::link('form/list', 'Forms') }}</li>
-                 <ul class="inner_navigation">
+                   <ul class="inner_navigation">
                     <li> <a href="#"  onclick="$('#upload_modal').modal({backdrop: 'static'});"><i class="icon-plus-sign icon-white"></i> Add New Form </a></li>
                    
                   </ul>
-                <li><i class="icon-user"></i> {{ HTML::link('users', 'Users') }}</li>
-                <li><i class="icon-wrench"></i> {{ HTML::link('settings', 'Settings') }}</li>
-                <li><i class="icon-off"></i> {{ HTML::link('logout', 'Logout') }}</li>
-          </ul>
-        {{  Elements::get('admin_footer') }}
-      </div>                 
-    </div>  
-
-<div class="span10 main">
- <br/>
-<div class="block header_block">
-                <h4><i class="icon-inbox"></i> Forms</h4> 
+                </h4> 
  </div>
               <br/>
               <div class="block">
@@ -264,22 +254,27 @@
                </div>
                 
             </div>
-        </div>
+         </div>
       </div>
-   </div>
-
- </div>
-
-  
+  </div>
+</div>
+<br/>
+<div class="header_dashboard">
+<div class="row-fluid">
+<div class="span12">
+<div class="span4"></div>
+<div class="span4">
+{{  Elements::get('admin_footer') }}
+</div>
+<div class="span4"></div>
+</div>
+</div>
+</div>
+    
 
 
     {{ HTML::script('global/bootstrap/js/bootstrap.min.js') }} 
- <script type="text/javascript">
-  
-  var ht = $(window).height(); 
- $('#sidebar').css('height', ht);
- $('.main').css('height', ht);
- </script>
+ 
     <script>
     $(document).ready(function() {  
 
@@ -320,7 +315,7 @@
     
          });  
      
-         });
+      });
 </script>
 
 </body>

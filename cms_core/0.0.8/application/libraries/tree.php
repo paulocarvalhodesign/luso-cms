@@ -51,9 +51,9 @@ class Tree
           
          $tree .=" order:".$page->order." ,id:".$page->id.", label: '<div class=\'opts\'><p style=\'display:none\'>".$page->id."</p><i class=\'icon-file\'></i>".$page->name."";
 
-        $tree .= "<div class=\'mov\'><span class=\'btn  btn-success\'> <a href=".url($page->route)."><i class=\'icon-globe\'></i></a></span> ";
-        $tree .= "<span class=\'btn btn-info\'> <a href=".url('pages/manage/'.$page->id)."><i class=\'icon-wrench\'></i></a> </span>";
-        $tree .= " <span class=\'btn btn-danger\'><a href=".url('pages/delete/'.$page->id)."><i class=\'icon-minus\'></i></a></span></div> ";
+        $tree .= "<div class=\'mov\'><span class=\'btn  \'> <a href=".url($page->route)."><i class=\'icon-globe\'></i></a></span> ";
+        $tree .= "<span class=\'btn \'> <a href=".url('pages/manage/'.$page->id)."><i class=\'icon-wrench\'></i></a> </span>";
+        $tree .= " <span class=\'btn \'><a class=\'delete\' href=".url('pages/delete/'.$page->id)."><i class=\'icon-minus\'></i></a></span></div> ";
 
 
          $tree .= "</div>',";
@@ -68,9 +68,9 @@ class Tree
           
                             $tree .=" order:".$child->order.", id:".$child->id.", label: '<div class=\'opts\'><p style=\'display:none\'>".$child->id."</p><i class=\'icon-file\'></i>".$child->name."";
 
-                            $tree .= "<div class=\'mov\'> <a href=".url($child->route)."><i class=\'icon-globe\'></i></a> ";
-                            $tree .= " <a href=".url('pages/manage/'.$child->id)."><i class=\'icon-wrench\'></i></a> ";
-                            $tree .= " <a href=".url('pages/delete/'.$child->id)."><i class=\'icon-minus\'></i></a> </div>";
+                            $tree .= "<div class=\'mov\'> <a class=\'btn \' href=".url($child->route)."><i class=\'icon-globe\'></i></a> ";
+                            $tree .= " <a class=\'btn \' href=".url('pages/manage/'.$child->id)."><i class=\'icon-wrench\'></i></a> ";
+                            $tree .= " <a class=\'btn delete\' href=".url('pages/delete/'.$child->id)."><i class=\'icon-minus\'></i></a> </div>";
 
                             $tree .= "</div>',";
 
@@ -87,8 +87,8 @@ class Tree
                                                 $tree .=" order:".$child->order.", id:".$child->id.", label: '<div class=\'opts\'><p style=\'display:none\'>".$child->id."</p><i class=\'icon-file\'></i>".$child->name."";
 
                                                 $tree .= "<div class=\'mov\'> <a href=".url($child->route)."><i class=\'icon-globe\'></i></a> ";
-                                                $tree .= " <a href=".url('pages/manage/'.$child->id)."><i class=\'icon-wrench\'></i></a> ";
-                                                $tree .= " <a href=".url('pages/delete/'.$child->id)."><i class=\'icon-minus\'></i></a> </div>";
+                                                $tree .= " <a class=\'btn \' href=".url('pages/manage/'.$child->id)."><i class=\'icon-wrench\'></i></a> ";
+                                                $tree .= " <a class=\'btn delete\' href=".url('pages/delete/'.$child->id)."><i class=\'icon-minus\'></i></a> </div>";
 
                                                 $tree .= "</div>',";
 
@@ -107,8 +107,8 @@ class Tree
                                                                 $tree .=" order:".$child->order.", id:".$child->id.", label: '<div class=\'opts\'><p style=\'display:none\'>".$child->id."</p><i class=\'icon-file\'></i>".$child->name."";
 
                                                                 $tree .= "<div class=\'mov\'> <a href=".url($child->route)."><i class=\'icon-globe\'></i></a> ";
-                                                                $tree .= " <a href=".url('pages/manage/'.$child->id)."><i class=\'icon-wrench\'></i></a> ";
-                                                                $tree .= " <a href=".url('pages/delete/'.$child->id)."><i class=\'icon-minus\'></i></a> </div>";
+                                                                $tree .= " <a class=\'btn \' href=".url('pages/manage/'.$child->id)."><i class=\'icon-wrench\'></i></a> ";
+                                                                $tree .= " <a class=\'btn delete\' href=".url('pages/delete/'.$child->id)."><i class=\'icon-minus\'></i></a> </div>";
 
                                                                 $tree .= "</div>',";
 
@@ -127,8 +127,8 @@ class Tree
                                                                                         $tree .=" order:".$child->order.", id:".$child->id.", label: '<div class=\'opts\'><p style=\'display:none\'>".$child->id."</p><i class=\'icon-file\'></i>".$child->name."";
 
                                                                                         $tree .= "<div class=\'mov\'> <a href=".url($child->route)."><i class=\'icon-globe\'></i></a> ";
-                                                                                        $tree .= " <a href=".url('pages/manage/'.$child->id)."><i class=\'icon-wrench\'></i></a> ";
-                                                                                        $tree .= " <a href=".url('pages/delete/'.$child->id)."><i class=\'icon-minus\'></i></a> </div>";
+                                                                                        $tree .= " <a class=\'btn \' href=".url('pages/manage/'.$child->id)."><i class=\'icon-wrench\'></i></a> ";
+                                                                                        $tree .= " <a class=\'btn delete\' href=".url('pages/delete/'.$child->id)."><i class=\'icon-minus\'></i></a> </div>";
 
                                                                                         $tree .= "</div>',";
 
@@ -147,8 +147,8 @@ class Tree
                                                                                                                         $tree .=" order:".$child->order.", id:".$child->id.", label: '<div class=\'opts\'><p style=\'display:none\'>".$child->id."</p><i class=\'icon-file\'></i>".$child->name."";
 
                                                                                                                         $tree .= "<div class=\'mov\'> <a href=".url($child->route)."><i class=\'icon-globe\'></i></a> ";
-                                                                                                                        $tree .= " <a href=".url('pages/manage/'.$child->id)."><i class=\'icon-wrench\'></i></a> ";
-                                                                                                                        $tree .= " <a href=".url('pages/delete/'.$child->id)."><i class=\'icon-minus\'></i></a> </div>";
+                                                                                                                        $tree .= " <a class=\'btn \' href=".url('pages/manage/'.$child->id)."><i class=\'icon-wrench\'></i></a> ";
+                                                                                                                        $tree .= " <a class=\'btn delete\' href=".url('pages/delete/'.$child->id)."><i class=\'icon-minus\'></i></a> </div>";
 
                                                                                                                         $tree .= "</div>',";
 
