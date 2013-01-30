@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <link href='http://fonts.googleapis.com/css?family=Quantico:400,700' rel='stylesheet' type='text/css'>
     {{ HTML::script('global/js/jquery.js') }} 
+    {{ HTML::script('global/js/jquery.validate.min.js') }} 
     {{ HTML::style('global/bootstrap/css/bootstrap.css') }}
     {{ HTML::style('global/bootstrap/css/bootstrap-responsive.css') }}
     {{ HTML::style('themes/admin/css/dashboard.css') }}
@@ -196,8 +197,48 @@
    
 
     {{ HTML::script('global/bootstrap/js/bootstrap.min.js') }} 
+    {{ HTML::script('themes/admin/js/app.js') }}
 
-    
+  <script>
+    (function($,W,D)
+{
+    var FORM = {};
+
+    FORM.UTIL =
+    {
+        setupFormValidation: function()
+        {
+            //form validation rules
+            $("#new_user_modal_form").validate({
+                rules: {
+                    username: "required",
+                    password: "required",
+                   
+                    
+                  
+                },
+                messages: {
+                    username: "Username required",
+                    password: "Password required",
+                   
+                    
+                    
+                },
+                submitHandler: function(form) {
+                    form.submit();
+                }
+            });
+        }
+    }
+
+    //when the dom has loaded setup form validation rules
+    $(D).ready(function($) {
+        FORM.UTIL.setupFormValidation();
+    });
+
+})(jQuery, window, document);
+
+</script>  
 
 </body>
 </html>

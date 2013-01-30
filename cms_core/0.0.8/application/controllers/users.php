@@ -130,7 +130,19 @@ class Users_Controller extends Dashboard_Controller {
     }
     public function get_delete($id){
 
-      if(!$id == '1')
+      if($id == '1'){
+
+        Session::flash('info', '
+                  <div class="alert alert-info">
+                  <button type="button" class="close" data-dismiss="alert">×</button>
+                  <span class="error">Cant delete root user, sorry.</span>
+                  </div>
+
+
+
+        ');
+      }
+      else{  
       $affected = DB::table('users')->delete($id);
      
       Session::flash('info', '
@@ -142,6 +154,7 @@ class Users_Controller extends Dashboard_Controller {
 
 
         ');
+     }
       return Redirect::to('users');
     }
     

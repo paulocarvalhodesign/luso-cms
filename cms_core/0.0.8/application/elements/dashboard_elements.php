@@ -12,7 +12,8 @@
 ?>
 <div class="span12">
 	<div class="span6">
-   <h3 class="cms_logo">LUSO CMS</h3>
+
+   <h3 class="cms_logo"><img width="25" src="<?php echo url('public/global/img/icon.png');?>"> LUSO CMS</h3>
 	</div>
     <div class="span6">
 
@@ -35,7 +36,7 @@ $avatar = User::showAvatar($user, '40', '40');
 	<?php $user =  Auth::user(); ?>
 	<p>WELCOME: <?php echo $user->nickname;?></p>
 </div>
-<div class="logout_button"><a href="<?php echo url('logout');?>"><i class="icon-off icon"></i></a></div>
+<div class="logout_button"><a class="tt" rel="tooltip" data-placement="bottom" data-original-title="Logout" href="<?php echo url('logout');?>"><i class="icon-off icon"></i></a></div>
 </div>
 
 </div>

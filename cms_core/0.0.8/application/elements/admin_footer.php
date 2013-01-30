@@ -12,7 +12,7 @@
 ?>
 
 <center  class="version">
-              Luso CMS v-<?php echo CMS_VERSION ;?> <br/>
+              Luso CMS v-<?php echo CMS_VERSION ;?> 
               <a href="http://paulocarvalhodesign.com">Paulo Carvalho Design</a>
  </center>
 

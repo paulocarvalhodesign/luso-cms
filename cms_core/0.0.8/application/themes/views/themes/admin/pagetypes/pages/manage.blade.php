@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>{{Config::get('site_name')}} :: Admin Area</title>
-    <meta name="viewport" content="width=device-width">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+   <link href='http://fonts.googleapis.com/css?family=Quantico:400,700' rel='stylesheet' type='text/css'>
     {{ HTML::script('global/js/jquery.js') }} 
     {{ HTML::style('jquery-ui/css/lusocms-theme/jquery-ui-1.9.0.custom.min.css') }} 
     {{ HTML::style('global/css/timepicker.css') }}
@@ -39,14 +40,14 @@
 
             <ul class="inner_navigation">
                <li>
-                  <i class="icon-white icon-globe"></i> 
-                  <a href="{{url($page->route)}}">Visit Page</a>
+                  
+                  <a href="{{url($page->route)}}"><i class="icon icon-globe"></i>  Visit Page</a>
 
               </li>
                
                <li>
-                <i class="icon-white icon-arrow-left"></i> 
-                <a class="" href="{{url('pages')}}"> Back</a>
+                
+                <a class="" href="{{url('pages')}}"><i class="icon icon-arrow-left"></i>  Back</a>
               </li>
               
             </ul> 
@@ -59,46 +60,44 @@
             
               <div class="row-fluid">
                <div class="span12">   
-                <div class="span4">
-                  <h4>Page Defaults</h4>
-
-             
-              {{Form::open('pages/update_page')}}
-
-               {{Form::hidden('id',$page->id)}}
-
-              <label>Page Title</label>
-              {{Form::text('title',$page->title)}}
-              <label>Page Description</label>
-              {{Form::textarea('description',$page->description)}}
-               <label>Page Tags</label>
-              {{Form::text('tags',$page->tags)}}
-              
-
-              </div>
+                 {{Form::open('pages/update_page')}}
+                
               <div class="span4">
-                <br/><br/>
+                 
+               {{Form::hidden('id',$page->id)}}
+               <p>
+              <label><span>Page Title:</span></label>
+              {{ Form::text('title', $page->title, array('id'=>'title')) }}
+              </p>
               <p>
-              <label>Parent:</label>
-              <?php $parent = Page::where_parent_id($page->parent_id)->only('name');?>
-              {{ Form::select('parent_id', $parents, $parent) }}
-             </p>  
-              <label>Page Type</label>
+              <label><span>Page Tags</span></label>
+              {{Form::text('tags',$page->tags)}}
+              </p>
+               <p>
+              <label><span>Page Keywords</span></label>
+              {{Form::text('keywords', $page->keywords)}}
+              </p>
+              
+              </div>
 
-              {{ Form::select('pagetype', $pagetypes, $page->pagetype ) }}
-             
 
-              <label>Exclude from sitemap</label>
-              <?php 
+              <div class="span4">
+               <p>
+              <label><span>Page URL:</span></label>
+              {{ Form::text('url', $page->url, array('id'=>'url')) }}
+             </p>
+             <label><span>Exclude from sitemap</span></label>
+             <?php
               if($page->exclude_from_sitemap == '1')
               $opts = array('1'=>'TRUE', '0'=>'FALSE');
               else
               $opts = array('0'=>'FALSE', '1'=>'TRUE');  
               ?>
-              {{ Form::select('exclude_from_sitemap', $opts) }}
-
+              {{ Form::select('exclude_from_sitemap', $opts) }} 
+              </p>  
+               <p> 
                
-               <label>Exclude from Navigation</label>
+               <label><span>Exclude from Navigation</span></label>
                <?php 
               if($page->exclude_from_navigation == '1')
               $opts = array('1'=>'TRUE', '0'=>'FALSE');
@@ -106,9 +105,23 @@
               $opts = array('0'=>'FALSE', '1'=>'TRUE');  
               ?>
               {{ Form::select('exclude_from_navigation', $opts) }}
+               </p>
+             </div>
 
+            <div class="span4">
+              <p>
+              <label><span>PageType:</span></label>
+              {{ Form::select('pagetype', $pagetypes, $page->pagetype ) }}
+             </p>
 
-               <label>Exclude from pagelist</label>
+              <p>
+               <label><span>Parent:</span></label>
+              <?php $parent = Page::where_parent_id($page->parent_id)->only('name');?>
+              {{ Form::select('parent_id', $parents, $parent) }}
+             </p>  
+              
+              <p>
+               <label><span>Exclude from pagelist</span></label>
                 <?php 
               if($page->exclude_from_pagelist == '1')
               $opts = array('1'=>'TRUE', '0'=>'FALSE');
@@ -116,17 +129,45 @@
               $opts = array('0'=>'FALSE', '1'=>'TRUE');  
               ?>
               {{ Form::select('exclude_from_pagelist', $opts) }}
-
-              <br/> 
-               <label>Page keywords</label>
-              {{Form::text('keywords',$page->keywords)}}
-              <br/>
-              {{Form::submit('save', array('class'=>'btn'))}}
-              {{Form::close()}}
+               </p>
             </div>
-            <div class="span4">
+
+                <div class="row-fluid"> 
+              <div class="span12">  
+              <div class="span8">
               
-             </div> 
+              
+                 
+             <p>
+              
+              <label><span>Description:</span></label>
+              {{ Form::textarea('description', $page->description, array('class'=>'description', 'width'=>'100%')) }}
+            </p>
+
+               </div>
+                <div class="span4">
+          
+              
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+
+            
+
+            {{Form::submit('Save Page', array('class'=>'btn'))}}
+
+          
+            {{ Form::close() }}
+            </div>
+      </div>
+</div>
+
+               
+              
+              
+           
+           
           </div>
         </div>
       </div>
@@ -293,16 +334,9 @@
 </div>
 </div>  
 
-    {{ HTML::script('global/bootstrap/js/bootstrap.min.js') }} 
+{{ HTML::script('global/bootstrap/js/bootstrap.min.js') }} 
 
-    <script>
-    $(document).ready(function() {    
-
- var ht = $(window).height(); 
- $('#sidebar').css('height', ht);
- $('.main').css('min-height', ht);
-    });
-</script>
+    
 <script type="text/javascript">
                  
 

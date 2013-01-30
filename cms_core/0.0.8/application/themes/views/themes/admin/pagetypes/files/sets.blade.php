@@ -19,6 +19,7 @@
     
     
     {{ HTML::script('global/js/jquery.js') }} 
+    {{ HTML::script('global/js/jquery.validate.min.js') }} 
     {{ HTML::script('jquery-ui/js/jquery-ui-1.9.0.custom.min.js') }} 
     {{ HTML::script('global/bootstrap/js/bootstrap.min.js') }} 
     {{ HTML::script('themes/admin/js/app.js') }}
@@ -249,7 +250,44 @@ self.close();
          });
 </script>
 
-    
+    <script>
+    (function($,W,D)
+{
+    var FORM = {};
+
+    FORM.UTIL =
+    {
+        setupFormValidation: function()
+        {
+            //form validation rules
+            $("#set_from").validate({
+                rules: {
+                    setname: "required",
+                   
+                    
+                  
+                },
+                messages: {
+                    setname: "Name is required.",
+                   
+                    
+                    
+                },
+                submitHandler: function(form) {
+                    form.submit();
+                }
+            });
+        }
+    }
+
+    //when the dom has loaded setup form validation rules
+    $(D).ready(function($) {
+        FORM.UTIL.setupFormValidation();
+    });
+
+})(jQuery, window, document);
+
+</script>
    
 </body>
 </html>

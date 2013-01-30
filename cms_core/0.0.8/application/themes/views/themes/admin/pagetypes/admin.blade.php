@@ -6,7 +6,6 @@
     <title>{{Config::get('site_name')}} :: Admin Area</title>
    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
    <link href='http://fonts.googleapis.com/css?family=Quantico:400,700' rel='stylesheet' type='text/css'>
-    {{ HTML::script('global/js/jquery.js') }} 
     {{ HTML::style('global/bootstrap/css/bootstrap.css') }}
     {{ HTML::style('global/bootstrap/css/bootstrap-responsive.css') }}
     {{ HTML::style('themes/admin/css/dashboard.css') }}
@@ -73,7 +72,7 @@
     data, {
     titleTextStyle: {
     color: '#333',
-    // fontName: 'Tahoma',
+    fontName: 'Quantico',
     fontSize: 16,}, 
     width:"100%", 
     height:"750%", 
@@ -81,14 +80,14 @@
     colors:['#8CC63F','#e6f4fa'],
     areaOpacity: 0.2,
      lineWidth:'1',
-     vAxis: {title: "Views", textPosition: 'in',textStyle: { color: '#8CC63F', fontSize: 10 }},                 
-     hAxis: { textPosition: 'in', showTextEvery: 2, slantedText: false, textStyle: { color: '#333', fontSize: 12 } },
+     vAxis: {title: "Views", textPosition: 'in',textStyle: { color: '#8CC63F', fontSize: 10, fontName: 'Quantico',}},                 
+     hAxis: { textPosition: 'in', showTextEvery: 2, slantedText: false, textStyle: { color: '#333', fontSize: 12 ,fontName: 'Quantico',} },
      pointSize: 10,
      chartArea:{left:20,top:30,width:"85%",height:"100%"},
      "backgroundColor": { fill: "none" }, 
      animation:{duration:'800',easing:'in'},
-     legendTextStyle: {color: '#333',  fontSize: 14},
-     tooltipTextStyle: {color: '#111',  fontSize: 10}
+     legendTextStyle: {color: '#333',  fontSize: 14, fontName: 'Quantico',},
+     tooltipTextStyle: {color: '#111',  fontSize: 10, fontName: 'Quantico',}
                       
                      
     });
@@ -153,17 +152,17 @@ $upgradable = $xml->upgradable;
 
 </div>
 </div>
-<!-- <div class="span6">
+<div class="span6">
 <div class="block header_block">
-<h4><i class="icon-signal header-icon"></i> Next version approved changes:</h4>
+<h4><i class="icon-signal header-icon"></i> News:</h4>
 </div>
 <br/>
- <div class="block">
+<div class="block">
+
+<p>Nothing to display.</p>
 
 
-<?php //include('../temp/list_of_changes.txt');?>
-
-</div> -->
+</div>
 </div>
 </div>
 </div>
@@ -171,7 +170,7 @@ $upgradable = $xml->upgradable;
 
 
 
-</div>
+
 <br/>
 
 <div class="header_dashboard">
@@ -185,14 +184,9 @@ $upgradable = $xml->upgradable;
 </div>
 </div>
 </div>
-    
+    {{ HTML::script('global/js/jquery.js') }} 
     {{ HTML::script('global/bootstrap/js/bootstrap.min.js') }} 
     {{ HTML::script('themes/admin/js/app.js') }} 
     
-<script>
-
-</script>
-
-
 </body>
 </html>

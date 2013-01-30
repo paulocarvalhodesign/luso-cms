@@ -7,6 +7,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <link href='http://fonts.googleapis.com/css?family=Quantico:400,700' rel='stylesheet' type='text/css'>
     {{ HTML::script('global/js/jquery.js') }} 
+    {{ HTML::script('global/js/jquery.validate.min.js') }} 
     {{ HTML::style('jquery-ui/css/lusocms-theme/jquery-ui-1.9.0.custom.min.css') }} 
     {{ HTML::script('jquery-ui/js/jquery-ui-1.9.0.custom.min.js') }} 
     {{ HTML::style('global/bootstrap/css/bootstrap.css') }}
@@ -39,8 +40,8 @@
                 <h4><i class="icon-inbox"></i> Forms
 
                    <ul class="inner_navigation">
-                    <li> <a href="#"  onclick="$('#upload_modal').modal({backdrop: 'static'});"><i class="icon-plus-sign icon-white"></i> Add New Form </a></li>
-                   
+                    <li> <a href="#"  onclick="$('#upload_modal').modal({backdrop: 'static'});"><i class="icon-plus-sign icon"></i> Add New Field </a></li>
+                   <li><a href="{{ url('form/list') }}"><i class="icon icon-arrow-left"></i> Back</a></li>
                   </ul>
                 </h4> 
  </div>
@@ -166,15 +167,7 @@
              </div>
              <div class="span3">
 
-              <center><h6>Manage Forms:</h6>
-
-               <div class="btn-group ">
-                
-              <a href="{{ url('form/list') }}" class="btn btn-max page-options">Back</a>
-              <br/><br/>
-               <a href="#" class="btn btn-max page-options" onclick="$('#upload_modal').modal({backdrop: 'static'});"><i class="icon-plus-sign icon-white"></i> Add New Field </a>
-              </div>
-              </center>
+              
               <div class="modal hide" id="upload_modal">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -316,6 +309,48 @@
          });  
      
       });
+</script>
+
+ <script>
+    (function($,W,D)
+{
+    var FORM = {};
+
+    FORM.UTIL =
+    {
+        setupFormValidation: function()
+        {
+            //form validation rules
+            $("#set_from").validate({
+                rules: {
+                    name: "required",
+                    label: "required",
+                    type: "required",
+                   
+                    
+                  
+                },
+                messages: {
+                    name: "Please choose name for the new field",
+                    label: "Please choose name for the new label",
+                    type: "Please choose field type",
+                    
+                    
+                },
+                submitHandler: function(form) {
+                    form.submit();
+                }
+            });
+        }
+    }
+
+    //when the dom has loaded setup form validation rules
+    $(D).ready(function($) {
+        FORM.UTIL.setupFormValidation();
+    });
+
+})(jQuery, window, document);
+
 </script>
 
 </body>

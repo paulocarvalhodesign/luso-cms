@@ -16,6 +16,7 @@
     {{ HTML::style('global/bootstrap/css/bootstrap-responsive.css') }}
     {{ HTML::style('themes/admin/css/dashboard.css') }}
     {{ HTML::script('global/js/jquery.js') }} 
+    {{ HTML::script('global/js/jquery.validate.min.js') }} 
     {{ HTML::script('global/bootstrap/js/bootstrap.min.js') }} 
     {{ HTML::script('themes/admin/js/app.js') }}
 
@@ -71,7 +72,7 @@
            @if(empty($files))
             <div class="block">            
            <p>No files uploaded...</p>
-             </div>
+       
            @else
 
             <div class="block">
@@ -84,7 +85,7 @@
               <th>Type</th>
              <th>Sets</th>
              <th>Properties</th>
-            <!--  <th>Edit</th> -->
+          
              <th>Delete</th>
              </tr>
              </thead>
@@ -292,6 +293,81 @@
 </div>
 </div>
 </div>  
-  
+  <script>
+    (function($,W,D)
+{
+    var FORM = {};
+
+    FORM.UTIL =
+    {
+        setupFormValidation: function()
+        {
+            //form validation rules
+            $("#upload_modal_form").validate({
+                rules: {
+                    file: "required",
+                   
+                    
+                  
+                },
+                messages: {
+                    file: "Please choose a file",
+                   
+                    
+                    
+                },
+                submitHandler: function(form) {
+                    form.submit();
+                }
+            });
+        }
+    }
+
+    //when the dom has loaded setup form validation rules
+    $(D).ready(function($) {
+        FORM.UTIL.setupFormValidation();
+    });
+
+})(jQuery, window, document);
+
+</script>
+<script>
+    (function($,W,D)
+{
+    var FORM = {};
+
+    FORM.UTIL =
+    {
+        setupFormValidation: function()
+        {
+            //form validation rules
+            $("#multi_upload_modal_form").validate({
+                rules: {
+                    file: "required",
+                   
+                    
+                  
+                },
+                messages: {
+                    file: "Please choose a file",
+                   
+                    
+                    
+                },
+                submitHandler: function(form) {
+                    form.submit();
+                }
+            });
+        }
+    }
+
+    //when the dom has loaded setup form validation rules
+    $(D).ready(function($) {
+        FORM.UTIL.setupFormValidation();
+    });
+
+})(jQuery, window, document);
+
+</script>
 </body>
 </html>

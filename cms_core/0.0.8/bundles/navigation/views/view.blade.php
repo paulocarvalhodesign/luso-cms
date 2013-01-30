@@ -55,8 +55,10 @@ $(document).ready(function() {
    else
     var root = segment;
    
+   
      
      $('#navigation-{{$block->id}} a[href$="' + root + '"]').attr('class', 'selected');
+     $('#navigation-{{$block->id}} a[href$="' + root + '"]').parent().attr('class', 'selected-path');
     
  
  });

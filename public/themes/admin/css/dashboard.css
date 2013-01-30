@@ -14,15 +14,20 @@ html,body{
 	text-align: left!important;
 	padding-left:10px;
 	color:#8CC63F;
-	text-shadow:1px 1px 0px #fff;
+	text-shadow:1px 1px 0px #111, 2px 2px 0px #111, 3px 3px 0px #fff;
 	font-family: 'Quantico', sans-serif;
 	font-weight:700;
 
 }
 .cms_logo img{
 	position:relative;
-	top:-2px;
-	box-shadow: 0px 0px 1px #fff;
+	top:0px;
+	width:30px;
+	height:30px;
+	background:#fff;
+	border-radius:50px;
+	padding:6px;
+
 }
 
 .header_dashboard{
@@ -31,6 +36,7 @@ html,body{
 	box-shadow: 1px 1px 3px #111;
 	border-radius:4px;
 	color:#111;
+
 }
 .dashboard-wrapper{
 	 background: url('../img/black_linen_v2.png');
@@ -39,7 +45,7 @@ html,body{
 	
 	padding:2px 10px;
 	padding-bottom:20px;
-	
+	font-family: 'Quantico', sans-serif;
 }
 .inner{
 	margin:15px;
@@ -114,7 +120,7 @@ html,body{
 }
 .dashboard_navigation{
 	position:relative;
-	top:5px;
+	top:0px;
 	margin-left:-23px;
 	padding-top:2px;
 }
@@ -122,25 +128,35 @@ html,body{
 .dashboard_navigation li{
 	list-style: none;
 	display:inline-block;
-	margin:8px 5px;
-	padding:5px 0px;
-	background:#8CC63F;
-	width:120px;
-	box-shadow:1px 1px 1px #111;
-	 border-radius:4px;
+	
 	
 }
 .dashboard_navigation{
 	 border-radius:4px;
 }
-.dashboard_navigation li:hover a{
-   -webkit-transition: all 500ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
-   -moz-transition: all 500ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
-    -ms-transition: all 500ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
-     -o-transition: all 500ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
-        transition: all 500ms cubic-bezier(0.250, 0.250, 0.750, 0.750); 
- color:#8CC63F!important;
+
+.dashboard_navigation li a{
+	color:#fff!important;
+	text-shadow: 1px 1px 0px #111;
+	position:relative;
+	margin:8px 5px;
+	padding:5px 8px;
+	background:#8CC63F;
+	width:120px;
+	box-shadow:1px 1px 0px #111,2px 2px 0px #111;
+	border-radius:4px;
 	
+
+}
+
+
+.dashboard_navigation li a.selected, .dashboard_navigation li a:hover{
+	background:#dedede!important;
+	box-shadow:inset 0px 0px 1px #111, inset 0px 0px 3px #111!important;}
+
+
+.dashboard_navigation li i {
+	margin-left:5px;
 }
 
 .header_block{
@@ -163,10 +179,7 @@ html,body{
 	color:#fff!important;
 	text-shadow: 1px 1px 1px #111!important;
 	}
-.inner_navigation li a:focus{
-	
 
-}
 .inner_navigation li a{
 	color:#111;
 	font-size:12px;
@@ -186,30 +199,7 @@ html,body{
 .inline-list li{
 	display:inline;
 }
-.dashboard_navigation li a{
-	color:#fff!important;
-	text-shadow: 1px 1px 1px #111;
-	position:relative;
-	
 
-}
-
-.dashboard_navigation li:hover{
-	-webkit-transition: all 500ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
-   -moz-transition: all 500ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
-    -ms-transition: all 500ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
-     -o-transition: all 500ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
-        transition: all 500ms cubic-bezier(0.250, 0.250, 0.750, 0.750); 
-	background:#dedede;
-	box-shadow:inset 0px 0px 1px #111, inset 0px 0px 3px #111;
-	
-}
-.dashboard_navigation li:hover a{ 
-	text-shadow: 1px 1px 1px #fff;
-}
-.dashboard_navigation li i {
-	margin-left:5px;
-}
 .cms_pages{
 	margin-left:-0px;
 }
@@ -384,6 +374,7 @@ td{
 .alert{
 	width:400px!important;
 	opacity:0.98;
+	z-index:5!important;
 }
 .image_submit{color:#111!important;}
 .holder{
@@ -519,9 +510,14 @@ td{
 .dashboard label.error{
 	background:red;
 	color:#111;
+	border-radius:5px;
+	text-align: center;
+	color:#fff;
+	text-shadow: 1px 1px 1px #111;
 	}
 
-.version a{color:#8CC63F;}
+.version a {color:#8CC63F;text-shadow: 1px 1px 1px #fff;font-size:12px;}
+.version{color:#111;font-size:12px;text-shadow: 1px 1px 1px #fff;padding-top:5px;}
 .dashboard input[type=text],.dashboard input[type=password],.dashboard input[type=email], .dashboard select, .dashboard textarea{width:98%;}
 .dashboard label span{
 	text-transform: uppercase;
@@ -547,3 +543,29 @@ td{
 	right:20px;
 	top:15px;
 }
+
+.frontend_btn   {
+	color:#111;
+	font-size:12px;
+	text-shadow: 1px 1px 1px #fff;
+	background:#111;
+	border-radius:4px;
+	box-shadow:1px 1px 0px #dedede,2px 2px 0px #333;
+	padding:6px 8px;
+	right:20px;
+	top:15px;
+	}
+.modal-header h3{
+	background:#8CC63F;
+	padding:5px;
+	border-radius:5px;
+
+}
+.modal-header .close{
+	color:#111;
+	font-size:42px!important;
+	position:relative;
+	top:3px;
+}
+
+.modal-backdrop{z-index:4;}

@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>{{Config::get('site_name')}} :: Admin Area</title>
+    <title>{{Config::get('site_name')}} :: Forms Area</title>
    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <link href='http://fonts.googleapis.com/css?family=Quantico:400,700' rel='stylesheet' type='text/css'>
     {{ HTML::script('global/js/jquery.js') }} 
@@ -134,7 +134,45 @@
 </div>
    
 
-
+    {{ HTML::script('global/js/jquery.validate.min.js') }} 
     {{ HTML::script('global/bootstrap/js/bootstrap.min.js') }} 
+    <script>
+    (function($,W,D)
+{
+    var FORM = {};
+
+    FORM.UTIL =
+    {
+        setupFormValidation: function()
+        {
+            //form validation rules
+            $("#set_from").validate({
+                rules: {
+                    name: "required",
+                   
+                    
+                  
+                },
+                messages: {
+                    name: "Please choose name for the new form",
+                   
+                    
+                    
+                },
+                submitHandler: function(form) {
+                    form.submit();
+                }
+            });
+        }
+    }
+
+    //when the dom has loaded setup form validation rules
+    $(D).ready(function($) {
+        FORM.UTIL.setupFormValidation();
+    });
+
+})(jQuery, window, document);
+
+</script>
 </body>
 </html>

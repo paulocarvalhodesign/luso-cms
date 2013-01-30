@@ -6,6 +6,7 @@
     <title>{{Config::get('site_name')}} :: Admin Area</title>
     <meta name="viewport" content="width=device-width">
     {{ HTML::script('global/js/jquery.js') }} 
+    {{ HTML::script('global/js/jquery.validate.min.js') }} 
     {{ HTML::style('global/bootstrap/css/bootstrap.css') }}
     {{ HTML::style('global/bootstrap/css/bootstrap-responsive.css') }}
     {{ HTML::style('themes/admin/css/dashboard.css') }}
@@ -37,7 +38,8 @@
 
                   <ul class="inner_navigation">
                     <li>
-                  <a onclick="$('#upload_modal').modal({backdrop: 'static'});" href="#"><i class="icon icon-plus"></i> Add Atribute</a>
+                     <a onclick="$('#upload_modal').modal({backdrop: 'static'});" href="#">
+                     <i class="icon icon-plus"></i> Add Atribute</a>
                     
                     </li>
                     <li>
@@ -161,8 +163,47 @@
 </div>
 </div>
 
-{{ HTML::script('global/bootstrap/js/bootstrap.min.js') }} 
+<script>
+    (function($,W,D)
+{
+    var FORM = {};
 
+    FORM.UTIL =
+    {
+        setupFormValidation: function()
+        {
+            //form validation rules
+            $("#upload_modal_form").validate({
+                rules: {
+                    name: "required",
+                    type: "required",
+                    
+                  
+                },
+                messages: {
+                    name: "Please enter a name for the atribute",
+                    type: "Please specify the type of attribute",
+                    
+                    
+                },
+                submitHandler: function(form) {
+                    form.submit();
+                }
+            });
+        }
+    }
+
+    //when the dom has loaded setup form validation rules
+    $(D).ready(function($) {
+        FORM.UTIL.setupFormValidation();
+    });
+
+})(jQuery, window, document);
+
+</script>
+
+{{ HTML::script('global/bootstrap/js/bootstrap.min.js') }} 
+{{ HTML::script('themes/admin/js/app.js') }}
 
 </body>
 </html>
