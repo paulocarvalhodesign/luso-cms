@@ -1,5 +1,6 @@
 .login_page{
 	background: url('../img/black_linen_v2.png');
+	font-family: 'Quantico', sans-serif;
 }
 .login{
 	position:relative;
@@ -11,6 +12,26 @@
 .login input[type=checkbox]{
 	
 
+
+}
+.cms_logo{
+	
+	padding-left:10px;
+	color:#8CC63F;
+	text-shadow:1px 1px 0px #111, 2px 2px 0px #111;
+	font-family: 'Quantico', sans-serif;
+	font-weight:700;
+	position:relative;
+	top:20px;
+}
+.cms_logo img{
+	position:relative;
+	top:0px;
+	width:30px;
+	height:30px;
+	background:#fff;
+	border-radius:50px;
+	padding:6px;
 
 }
 
@@ -57,7 +78,7 @@ html.sign_up, body.sign_up{
 
 .box{
 	margin:10% auto;
-	background: url('../img/45degreee_fabric.png');
+	background: #dedede;
 	border-radius:8px;
 	padding:20px;
 	box-shadow:0px 0px 25px #111, 0px 0px 45px #111;
@@ -115,6 +136,7 @@ html.sign_up, body.sign_up{
 	font-size:0.75em;
 	margin-top:0%;
 }
+.version a{color:#8CC63F;}
 .login_page form, .sign_up form{
 	position:relative;
 	}
@@ -122,3 +144,12 @@ html.sign_up, body.sign_up{
 	
 	text-align:center;
 }	
+.write_error{
+	padding:5px;
+	background:red;
+	border-radius:5px;
+	color:#fff;
+	text-shadow:1px 1px 1px #000;
+	text-align: center;
+	margin:5px 0px; 
+}

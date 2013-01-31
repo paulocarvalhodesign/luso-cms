@@ -3,8 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Luso CMS :: Setup :: Step 3</title>
-    <meta name="viewport" content="width=device-width">
+    <title>Luso CMS :: Setup :: Step 3: App</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <link href='http://fonts.googleapis.com/css?family=Quantico:400,700' rel='stylesheet' type='text/css'>
     {{ HTML::script('global/js/jquery.js') }} 
     {{ HTML::style('global/bootstrap/css/bootstrap.css') }}
     {{ HTML::style('global/bootstrap/css/bootstrap-responsive.css') }}
@@ -14,12 +15,19 @@
 <body class="login_page sign_up">
     <div class="container">
       <div class="row-fluid"> 
+        <div class="span12">
+        <div class="span4"></div>  
+        <div class="span4">
+          <center><h3 class="cms_logo"><img width="25" src="<?php echo url('public/global/img/icon.png');?>"> LUSO CMS</h3></center>
+        </div>  
+         <div class="span4"></div>  
+        </div>
        <div class="span4"></div>     
        <div class="span4">
        <div class="box">
           
 
-        <h4 class="step_header step_one"><img src="<?php echo url('public/global/img/logo.png');?>"/><span>Setup Application</span></h4>
+        <h4 class="step_header step_one"><span>Setup Application</span></h4>
 
 
         <?php $message = Session::get('message'); ?>
