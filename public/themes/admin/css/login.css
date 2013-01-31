@@ -91,7 +91,8 @@ html.sign_up, body.sign_up{
 	border-radius:6px;
 	background:#fff;
 	border:none;
-	box-shadow:inset 0px -1px 1px #939393; 
+	box-shadow:inset 0px -1px 1px #939393;
+	border:1px solid #f2f2f2 ;
 }
 .box label{
 	text-transform: uppercase;
