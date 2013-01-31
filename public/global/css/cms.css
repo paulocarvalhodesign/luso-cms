@@ -422,3 +422,15 @@ iframe{
 }
 .dropdown-menu li a{ border-radius: 3px;}
 
+.modal label span{
+	text-transform: uppercase;
+	text-shadow:1px 1px 0px #fff;
+	background:#d5d5d5;
+	padding:4px 8px;
+	width:60%!important;
+	font-size:12px;
+	color:#111;
+	margin:5px;
+	border-radius:4px;
+	box-shadow:inset -1px -1px 1px #fff;
+}

@@ -1,8 +1,5 @@
  
 <?php $files = Files::all();?>
-
-
-<br/>
 <div id="images">
  <button class="btn btn-primary"  id="close_image_manager">Close</button>
  <ul class="filemanager" id="uItem" >
@@ -32,8 +29,12 @@
 <?php echo Form::hidden('area', $area); ?>
 
 <?php echo Form::textarea('content', '', array('id'=>'editor', 'class'=>'ckeditor')); ?>
-<br/>
-<label>Template:</label>
+
+<div class="row-fluid"> 
+ <div class="span12">
+<div class="span10">
+  <br/>
+  <label><span>Template:</span></label>
 <?php
 $dir = array();
 
@@ -62,8 +63,17 @@ if(!empty($dir))
 
 ?>
 <?php echo Form::select('template', $content_templates); ?>
-<br/>
-<?php echo Form::submit('Save',array('class'=>'btn  btn-primary bt-max')); ?>
+
+</div>  
+
+<div class="span2">
+ <br/> <br/>
+ <button class="btn" data-dismiss="modal">Cancel</button>
+<?php echo Form::submit('Save',array('class'=>'btn  btn-primary')); ?>
+</div>
+</div>
+</div>
+
 <?php echo Form::close() ?>
 
 

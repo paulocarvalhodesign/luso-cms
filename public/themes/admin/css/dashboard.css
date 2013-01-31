@@ -569,3 +569,5 @@ td{
 }
 
 .modal-backdrop{z-index:4;}
+table i{position:relative;top:1px;}
+h4 i{position:relative;top:5px;}

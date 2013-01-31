@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>{{Config::get('site_name')}} :: Admin Area</title>
+    <title>{{Config::get('site_name')}} :: Users </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <link href='http://fonts.googleapis.com/css?family=Quantico:400,700' rel='stylesheet' type='text/css'>
     {{ HTML::script('global/js/jquery.js') }} 
@@ -49,12 +49,12 @@
                <table class="table table-condensed table-bordered">
              <thead>
              <tr>
-             <th>Avatar</th>
-             <th>nickname</th>
-             <th>first name</th>
-             <th>last name</th>
-             <th>email</th>
-             <th>Options</th>
+             <th><i class="icon-white icon-user"></i> Avatar</th>
+             <th><i class="icon-white icon-pencil"></i> Nickname</th>
+             <th><i class="icon-white icon-pencil"></i> First name</th>
+             <th><i class="icon-white icon-pencil"></i> Last name</th>
+             <th><i class="icon-white icon-envelope"></i> Email</th>
+             <th><i class="icon-white icon-certificate"></i> Options</th>
              </tr>
              </thead>
              <tbody>

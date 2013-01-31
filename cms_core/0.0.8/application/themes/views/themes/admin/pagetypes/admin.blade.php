@@ -6,10 +6,14 @@
     <title>{{Config::get('site_name')}} :: Admin Area</title>
    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
    <link href='http://fonts.googleapis.com/css?family=Quantico:400,700' rel='stylesheet' type='text/css'>
+
     {{ HTML::style('global/bootstrap/css/bootstrap.css') }}
     {{ HTML::style('global/bootstrap/css/bootstrap-responsive.css') }}
     {{ HTML::style('themes/admin/css/dashboard.css') }}
   
+  <!-- Include the Google Charts API -->
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
 </head>
 {{ Session::get('info') }}
 <body class="dashboard">
@@ -38,8 +42,7 @@
 <!-- Create an empty div that will be filled using the Google Charts API and the data pulled from Google -->
 <div id="chart"></div>
 
-<!-- Include the Google Charts API -->
-<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
 
 
 <!-- Create a new chart and plot the pageviews for each day -->

@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>{{Config::get('site_name')}} :: Admin Area</title>
+    <title>{{Config::get('site_name')}} :: Settings </title>
    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <link href='http://fonts.googleapis.com/css?family=Quantico:400,700' rel='stylesheet' type='text/css'>
     {{ HTML::script('global/js/jquery.js') }} 
@@ -79,7 +79,7 @@
                   {{Form::close()}}
 
 
-                  <h4><i class="icon-wrench"></i> Error Level</h4>
+                  <h4><i class="icon-warning-sign"></i> Error Level</h4>
                   
                   {{ Form::open('settings/error_level')}}
 
@@ -115,7 +115,7 @@
                 <div class="span6">
                    <div class="inner">
                      <hr/>
-                  <h4><i class="icon-wrench"></i> Website Name</h4> 
+                  <h4><i class="icon-pencil"></i> Website Name</h4> 
 
                  <?php foreach($sitename as $s)
 
@@ -131,7 +131,7 @@
                
 
                    
-                  <h4><i class="icon-wrench"></i> Theme</h4> 
+                  <h4><i class="icon-picture"></i> Theme</h4> 
 
                   {{ Form::open('settings/theme')}}
 
@@ -153,7 +153,7 @@
             <div class="span12">
 
              <div class="span4">
-               <h4><i class="icon-wrench"></i> Google Analytics</h4> 
+               <h4><i class="icon-tasks"></i> Google Analytics</h4> 
                       
                       {{ Form::open('settings/analytics')}}
 
