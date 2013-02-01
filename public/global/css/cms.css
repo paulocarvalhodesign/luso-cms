@@ -435,3 +435,7 @@ iframe{
 	border-radius:4px;
 	box-shadow:inset -1px -1px 1px #fff;
 }
+.edit_options_toggle{
+	position:absolute;
+	display: block;
+}

@@ -355,23 +355,18 @@ public static function open_wrapper($area, $handle, $id, $global){
 
 	$markup .='<div class="edit_block">';
 
-	$markup .='
+	
 
-	<ul class="nav nav-pills edit_options">
-  		<li class="dropdown">
-   		 <a class="dropdown-toggle" data-toggle="dropdown" href="#">';
-
-    $markup .='    <i class="icon-wrench"></i>';
    
-   $markup .='
-      </a>
+   
+    $markup .='
+    
     <ul class="dropdown-menu">
       <li><a data-toggle="modal" data-target="#'.$handle.'-blocks"  href="'.url('editblock?global='.$global.'&id='.$id.'&handle='.$handle.'&page_id='.Config::get('page_id').'').'"><i class="icon-pencil"></i> Edit block</a></li>
       <li><a data-toggle="modal" data-target="#'.$handle.'-blocks-move"  href="'.url('moveblock?global='.$global.'&id='.$id.'&area='.$area.'&page_id='.Config::get('page_id').'').'"><i class="icon-resize-vertical"></i> Move block</a></li>
       <li><a class="delete" onclick="deleteItem()" href="'.url('delete_block/?global='.$global.'&block='.$handle.'s&id='.$id.'&page_id='.Config::get('page_id').'').'"><i class="icon-minus"></i> Delete block</a></li>
     </ul>
-  </li>
-</ul>
+ 
 
 	';
 
@@ -421,8 +416,8 @@ public static function open_wrapper($area, $handle, $id, $global){
 	';
 	
 
-	$markup .='<div class="block_wrapper_overlay"></div>';
-
+	$markup .='<div data-toggle="dropdown" class="block_wrapper_overlay"></div>';
+	
 	return $markup;
   	 }
   	 else

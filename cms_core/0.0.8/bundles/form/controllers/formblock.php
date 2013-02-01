@@ -69,7 +69,12 @@ class Form_Formblock_Controller extends Base_Controller {
     }
     
 
-    
+    public function get_index(){
+
+     
+
+      return 'works';
+    }
     
 
 
