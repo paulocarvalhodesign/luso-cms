@@ -571,3 +571,7 @@ td{
 .modal-backdrop{z-index:4;}
 table i{position:relative;top:1px;}
 h4 i{position:relative;top:5px;}
+
+.icon-selected{
+	background-image: url("../../../global/bootstrap/img/glyphicons-halflings-white.png");
+}

@@ -25,6 +25,19 @@ $(document).ready(function() {
     
     $('#navigation li  a[href*="' + root + '"]').attr('class', 'selected');
     $('#navigation li  a[href*="' + root + '"]').parent().attr('class', 'selected-path');
+    $('#navigation li  a[href*="' + root + '"] i').addClass('icon-white');
+    $('#navigation li  a ').hover(
+
+         function () {
+        $(this).find('i').addClass('icon-selected');
+        
+         },
+        function () {
+
+          $(this).find('i').removeClass('icon-selected').addClass('icon');
+         }
+
+      );
     
 
     });
