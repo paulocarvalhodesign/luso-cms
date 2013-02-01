@@ -151,7 +151,7 @@ html,body{
 
 
 .dashboard_navigation li a.selected, .dashboard_navigation li a:hover{
-	background:#dedede!important;
+	background:#333!important;
 	box-shadow:inset 0px 0px 1px #111, inset 0px 0px 3px #111!important;}
 
 

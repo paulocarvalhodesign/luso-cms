@@ -49,6 +49,7 @@
      -o-transition: all 500ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
         transition: all 500ms cubic-bezier(0.250, 0.250, 0.750, 0.750); 
 	}
+.cms_toolbar_options, .cms_toolbar_options_quit, .add_block a{font-family:'Quantico',verdana!important;}
 .cms_toolbar_options li, .cms_toolbar_options_quit li{
 	list-style: none;
 	display: inline;

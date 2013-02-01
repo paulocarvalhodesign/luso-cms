@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>{{Config::get('site_name')}} :: Admin Area</title>
    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+   
    <link href='http://fonts.googleapis.com/css?family=Quantico:400,700' rel='stylesheet' type='text/css'>
 
     {{ HTML::style('global/bootstrap/css/bootstrap.css') }}
@@ -13,6 +14,10 @@
   
   <!-- Include the Google Charts API -->
   <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+    {{ HTML::script('global/js/jquery.js') }} 
+    {{ HTML::script('global/bootstrap/js/bootstrap.min.js') }} 
+    {{ HTML::script('themes/admin/js/app.js') }} 
 
 </head>
 {{ Session::get('info') }}
@@ -187,9 +192,7 @@ $upgradable = $xml->upgradable;
 </div>
 </div>
 </div>
-    {{ HTML::script('global/js/jquery.js') }} 
-    {{ HTML::script('global/bootstrap/js/bootstrap.min.js') }} 
-    {{ HTML::script('themes/admin/js/app.js') }} 
+   
     
 </body>
 </html>

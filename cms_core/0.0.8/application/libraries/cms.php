@@ -285,6 +285,7 @@ class Cms
 	   Asset::container('core_css')->add('bootstrap-responsive','global/bootstrap/css/bootstrap-responsive.css');	
 	   Asset::container('core_css')->add('jquery-ui','jquery-ui/css/lusocms-theme/jquery-ui-1.9.0.custom.min.css');
 	   Asset::container('core_css')->add('global','global/css/cms.css');
+	   Asset::container('core_css')->add('fonts','http://fonts.googleapis.com/css?family=Quantico:400,700');
        }
 
 	}

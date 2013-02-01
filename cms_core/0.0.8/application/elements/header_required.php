@@ -14,6 +14,8 @@
 
 	<?php echo Asset::container('core_css')->styles() ;?>
 
+  <link href='http://fonts.googleapis.com/css?family=Quantico:400,700' rel='stylesheet' type='text/css'>
+
 	<?php echo Asset::container('jquery-ui')->styles() ;?>
 
   <?php echo Asset::container('theme')->styles() ;?>
