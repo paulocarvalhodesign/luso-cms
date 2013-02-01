@@ -42,7 +42,7 @@ class Form_Formblock_Controller extends Base_Controller {
        $global = $params['global'];
        $area = $params['area'];
 
-       //$fields = DB::table('form_fields')->where('form_id', '=',$form_id)->order_by('order', 'asc')->get();
+       
 
        $fields = Form\Models\Field::where('form_id', '=',$form_id)->order_by('order', 'asc')->get();
        
@@ -57,7 +57,16 @@ class Form_Formblock_Controller extends Base_Controller {
        
     }
 
+    public function get_list(){
 
+     $forms = DB::table('forms')->get();
+
+     $view = View::make('Form::dashboard.form')
+        ->with('user',Auth::user())
+        ->with('forms', $forms);
+
+      return $view;
+    }
     
 
     

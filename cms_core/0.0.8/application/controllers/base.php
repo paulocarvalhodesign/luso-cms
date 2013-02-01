@@ -33,6 +33,7 @@ class Base_Controller extends Controller {
 
 	public function __construct(){
 
+		 $settings 		 = CMS::set_settings();
 
 	}
 

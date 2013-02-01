@@ -58,8 +58,7 @@ $array = array(
 	'useragent'  => array('auto' => true ),
 	'flatten'    => array('auto' => true ),
 	'sitemap'    => array('auto' => true ),
-	'laraveless' => array('auto' => true ),
-	//'lessismore' => array('auto' => true ),
+	'lessismore' => array('auto' => true ),
 	'gallery' 	 => array('auto' => true, 'handles' => 'gallery', 'location' => '../../../cms_user/bundles/gallery'),
 );
 

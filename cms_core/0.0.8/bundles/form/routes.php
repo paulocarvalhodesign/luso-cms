@@ -4,9 +4,11 @@ Route::controller(Controller::detect('form'));
 
 Route::group(array('before' => 'auth'), function()
     {
+
+
 Route::get('form/list', function(){
 
-	 
+	
 	$forms = DB::table('forms')->get();
 
 	 $view = View::make('Form::dashboard.form')
@@ -17,6 +19,8 @@ Route::get('form/list', function(){
 
 
 });
+
+//Route::get('form/list', array('uses'=>'form@list'));
 
 Route::get('form/manage_form/(:num)', function($id){
 

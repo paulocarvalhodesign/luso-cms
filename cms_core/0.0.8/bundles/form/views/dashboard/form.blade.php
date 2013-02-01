@@ -35,7 +35,8 @@
  <br/>
 <div class="block header_block">
                 <h4><i class="icon-inbox"></i> Forms
-
+        
+        {{Config::get('site_name')}}
 
                   <ul class="inner_navigation">
                     <li> <a href="#"  onclick="$('#upload_modal').modal({backdrop: 'static'});"><i class="icon-plus-sign icon"></i> Add New Form </a></li>

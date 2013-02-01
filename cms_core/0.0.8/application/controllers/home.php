@@ -34,7 +34,7 @@ class Home_Controller extends Base_Controller {
 	   $filter   		 = parse_url($link);
 	   // Resolve the url
 	   $url 	 		 = CMS::resolve_url($filter);
-	   $settings 		 = CMS::set_settings();
+	  // $settings 		 = CMS::set_settings();
 	   $theme 	  		 = CMS::set_theme();
 	   $page     		 = CMS::set_page($url);
 	   $page_id  		 = Config::set('page_id', $page->id);
