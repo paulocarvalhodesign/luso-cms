@@ -17,7 +17,7 @@
 
 <a class="group-{{$block->id}}" href="{{$block->url}}">{{HTML::image($url,  $block->title, $attributes)}}</a>
 
-{{ Area::close_wrapper() }}
+
 
 <script>
 			$(document).ready(function(){
@@ -48,3 +48,4 @@
 
 
 @endif
+{{ Area::close_wrapper() }}
