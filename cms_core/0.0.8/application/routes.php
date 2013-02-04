@@ -120,6 +120,11 @@
     Route::post('settings/theme_install', array('uses'=>'settings@theme_install'));
     
     
+     // Extensions Routes
+    Route::get('extensions', array('uses'=>'extensions@index'));
+    
+
+
     Route::get('edit/(:num)',array('uses'=>'edit@index'));
     Route::get('edit/publish/(:num)',array('uses'=>'edit@publish'));
 

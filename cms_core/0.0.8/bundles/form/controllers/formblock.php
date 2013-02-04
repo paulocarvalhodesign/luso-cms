@@ -30,6 +30,10 @@ class Form_Formblock_Controller extends Base_Controller {
      |
      */
     public $restful = true;
+
+    
+
+
      
     public function get_render($params) {
 
@@ -57,10 +61,11 @@ class Form_Formblock_Controller extends Base_Controller {
        
     }
 
+    
+
     public function get_list(){
 
      $forms = DB::table('forms')->get();
-
      $view = View::make('Form::dashboard.form')
         ->with('user',Auth::user())
         ->with('forms', $forms);
@@ -69,13 +74,92 @@ class Form_Formblock_Controller extends Base_Controller {
     }
     
 
-    public function get_index(){
+     public function get_manage_form($id){
 
-     
+         $form  = DB::table('forms')->find($id);
+         $fields = DB::table('form_fields')->where_form_id($id)->order_by('order', 'asc')->get();
 
-      return 'works';
-    }
+         $view = View::make('Form::dashboard.manage')
+              ->with('user',Auth::user())
+              ->with('fields',$fields)
+              ->with('form_id',$id)
+              ->with('form', $form);
+
+            return $view;
+
+
+     }
     
 
+      public function post_manage_form(){
+
+        $id = Input::get('id');
+  $name = Input::get('name');
+  $title = Input::get('title');
+  $message = Input::get('message'); 
+
+  $rules = array(
+                        'id'  => 'required',
+                        'name' => 'required',
+                        'title' => 'required',
+                        'message' => 'required',
+                    );
+        $input = Input::all();
+        $validation = Validator::make($input, $rules);
+   
+    if ($validation->fails())
+        {
+              $errors = $validation->errors->all('<p>:message</p>'); 
+    
+              $message ='<div class="alert alert-error">
+                            <button type="button" class="close" data-dismiss="alert">×</button>
+                            <span class="error">';    
+
+                  foreach($errors as $error)
+
+                  $message .= $error;
+
+                  $message .=' </span> </div>';
+
+
+
+  
+
+            Session::flash('info', $message);     
+            return Redirect::to('form/manage_form/'.$id);
+        
+        }else{
+
+          $data = array(
+
+            'name' => $name,
+            'title'=> $title,
+            'message'=>$message
+
+            );
+
+           $affected = DB::table('forms')
+          ->where('id', '=', $id)
+          ->update($data);
+
+       $message ='<div class="alert alert-info">
+                            <button type="button" class="close" data-dismiss="alert">×</button>
+                            <span class="error">';    
+
+              $message .=' Form Updated';
+                  
+              $message .=' </span> </div>';
+
+
+
+  
+
+            Session::flash('info', $message);        
+
+           return Redirect::to('form/manage_form/'.$id);
+
+        }
+        
+      }
 
 }

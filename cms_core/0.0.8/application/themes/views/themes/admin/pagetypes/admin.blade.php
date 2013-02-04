@@ -35,7 +35,9 @@
  <div class="row-fluid">
 <div class="span12 main">
 <div class="ajax-message"></div>
- <br/>
+<br/>
+ <div class="row-fluid">
+ <div class="span6">
 <div class="block header_block">
 <h4><i class="icon-signal header-icon"></i> Analytics:</h4>
 </div>
@@ -81,7 +83,7 @@
     titleTextStyle: {
     color: '#333',
     fontName: 'Quantico',
-    fontSize: 16,}, 
+    fontSize: 12,}, 
     width:"100%", 
     height:"750%", 
     title: 'Data for the period : <?php echo date('M j, Y',strtotime('-30 day')).' - '.date('M j, Y'); ?>',
@@ -94,7 +96,7 @@
      chartArea:{left:20,top:30,width:"85%",height:"100%"},
      "backgroundColor": { fill: "none" }, 
      animation:{duration:'800',easing:'in'},
-     legendTextStyle: {color: '#333',  fontSize: 14, fontName: 'Quantico',},
+    // legendTextStyle: {color: '#333',  fontSize: 14, fontName: 'Quantico',},
      tooltipTextStyle: {color: '#111',  fontSize: 10, fontName: 'Quantico',}
                       
                      
@@ -110,9 +112,23 @@
 <h4>{{Lang::line('dashboard.analytics_inactive')->get()}}</h4>
 
 
+
 @endif
 </div>
+<br/>
+</div>
 
+<div class="span6">
+  <div class="block header_block">
+<h4><i class="icon-envelope header-icon"></i> Messages:</h4>
+</div>
+<br/>
+ <div class="block">
+   <p>No messages...</p>
+ </div>
+</div>
+</div>
+</div>
 <br/>
 
 <br/>

@@ -95,7 +95,7 @@
 	position:absolute;
 	background:rgba(1,1,1,0.35);
 	z-index:400;
-
+	cursor:pointer;
 
 }.block_wrapper:hover .block_wrapper_overlay{
 	display:block!important;
@@ -406,7 +406,7 @@ iframe{
 }
 .dropdown-menu {
     background-clip: padding-box;
-    background-color: #dedede;
+    background-color: rgba(237, 237, 237,0.9);
     border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 3px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
@@ -421,7 +421,13 @@ iframe{
     top: 100%;
     z-index: 1000;
 }
-.dropdown-menu li a{ border-radius: 3px;}
+.dropdown-menu li a{ 
+	border-radius: 3px; 
+	background-color: #333;
+	margin:3px 0px;
+	color:#fff!important;
+	text-shadow:1px 1px 1px #111;
+}
 
 .modal label span{
 	text-transform: uppercase;

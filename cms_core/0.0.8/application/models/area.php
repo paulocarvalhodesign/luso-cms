@@ -121,10 +121,10 @@ public static function render($area, $page_id, $limit=''){
 	    $obj .='
 		
 		<div class="dropdown">
-  			<a class="dropdown-toggle add_block" data-toggle="dropdown" href="#"><i class="icon-plus"></i> add to '.$area_sorted.' area</a>
+  			<a class="dropdown-toggle add_block" data-toggle="dropdown" href="#"><i class="icon-white icon-plus"></i> add to '.$area_sorted.' area</a>
   			<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
 		';	
-		$obj .= '<li><a data-toggle="modal" data-area="'.$area.'" data-target="#'.$area.'-blocks" class="" href="'.url('blocks?global=false&page_id='.$page_id.'&area='.$area.'').'"> <i class="icon-plus"></i> add Block </a></li>';
+		$obj .= '<li><a data-toggle="modal" data-area="'.$area.'" data-target="#'.$area.'-blocks" class="" href="'.url('blocks?global=false&page_id='.$page_id.'&area='.$area.'').'"> <i class="icon-white icon-plus"></i> add Block </a></li>';
 	
 		$obj .='
 
@@ -205,12 +205,12 @@ public static function render($area, $page_id, $limit=''){
 		$obj .='
 		
 		<div class="dropdown">
-  			<a class="dropdown-toggle add_block" data-toggle="dropdown" href="#"><i class="icon-plus"></i> add to '.$area_sorted.' area</a>
+  			<a class="dropdown-toggle add_block" data-toggle="dropdown" href="#"><i class="icon-white icon-plus"></i> add to '.$area_sorted.' area</a>
   			<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
 
 
 		';	
-		$obj .= '<li><a data-toggle="modal" data-area="'.$area.'" data-target="#'.$area.'-blocks"  href="'.url('blocks?global=false&page_id='.$page_id.'&area='.$area.'').'"> <i class="icon-plus"></i> add Block </a></li>';
+		$obj .= '<li><a data-toggle="modal" data-area="'.$area.'" data-target="#'.$area.'-blocks"  href="'.url('blocks?global=false&page_id='.$page_id.'&area='.$area.'').'"> <i class=" icon-white icon-plus"></i> add Block </a></li>';
 		
 		$obj .='
 
@@ -362,9 +362,9 @@ public static function open_wrapper($area, $handle, $id, $global){
     $markup .='
     
     <ul class="dropdown-menu">
-      <li><a data-toggle="modal" data-target="#'.$handle.'-blocks"  href="'.url('editblock?global='.$global.'&id='.$id.'&handle='.$handle.'&page_id='.Config::get('page_id').'').'"><i class="icon-pencil"></i> Edit block</a></li>
-      <li><a data-toggle="modal" data-target="#'.$handle.'-blocks-move"  href="'.url('moveblock?global='.$global.'&id='.$id.'&area='.$area.'&page_id='.Config::get('page_id').'').'"><i class="icon-resize-vertical"></i> Move block</a></li>
-      <li><a class="delete" onclick="deleteItem()" href="'.url('delete_block/?global='.$global.'&block='.$handle.'s&id='.$id.'&page_id='.Config::get('page_id').'').'"><i class="icon-minus"></i> Delete block</a></li>
+      <li><a data-toggle="modal" data-target="#'.$handle.'-blocks"  href="'.url('editblock?global='.$global.'&id='.$id.'&handle='.$handle.'&page_id='.Config::get('page_id').'').'"><i class="icon-white icon-pencil"></i> Edit block</a></li>
+      <li><a data-toggle="modal" data-target="#'.$handle.'-blocks-move"  href="'.url('moveblock?global='.$global.'&id='.$id.'&area='.$area.'&page_id='.Config::get('page_id').'').'"><i class="icon-white icon-resize-vertical"></i> Move block</a></li>
+      <li><a class="delete" onclick="deleteItem()" href="'.url('delete_block/?global='.$global.'&block='.$handle.'s&id='.$id.'&page_id='.Config::get('page_id').'').'"><i class="icon-white icon-minus"></i> Delete block</a></li>
     </ul>
  
 
@@ -539,12 +539,12 @@ public static function globalRender($area, $page_id, $limit=""){
 			$obj .='
 		
 		<div class="dropdown">
-  			<a class="dropdown-toggle add_block" data-toggle="dropdown" href="#"><i class="icon-plus"></i> add to '.$area_sorted.' global area</a>
+  			<a class="dropdown-toggle add_block" data-toggle="dropdown" href="#"><i class="icon-white icon-plus"></i> add to '.$area_sorted.' global area</a>
   			<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
 
 
 		';	
-		$obj .= '<li><a data-toggle="modal" data-area="'.$area.'" data-target="#'.$area.'-blocks"  href="'.url('blocks?global=true&page_id='.$page_id.'&area='.$area.'').'"> <i class="icon-plus"></i> add Block </a></li>';
+		$obj .= '<li><a data-toggle="modal" data-area="'.$area.'" data-target="#'.$area.'-blocks"  href="'.url('blocks?global=true&page_id='.$page_id.'&area='.$area.'').'"> <i class="icon-white icon-plus"></i> add Block </a></li>';
 	 
 		$obj .='
 
@@ -625,7 +625,7 @@ public static function globalRender($area, $page_id, $limit=""){
 
 
 		';	
-		$obj .= '<li><a data-toggle="modal" data-area="'.$area.'" data-target="#'.$area.'-blocks"  href="'.url('blocks?global=true&page_id='.$page_id.'&area='.$area.'').'"> <i class="icon-plus"></i> add Block </a></li>';
+		$obj .= '<li><a data-toggle="modal" data-area="'.$area.'" data-target="#'.$area.'-blocks"  href="'.url('blocks?global=true&page_id='.$page_id.'&area='.$area.'').'"> <i class=" icon-white icon-plus"></i> add Block </a></li>';
 	
 		$obj .='
 
