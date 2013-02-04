@@ -90,13 +90,13 @@
     colors:['#8CC63F','#e6f4fa'],
     areaOpacity: 0.2,
      lineWidth:'1',
-     vAxis: {title: "Views", textPosition: 'in',textStyle: { color: '#8CC63F', fontSize: 10, fontName: 'Quantico',}},                 
+     vAxis: {title: "Views", textPosition: 'in',textStyle: { color: '#8CC63F', fontSize: 8, fontName: 'Quantico',}},                 
      hAxis: { textPosition: 'in', showTextEvery: 2, slantedText: false, textStyle: { color: '#333', fontSize: 12 ,fontName: 'Quantico',} },
      pointSize: 10,
-     chartArea:{left:20,top:30,width:"85%",height:"100%"},
+     chartArea:{left:10,top:30,width:"95%",height:"100%"},
      "backgroundColor": { fill: "none" }, 
      animation:{duration:'800',easing:'in'},
-    // legendTextStyle: {color: '#333',  fontSize: 14, fontName: 'Quantico',},
+     legendTextStyle: {color: '#333',  fontSize: 89, fontName: 'Quantico',},
      tooltipTextStyle: {color: '#111',  fontSize: 10, fontName: 'Quantico',}
                       
                      
