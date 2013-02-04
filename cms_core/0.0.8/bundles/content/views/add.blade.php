@@ -1,7 +1,7 @@
  
 <?php $files = Files::all();?>
 <div id="images">
- <button class="btn btn-primary"  id="close_image_manager">Close</button>
+ <button class="btn btn-primary"  id="close_image_manager">X</button>
  <ul class="filemanager" id="uItem" >
 <?php foreach($files as $file):?>
 
@@ -9,8 +9,11 @@
   <p>
   
   
-                       <img src="<?php echo $file->location;?>"/>
-                        
+                       <img class="tt" rel="tooltip"
+                        data-placement="bottom" 
+                        data-original-title="<?php echo $file->filename;?>"
+                        src="<?php echo $file->location;?>"/>
+      
                         <span><?php echo $file->location;?></span>
                           
   </p>
@@ -19,6 +22,9 @@
 <?php endforeach;?>
 </ul>
 </div>
+
+
+
             
 <?php echo Form::open('content/add', '',array('class'=>'content_form')) ?>
 

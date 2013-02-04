@@ -7,7 +7,7 @@
 
 <?php echo Form::hidden('area', $area); ?>
 
-<label>Choose your form:</label>
+<label><span>Choose your form:</span></label>
 <?php
 
 	$query = DB::table('forms')->get();
@@ -21,7 +21,7 @@
  ?>
 <?php  echo Form::select('form', $forms); ?>
 <br/>
-<label>Template:</label>
+<label><span>Template:</span></label>
 <?php
 $dir = array();
 

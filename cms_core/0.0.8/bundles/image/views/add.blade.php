@@ -2,7 +2,7 @@
 
 
 <div id="imageblockimages">
- <button class="btn btn-primary"  id="imageblock_close_image_manager">Close</button>
+ <button class="btn btn-primary"  id="imageblock_close_image_manager">X</button>
  <ul class="filemanager" id="imageblockuItem" >
 <?php foreach($files as $file):?>
 
@@ -29,23 +29,13 @@
 <?php echo Form::hidden('area', $area); ?>
   <div class="row-fluid">
   	<div class="span12">
-	<div class="span2">
-    <br/>
-    <center>
-    <a class="btn image_submit" id="imageblockmedia-selector">Select File</a>
-	</center>
-
-    </div>
-    <div class="span2">
-     <div class="field"></div> 
-    
-     <div class="holder"></div> 
-      </div>
+	
+   
      <div class="span3">
-        <label>title:</label>
+        <label><span>title:</span></label>
         <?php  echo Form::text('title'); ?>
 
-        <label>Template:</label>
+        <label><span>Template:</span></label>
 <?php
 $dir = array();
 
@@ -75,18 +65,10 @@ if(!empty($dir))
 <?php echo Form::select('template', $image_templates); ?>
 
         
-     	<label>Width: <span>(px)</span></label>
-       <div class="width-slider"></div>
-       <div id="width-slider-result">0 </div>
-     	<?php echo Form::hidden('width', '',array('id'=>'width')); ?>
-
-     	<label>Height: <span>(px)</span></label>
-       <div class="height-slider"></div>
-       <div id="height-slider-result">0 </div>
-      <?php echo Form::hidden('height', '',array('id'=>'height')); ?>
+     	
   
 
-  <label>Open in lightbox?:</label>
+  <label><span>Open in lightbox?:</span></label>
   
    <?php $opts = array('true'=>'True','false'=>'False') ; echo Form::select('lightbox', $opts); ?>
 
@@ -95,13 +77,33 @@ if(!empty($dir))
 
 
      </div>	
-     <div class="span5">
+     <div class="span6">
      	
 
-     	<label>description:</label>
+     	<label><span>description:</span></label>
      	<?php echo Form::textarea('description', '' , array('class'=>'image_block_textarea')); ?>
 
+      <label> <span>Width:(px)</span></label>
+       <div class="width-slider"></div>
+       <div id="width-slider-result">0 </div>
+      <?php echo Form::hidden('width', '',array('id'=>'width')); ?>
+
+      <label><span>Height: (px)</span></label>
+       <div class="height-slider"></div>
+       <div id="height-slider-result">0 </div>
+      <?php echo Form::hidden('height', '',array('id'=>'height')); ?>
+
      </div>	
+      <div class="span3">
+     <div class="field"></div> 
+    <center>
+     <div class="holder"></div> 
+   </center>
+      <br/>
+    <center>
+    <a class="btn image_submit" id="imageblockmedia-selector">Select File</a>
+  </center>
+      </div>
   </div>
 </div>
 <script type="text/javascript">

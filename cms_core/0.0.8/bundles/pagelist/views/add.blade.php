@@ -6,9 +6,10 @@
 <?php echo Form::hidden('global', $global); ?>
 
 <?php echo Form::hidden('area', $area); ?>
-
-
-<label>Show Pages of type?</label>
+<div class="row-fluid"> 
+ <div class="span12">
+ <div class="span4">
+<label><span>Show Pages of type?</span></label>
 
 <?php
 
@@ -23,7 +24,7 @@ $theme = Theme::where_active('1')->first();
 ?>
 
 <?php echo Form::select('pagetype', $pagetypes); ?>
-<label>Where?</label>
+<label><span>Where?</span></label>
 <?php
 
  $p = DB::table('pages')->get();
@@ -35,7 +36,7 @@ $theme = Theme::where_active('1')->first();
 
 ?>
 <?php echo Form::select('location', $pages); ?>
-<label>Template:</label>
+<label><span>Template:</span></label>
 
 
 
@@ -67,20 +68,23 @@ if(!empty($dir))
 
 ?>
 <?php echo Form::select('template', $pagelist_templates); ?>
-<br/>
-<label>Order by?</label>
+</div>
+ <div class="span4">
+<label><span>Order by?</span></label>
 <?php $order_by = array('sitemap'=>'Sitemap', 'id'=>'ID', 'alphabetic'=>'Alphabetic');?>
 <?php echo Form::select('order_by', $order_by); ?>
-<label>Position?</label>
+<label><span>Position?</span></label>
 <?php $position = array('asc'=>'ASC', 'desc'=>'DESC');?>
 <?php echo Form::select('position', $position); ?>
 
 <?php $options = array('0'=>'false', '1'=>'true');?>
-<label>Paginate? </label>
+<label><span>Paginate? </span></label>
 
 <?php echo Form::select('pagination', $options); ?>
 <br/>
-<label>How many?</label>
+</div>
+ <div class="span4">
+<label><span>How many?</span></label>
  <div class="ammount-slider"></div>
  <div id="ammount-slider-result">4</div>
  <?php echo Form::hidden('ammount', '4',array('id'=>'ammount')); ?>
@@ -90,7 +94,9 @@ if(!empty($dir))
 
 <?php echo Form::submit('Save',array('class'=>'btn  btn-primary')); ?>
 
-
+</div>
+</div>
+</div>
 
 
 

@@ -8,8 +8,10 @@
 <?php echo Form::hidden('global', $global); ?>
 
 <?php  echo Form::hidden('id', $id); ?>
-
-<label>Show Pages of type?</label>
+<div class="row-fluid"> 
+ <div class="span12">
+ <div class="span4">
+<label><span>Show Pages of type?</span></label>
 <?php
 
 
@@ -22,42 +24,18 @@
 ?>
 <?php  echo Form::select('pagetype', $pagetypes, $block->pagetype); ?>
 
-
-<label>How many?</label>
-
-<div class="ammount-slider"></div>
-<div id="ammount-slider-result"><?php echo $block->ammount;?></div>
-<?php echo Form::hidden('ammount', $block->ammount ,array('id'=>'ammount')); ?>
-
-
-<label>Where?</label>
+<label><span>Where?</span></label>
 <?php
 
  $p = DB::table('pages')->get();
   $pages['anywhere'] = 'Anywhere';
  foreach($p as $page)
 
- 		$pages[$page->id] = $page->title;
+    $pages[$page->id] = $page->title;
 
 ?>
 <?php  echo Form::select('location', $pages, $block->location); ?>
-
-<?php $options = array('0'=>'false', '1'=>'true');?>
-
-<label>Paginate? </label>
-
-<?php echo Form::select('pagination', $options,$block->pagination); ?>
-
-
-
-<label>Order by?</label>
-<?php $order_by = array('sitemap'=>'Sitemap', 'id'=>'ID', 'alphabetic'=>'Alphabetic');?>
-<?php echo Form::select('order_by', $order_by, $block->order_by); ?>
-<label>Position?</label>
-<?php $position = array('asc'=>'ASC', 'desc'=>'DESC');?>
-<?php echo Form::select('position', $position,  $block->position); ?>
-
-<label>Template:</label>
+<label><span>Template:</span></label>
 <?php
 $dir = array();
 
@@ -85,9 +63,39 @@ if(!empty($dir))
 
 ?>
 <?php echo Form::select('template', $pagelist_templates, $block->template); ?>
+
+
+
+
+</div>
+<div class="span4">
+<label><span>Order by?</span></label>
+<?php $order_by = array('sitemap'=>'Sitemap', 'id'=>'ID', 'alphabetic'=>'Alphabetic');?>
+<?php echo Form::select('order_by', $order_by, $block->order_by); ?>
+
+<label><span>Position?</span></label>
+<?php $position = array('asc'=>'ASC', 'desc'=>'DESC');?>
+<?php echo Form::select('position', $position,  $block->position); ?>
+
+<?php $options = array('0'=>'false', '1'=>'true');?>
+
+<label><span>Paginate? </span></label>
+
+<?php echo Form::select('pagination', $options,$block->pagination); ?>
+
+
+
+
+</div>
+<div class="span4">
+<label><span>How many?</span></label>
+
+<div class="ammount-slider"></div>
+<div id="ammount-slider-result"><?php echo $block->ammount;?></div>
+<?php echo Form::hidden('ammount', $block->ammount ,array('id'=>'ammount')); ?>
 <br/>
 <?php echo Form::submit('Save',array('class'=>'btn  btn-primary')); ?>
-
+</div></div></div>
 <?php echo Form::close() ?>
 
 

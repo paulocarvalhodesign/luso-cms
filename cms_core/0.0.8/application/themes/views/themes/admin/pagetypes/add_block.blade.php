@@ -47,6 +47,7 @@ if($block->core == 'true'){
 <script>
 $(function () {
 $('#myTab a:first').tab('show');
+$('.tt').tooltip();
 })
 </script>
  

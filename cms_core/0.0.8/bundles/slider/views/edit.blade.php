@@ -8,7 +8,7 @@
 <?php echo Form::hidden('global', $global); ?>
 <?php  echo Form::hidden('id', $id); ?>
 
-<label>Choose your file set:</label>
+<label><span>Choose your file set:</span></label>
 <?php
 
 	$query = DB::table('sets')->get();
@@ -50,7 +50,7 @@ if(!empty($dir))
 
 
 ?>
-<label>Template:</label>
+<label><span>Template:</span></label>
 <?php echo Form::select('template', $image_templates, $block->template); ?>
 <br/>
 <?php echo Form::submit('Save',array('class'=>'btn  btn-primary')); ?>

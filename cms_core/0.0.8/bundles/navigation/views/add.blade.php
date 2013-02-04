@@ -2,7 +2,7 @@
 <?php echo Form::hidden('page_id', $page_id); ?>
 <?php echo Form::hidden('global', $global); ?>
 <?php echo Form::hidden('area', $area); ?>
-<label>Template:</label>
+<label><span>Template:</span></label>
 <?php
 $dir = array();
 

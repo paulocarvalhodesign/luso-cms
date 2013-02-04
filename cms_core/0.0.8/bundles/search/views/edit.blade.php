@@ -9,7 +9,7 @@
 
 
 <?php echo Form::hidden('global', $global); ?>
-<label>Show Results?</label>
+<label><span>Show Results?</span></label>
 <?php 
 	$results = array(
 
@@ -24,7 +24,7 @@
 
 
 <?php else:?>
-<label>Redirect Where?</label>
+<label><span>Redirect Where?</span></label>
 <?php
 		$all_pages = Page::all();
 

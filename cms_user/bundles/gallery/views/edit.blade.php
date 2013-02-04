@@ -8,7 +8,7 @@
 <?php echo Form::hidden('global', $global); ?>
 <?php  echo Form::hidden('id', $id); ?>
 
-
+<label><span>Choose your file set:</span></label>
 <?php
 
 	$query = DB::table('sets')->get();

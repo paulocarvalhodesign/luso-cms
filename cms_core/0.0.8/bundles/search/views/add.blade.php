@@ -6,7 +6,7 @@
 <?php echo Form::hidden('global', $global); ?>
 
 <?php echo Form::hidden('area', $area); ?>
-<label>Show Results?</label>
+<label><span>Show Results?</span></label>
 <?php 
 	$results = array(
 
@@ -17,7 +17,7 @@
 ?>
 <?php echo Form::select('results', $results); ?>
 
-<label>Redirect Where?</label>
+<label><span>Redirect Where?</span></label>
 <?php echo Form::select('content', $pages); ?>
 <br/>
 <?php echo Form::submit('Save',array('class'=>'btn  btn-primary bt-max')); ?>

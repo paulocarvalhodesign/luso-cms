@@ -7,7 +7,7 @@
 
 <?php echo Form::hidden('area', $area); ?>
 
-<label>Choose your file set:</label>
+<label><span>Choose your file set:</span></label>
 <?php
 
 	$query = DB::table('sets')->get();
@@ -47,7 +47,7 @@ if(!empty($dir))
 
 
 ?>
-<label>Template:</label>
+<label><span>Template:</span></label>
 <?php echo Form::select('template', $slider_templates); ?>
 <br/>
 <?php echo Form::submit('Save',array('class'=>'btn  btn-primary')); ?>
