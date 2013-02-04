@@ -406,7 +406,7 @@ iframe{
 }
 .dropdown-menu {
     background-clip: padding-box;
-   background: url('../img/black_linen_v2.png');
+    background: url('../img/black_linen_v2.png');
     border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 3px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
@@ -420,6 +420,21 @@ iframe{
     position: absolute;
     top: 100%;
     z-index: 1000;
+    border:3px solid rgba(255,255,255,0.98);
+    -webkit-transition: all 200ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+    -moz-transition: all 200ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+    -ms-transition: all 200ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+     -o-transition: all 200ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+        transition: all 200ms cubic-bezier(0.250, 0.250, 0.750, 0.750); 
+    opacity:0.9;
+}
+.dropdown-menu:hover{
+	-webkit-transition: all 200ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+    -moz-transition: all 200ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+    -ms-transition: all 200ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+     -o-transition: all 200ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+        transition: all 200ms cubic-bezier(0.250, 0.250, 0.750, 0.750); 
+	opacity:1;
 }
 .dropdown-menu li a{ 
 	border-radius: 3px; 
@@ -428,6 +443,8 @@ iframe{
 	color:#fff!important;
 	text-shadow:1px 1px 1px #111;
 	box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+	text-transform: uppercase;
+	font-size:12px!important;
 }
 .dropdown-menu li i{background-color:#4b4b4b;border-radius:5px;box-shadow:0px 0px 2px rgba(0, 0, 0, 0.8);}
 

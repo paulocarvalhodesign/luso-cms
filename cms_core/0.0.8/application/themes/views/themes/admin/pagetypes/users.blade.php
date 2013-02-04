@@ -92,9 +92,9 @@
                 <div class="modal-body">
                  
                     <form method="POST" action="{{ URL::to('users/update') }}" id="user_modal_form--{{$user->id}}" enctype="multipart/form-data">
-                       
+                         <div class="row-fluid">
                        <div class="span12">
-                       <div class="span6">              
+                                 
                        
                        {{Form::hidden('id',$user->id)}}
                       <label>Avatar: (Use filename from file manager)</label>
@@ -116,10 +116,10 @@
                       
                       <label>New Password</label>
                       {{Form::password('password')}} 
-                       </div>
-                       <div class="span6"></div>
+                      
                       </div>
-              
+              </div>
+
                                      
                 </div>
                 <div class="modal-footer">
