@@ -22,7 +22,7 @@
 <script>
 			$(document).ready(function(){
 				
-				$(".group-{{$block->id}}").colorbox({rel:'group-{{$block->id}}'});
+				$(".group-{{$block->id}}").colorbox({rel:'group-{{$block->id}}', width:'80%', height:'80%'});
 				
 			});
 </script>
