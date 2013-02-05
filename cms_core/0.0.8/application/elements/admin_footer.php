@@ -12,7 +12,7 @@
 ?>
 <script>
   $(document).ready(function() {
-    $(".dashboard_navigation a").click(function() {
+    $(".dashboard_navigation a, form input[type=submit]").click(function() {
      $('.preloader').show().delay(2000).fadeOut();
     });
   }); 

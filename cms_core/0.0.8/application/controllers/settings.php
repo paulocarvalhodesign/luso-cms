@@ -121,13 +121,23 @@ class Settings_Controller extends Dashboard_Controller {
                 
                
                 
-                
-                File::put(path('app').'config/cms_error.php', $data);   
+     if(@File::put(path('app').'config/cms_error.php', $data))           
+       
 
      Session::flash('info', '
                   <div class="alert alert-info">
                   <button type="button" class="close" data-dismiss="alert">×</button>
                   <span class="error">Error Level is '.$maintenance.'!</span>
+                  </div>
+
+
+
+        ');
+    else
+      Session::flash('info', '
+                  <div class="alert alert-error">
+                  <button type="button" class="close" data-dismiss="alert">×</button>
+                  <span class="error">Cant write file ,check permitions!</span>
                   </div>
 
 
@@ -156,6 +166,7 @@ class Settings_Controller extends Dashboard_Controller {
      ->update(array('username' => $username, 'password'=>$password,'profile'=>$profile));
 
       File::put(path('root').'cms_config/tracking_code.php', $tracking_code);
+      
 
      Session::flash('info', '
                   <div class="alert alert-info">

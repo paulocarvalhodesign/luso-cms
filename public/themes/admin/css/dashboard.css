@@ -270,9 +270,9 @@ input[type=checkbox]{
 .dropdown-menu a:hover{
 	text-shadow:1px 1px 1px #111;
 }
-.alert-error, .alert-info{
+.alert-error, .alert-info, .alert-danger{
 	position:fixed!important;
-	top:1%;
+	bottom:1%;
 	right:1%;
 	width:200px;
 }

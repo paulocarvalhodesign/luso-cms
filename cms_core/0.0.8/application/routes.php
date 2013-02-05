@@ -20,22 +20,18 @@
             
         
         });
+   
     Route::get('setup/(:any)',function(){
        
            return Redirect::to('/');
            
        
-       });
+    });
     
 
     $routes = DB::table('pages')->get(); 
-
-
-
-    Route::get('/', array('after' => 'compress','uses'=>'home@index'));
-
-
-
+    Route::get('/', array('uses'=>'home@index'));
+    
     foreach($routes as $route)
     {
 

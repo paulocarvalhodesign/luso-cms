@@ -31,7 +31,7 @@ class Setup_Controller extends Base_Controller {
     
      $view = View::make('path: '.ADMIN_THEME_PATH.'install/index.blade.php');
 
-      return $view;
+     return $view;
  
     }
 
