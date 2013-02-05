@@ -23,12 +23,16 @@ class Edit_Controller extends Base_Controller {
 	public $restful = true;
 	public $url;
 
+ 
 
 
-	public function get_index($id)
+	public function get_index()
 	{
 
-		$page_id =  $id;
+		$page_id =  CMS::decrypt($_GET['token']);
+
+
+
         $page = Page::find($page_id);
 
         $user = Auth::user();
@@ -52,9 +56,9 @@ class Edit_Controller extends Base_Controller {
 
 	}
 
-	public function get_publish($id){
+	public function get_publish(){
 
-		$page_id =  $id;
+		$page_id =  CMS::decrypt($_GET['token']);
         $page = Page::find($page_id);
         $page->edit_mode = 'false';       
         $page->save();

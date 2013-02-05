@@ -34,7 +34,7 @@ Logged in as:<br/>
 
       <?php if(Config::get('edit_mode') == 'false' || Config::get('edit_mode') == ''):?>
       
-      <li><i class="icon-pencil icon-white"></i> <?php echo HTML::link('edit/'.Config::get('page_id').'', 'Edit Mode', array('class'=>'edit-trigger')); ?></li>
+      <li><i class="icon-pencil icon-white"></i> <?php echo HTML::link('edit?token='.CMS::encrypt(Config::get('page_id')).'', 'Edit Mode', array('class'=>'edit-trigger')); ?></li>
 
       <li><i class="icon-certificate icon-white"></i><?php echo HTML::link('pages/manage/'.Config::get('page_id').'', 'Page Properties'); ?></li>
 
@@ -42,7 +42,7 @@ Logged in as:<br/>
 
      <?php elseif(Config::get('edit_mode') == 'true'):?>
 
-      <li><i class="icon-pencil icon-white"></i> <?php echo HTML::link('edit/publish/'.Config::get('page_id').'', 'Leave Edit Mode', array('class'=>'save-trigger')); ?></li>
+      <li><i class="icon-pencil icon-white"></i> <?php echo HTML::link('edit/publish?token='.CMS::encrypt(Config::get('page_id')).'', 'Leave Edit Mode', array('class'=>'save-trigger')); ?></li>
       
       <li><i class="icon-certificate icon-white"></i><?php echo HTML::link('pages/manage/'.Config::get('page_id').'', 'Page Properties'); ?></li>
 
