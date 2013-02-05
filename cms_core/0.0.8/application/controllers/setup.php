@@ -24,13 +24,15 @@ class Setup_Controller extends Base_Controller {
     
 
     public function get_index() {
-        
-     $site = File::put(path('root').'cms_config/site.php', '');
-     $user = File::put(path('root').'cms_config/user.php', '');
-     $code = File::put(path('root').'cms_config/tracking_code.php', '');
-    
+   
+     $folder = path('root').'cms_config';
+     if(is_writable($folder)) 
+     File::put(path('root').'cms_config/site.php', '');
+     File::put(path('root').'cms_config/user.php', '');
+     File::put(path('root').'cms_config/tracking_code.php', '');
+     
+      
      $view = View::make('path: '.ADMIN_THEME_PATH.'install/index.blade.php');
-
      return $view;
  
     }

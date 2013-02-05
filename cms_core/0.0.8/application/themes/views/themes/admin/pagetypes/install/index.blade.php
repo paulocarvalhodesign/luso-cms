@@ -29,8 +29,9 @@
         <h4 class="step_header step_one"><span>Setup Database</span></h4>
 
         <?php 
+        $folder = path('root').'cms_config';
         $database_file = path('app').'config/database.php'; 
-      
+        $folder = is_writable($folder);
         $db = is_writable($database_file);
 
         ?>
@@ -38,18 +39,30 @@
          @if(!$db) 
         
          <p class="write_error">database.php must be writable.</p>
+        
+         @endif
+
+         @if(!$folder) 
+        
+         <p class="write_error">cms_config/ must be writable.</p>
+        
+         @endif
+        
          
+
         
-         @else
-        
+       
+
+
         <?php $message = Session::get('message'); ?>
 
 
          @if(isset($message))
         
-          {{$message}}
-         
+         {{$message}}
+        
          @endif
+    
        
         
         {{ Form::open('setup') }}
@@ -66,10 +79,11 @@
          <label>Database Name:</label>
         {{ Form::text('table') }}
         <br/>
+       
         {{ Form::submit('next', array('class'=>'btn')) }}
-        
+   
         {{ Form::close() }}
-         @endif
+        
         </div>
        
           {{  Elements::get('admin_footer') }}

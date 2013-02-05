@@ -13,6 +13,7 @@
     {{ HTML::style('themes/admin/css/login.css') }}
  
 </head>
+<div class="preloader"><img src="<?php echo url('public/images/loader.gif');?>"/></div>
 <body class="login_page sign_up">
     <div class="container">
       
@@ -69,6 +70,14 @@
 
   {{ HTML::script('global/bootstrap/js/bootstrap.min.js') }}  
   {{ HTML::script('themes/admin/js/app.js') }} 
+
+  <script>
+  $(document).ready(function() {
+    $("form input[type=submit]").click(function() {
+     $('.preloader').show().delay(2000).fadeOut();
+    });
+  }); 
+  </script>
   
 </body>
 </html>

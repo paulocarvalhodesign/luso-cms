@@ -44,37 +44,6 @@
         <label>Site Name:</label>
         {{ Form::text('name') }}
 
-
-        <label>Website Theme:</label>
-        <?php
-
-        
-           $directory = path('root').'cms_user/themes/views/themes/';  
- 
-            //get all files in specified directory
-            $files = glob($directory . "*");
-             
-            //print each file name
-            foreach($files as $file)
-            {
-             //check to see if the file is a folder/directory
-             if(is_dir($file))
-             {
-              $result = str_replace($directory, '',$file);
-              if($result == 'admin'){
-
-              }else{
-                $themes[$result] = $result;
-              }
-              
-             }
-            }
-  
-
-        ?>
-        {{ Form::select('theme', $themes) }}
-
-        
         <br/>
         {{ Form::submit('next', array('class'=>'btn')) }}
         

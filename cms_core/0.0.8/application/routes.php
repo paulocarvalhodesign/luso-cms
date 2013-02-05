@@ -339,12 +339,12 @@ Route::get('sitemap', function(){
     Route::post('setup/install_cms',function(){
      
         $name = Input::get('name');
-        $theme = Input::get('theme');
+        $theme = 'default';
          $a ="'";
 
          $rules = array(
                         'name'  => 'required',
-                        'theme' => 'required',
+                        
                         
                     );
         $input = Input::all();
