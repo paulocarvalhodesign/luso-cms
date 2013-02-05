@@ -34,7 +34,7 @@ Logged in as:<br/>
 
       <?php if(Config::get('edit_mode') == 'false' || Config::get('edit_mode') == ''):?>
       
-      <li><i class="icon-pencil icon-white"></i> <?php echo HTML::link('edit/'.Config::get('page_id').'', 'Edit Mode'); ?></li>
+      <li><i class="icon-pencil icon-white"></i> <?php echo HTML::link('edit/'.Config::get('page_id').'', 'Edit Mode', array('class'=>'edit-trigger')); ?></li>
 
       <li><i class="icon-certificate icon-white"></i><?php echo HTML::link('pages/manage/'.Config::get('page_id').'', 'Page Properties'); ?></li>
 
@@ -42,7 +42,7 @@ Logged in as:<br/>
 
      <?php elseif(Config::get('edit_mode') == 'true'):?>
 
-      <li><i class="icon-pencil icon-white"></i> <?php echo HTML::link('edit/publish/'.Config::get('page_id').'', 'Leave Edit Mode'); ?></li>
+      <li><i class="icon-pencil icon-white"></i> <?php echo HTML::link('edit/publish/'.Config::get('page_id').'', 'Leave Edit Mode', array('class'=>'save-trigger')); ?></li>
       
       <li><i class="icon-certificate icon-white"></i><?php echo HTML::link('pages/manage/'.Config::get('page_id').'', 'Page Properties'); ?></li>
 
@@ -58,3 +58,29 @@ Logged in as:<br/>
       <li><i class="icon-off icon-white"></i> <?php echo HTML::link('logout', 'Logout'); ?></li> 
       
     </ul>
+
+  </div>
+
+  <div class="preloader"><img src="<?php echo url('public/images/loader.gif');?>"/></div>
+  <script>
+  $(document).ready(function() {
+    
+    $(".edit-trigger").click(function(event) {
+     
+     event.preventDefault();
+     $('.preloader').show();
+     $('body').load('<?php echo url('edit/'.Config::get('page_id'));?>');
+     
+    });
+
+    $(".save-trigger").click(function(event) {
+     
+     event.preventDefault();
+     $('.preloader').show();
+     $('body').load('<?php echo url('edit/publish/'.Config::get('page_id'));?>'); 
+
+
+    
+   });
+}); 
+  </script>

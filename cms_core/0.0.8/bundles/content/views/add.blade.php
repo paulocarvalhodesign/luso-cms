@@ -26,7 +26,7 @@
 
 
             
-<?php echo Form::open('content/add', '',array('class'=>'content_form')) ?>
+<?php echo Form::open('content/add', '',array('class'=>'content_form', 'id'=>$area.'-content')) ?>
 
 <?php echo Form::hidden('page_id', $page_id); ?>
 
@@ -75,7 +75,7 @@ if(!empty($dir))
 <div class="span2">
  <br/> <br/>
  <button class="btn" data-dismiss="modal">Cancel</button>
-<?php echo Form::submit('Save',array('class'=>'btn  btn-primary')); ?>
+<?php echo Form::submit('Save',array('class'=>'btn go  btn-primary')); ?>
 </div>
 </div>
 </div>
@@ -93,18 +93,7 @@ if(!empty($dir))
 
 <script type="text/javascript">
 
-$('.modal').bind('hidden', function () {
-  //window.location.reload(true);
-});
 
-
-
-      // This call can be placed at any point after the
-      // <textarea>, or inside a <head><script> in a
-      // window.onload event handler.
-
-      // Replace the <textarea id="editor"> with an CKEditor
-      // instance, using default configurations.
 
       CKEDITOR.replace( 'editor', {
           extraPlugins : 'internpage',
@@ -167,7 +156,10 @@ $('.modal').bind('hidden', function () {
       
 
 
-      });   
+      });  
+
+     
+    
 
    
 

@@ -26,7 +26,7 @@
 <script>
   
 $('.modal').bind('hidden', function () {
-  window.location.reload(true);
+ // window.location.reload(true);
 });
 
 function deleteItem() {

@@ -13,7 +13,7 @@
     {{ HTML::style('themes/admin/css/dashboard.css') }}
 </head>
 {{ Session::get('info') }}
-<body class="dashboard">
+<body class="dashboard" id="dashboard">
   <div class="dashboard-wrapper">
     <div class="container">
       <div class="header_dashboard">
@@ -126,7 +126,7 @@
 
                   {{Form::text('site_name', $name, array('placeholder'=>'Site Name'))}}
                    <br/>
-                  {{Form::submit('Save', array('class'=>'btn btn-primary'))}}
+                  {{Form::submit('Save', array('class'=>'btn btn-primary site_name_save'))}}
                   {{Form::close()}}
                
 
@@ -137,7 +137,7 @@
 
                   {{Form::select('theme', $themes, $theme)}}
                    <br/> 
-                  {{Form::submit('Save', array('class'=>'btn btn-primary'))}}
+                  {{Form::submit('Save', array('class'=>'btn btn-primary '))}}
                   {{Form::close()}}
                    <br/>
                   <hr/>
@@ -263,5 +263,6 @@
 })(jQuery, window, document);
 
 </script>
+
 </body>
 </html>
