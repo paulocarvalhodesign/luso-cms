@@ -10,7 +10,13 @@
  * 
  */
 ?>
-
+<script>
+  $(document).ready(function() {
+    $(".dashboard_navigation a").click(function() {
+     $('.preloader').show().delay(2000).fadeOut();
+    });
+  }); 
+  </script>
 <center  class="version">
               Luso CMS v-<?php echo CMS_VERSION ;?> 
               <a href="http://paulocarvalhodesign.com">Paulo Carvalho Design</a>

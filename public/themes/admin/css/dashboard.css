@@ -471,14 +471,14 @@ td{
 	border-radius:50px;
 	width:40px;height:40px;
 	position:absolute;
-	right:65px;
-	top:10px;
+	right:35px;
+	top:0px;
 	z-index:3;
 }
 .user_details{
 	position:absolute;
-	right:85px;
-	top:17px;
+	right:55px;
+	top:6px;
 	font-size:12px;
 	background: url('../img/black_linen_v2.png');
 	border-radius:25px;
@@ -488,7 +488,7 @@ td{
 }
 .user_details p{
 	position:relative;
-	top:3px;
+	top:5px;
 }
 .images_in_set{}
 .images_in_set li{
@@ -540,8 +540,9 @@ td{
 	box-shadow:1px 1px 0px #111,2px 2px 0px #111;
 	position:absolute;
 	padding:4px 8px;
-	right:20px;
-	top:15px;
+	right:40px;
+	top:63px;
+	display:block;
 }
 
 .frontend_btn   {
@@ -550,10 +551,12 @@ td{
 	text-shadow: 1px 1px 1px #fff;
 	background:#111;
 	border-radius:4px;
-	box-shadow:1px 1px 0px #dedede,2px 2px 0px #333;
-	padding:6px 8px;
-	right:20px;
-	top:15px;
+     box-shadow:1px 1px 0px #111;
+	padding:5px 8px;
+	right:74px;
+	top:-2px;
+	position:absolute;
+	display:block;
 	}
 .modal-header h3{
 	background:#8CC63F;
@@ -591,11 +594,12 @@ h4 i{position:relative;top:5px;}
 }
 .preloader{
 	position:fixed;
-	background:rgba(255,255,255,0.8);
+	background:rgba(255,255,255,0.95);
 	width:100%;
 	height:100%;
 	left:0px;
 	display:none;
+	z-index:20000!important;
 }
 .preloader img{
 	position:absolute;
