@@ -30,8 +30,9 @@
 	text-shadow:1px 1px 1px #111;
 }
 .cms_toolbar_options_quit{
-	float:right;
-	margin-right:25px;
+	top:0px;
+	right:35px;
+	position:absolute;
 
 }
 .cms_toolbar_options_quit li, .cms_toolbar_options li{
@@ -489,6 +490,7 @@ iframe{
 	height:100%;
 	left:0px;
 	display:none;
+	z-index:20000;
 }
 .preloader img{
 	position:absolute;
