@@ -9,7 +9,7 @@
  * 
  */
 ?>
-  <div class="preloader"><img src="<?php echo url('public/images/loader.gif');?>"/></div>
+ 
 <div class="span10">
   <img class="luso_icon" src="<?php echo url('public/global/img/icon.png');?>" width="25"/>
 <div class="user_img_toolbar">  
@@ -61,7 +61,7 @@ Logged in as:<br/>
 
   </div>
 
-
+ <div class="preloader"><img src="<?php echo url('public/images/loader.gif');?>"/></div>
   <script>
   $(document).ready(function() {
     $(".cms_toolbar_options a").click(function() {
