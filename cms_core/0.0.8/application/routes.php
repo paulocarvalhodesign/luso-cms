@@ -228,9 +228,9 @@ Route::get('sitemap', function(){
 
          
       
-        $conn = mysql_connect($host, $username, $password);
+      
 
-            if($conn == true) {
+            if(@$conn = mysql_connect($host, $username, $password)) {
               
 
               $database_file = file_get_contents(path('app').'install/database.php');
@@ -312,6 +312,8 @@ Route::get('sitemap', function(){
         }else{
 
 
+          
+
         $data[] = '<?php ';
                  $data[] ='$nickname='.$a.$nickname.$a.';';     
                  $data[] ='$username='.$a.$username.$a.';'; 
@@ -329,7 +331,7 @@ Route::get('sitemap', function(){
    
     Route::get('setup/app_setup',function(){
 
-      //$view = View::make('themes.admin.pagetypes.install.app');
+ 
       $view = View::make('path: '.ADMIN_THEME_PATH.'install/app.blade.php');
 
       return $view;
