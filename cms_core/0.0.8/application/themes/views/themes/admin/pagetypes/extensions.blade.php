@@ -37,11 +37,60 @@
 <div class="ajax-message"></div>
  <br/>
 <div class="block header_block">
-<h4><i class="icon-th header-icon"></i> Extensions & Blocks:</h4>
+<h4><i class="icon-th header-icon"></i> Extensions & Blocks:
+
+ <ul class="inner_navigation">
+                    <li>
+                         <a href="{{url('#')}}"> <i class="icon icon-th"></i> Add New</a>
+                       
+                    </li>
+                  
+                   
+              
+            </ul>
+
+
+</h4>
 </div>
 <br/>
 <div class="block">
+<table class="table table-condensed table-bordered">
+             <thead>
+             <tr>
+             <th>Name</th>
+             <th>Icon</th>
+             <th>Handle</th>
+             <th>Version</th>
+             <th>Core</th>
+             <th>Options</th>
+            
+             </tr>
+</thead>
+<tbody>
  
+@foreach($blocks as $b)
+<tr>
+<td class="white">{{ucfirst($b->block_name)}}</td>
+<td class="white"> <i class="icon {{$b->icon}}"></i></td>
+<td class="white"> {{$b->block_table}}</td>
+<td class="white"> {{$b->block_version}}</td>
+<td class="white"> {{$b->core}}</td>
+<td class="white">
+  @if($b->block_active)
+ <a class="btn" href="#">Disable</a>
+ @else
+ <a class="btn" href="#">Activate</a>
+ @endif
+</td>
+</tr>
+ @endforeach
+
+</tbody>
+</table>
+ 
+
+
+
 </div>
 </div>
 </div>

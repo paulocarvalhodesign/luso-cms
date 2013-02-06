@@ -36,8 +36,13 @@ class Extensions_Controller extends Dashboard_Controller {
     public function get_index() {
       
     
+     $blocks = Block::all();
+
+
+
      $view = View::make('path: '.ADMIN_THEME_PATH.'extensions.blade.php')
-        ->with('user',Auth::user());
+        ->with('user',Auth::user())
+        ->with('blocks', $blocks);
        
 
       return $view;
