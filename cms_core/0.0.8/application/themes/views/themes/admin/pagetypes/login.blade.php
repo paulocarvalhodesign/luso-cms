@@ -59,6 +59,7 @@
 
          </div>
          <br/>
+           {{  Elements::get('preloader') }}
            {{  Elements::get('admin_footer') }}
         </div>
         <div class="span4"></div>  
@@ -71,7 +72,7 @@
   {{ HTML::script('global/bootstrap/js/bootstrap.min.js') }}  
   {{ HTML::script('themes/admin/js/app.js') }} 
 
-  <?php include('preloader.php');?>
+
   
 </body>
 </html>
