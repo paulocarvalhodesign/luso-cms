@@ -26,18 +26,22 @@ class Cms
    * 
    * @return string
    */
-
+   
+	public static function salt(){
+	return  'ewpoufhw[eofuhwe[fu';
+	}
     public static function encrypt($text)
     {
-    	$salt ='aosdfhsa9fhsad809fhsad08fh';
-    	return strtr(base64_encode($text.$salt), '+/=', '-_,');
+    	
+    	
+    	return strtr(base64_encode($text.CMS::salt()), '+/=', '-_,');
 	}
     
 
     public static function decrypt($text)
     {
-    	$salt ='aosdfhsa9fhsad809fhsad08fh';
-    	return base64_decode(strtr($text.$salt, '-_,', '+/='));
+    	
+    	return base64_decode(strtr($text.CMS::salt(), '-_,', '+/='));
     }
 
 

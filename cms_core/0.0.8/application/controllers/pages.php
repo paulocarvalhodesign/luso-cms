@@ -222,6 +222,7 @@ class Pages_Controller extends Dashboard_Controller {
 
     public function get_manage($id){
 
+        $id =  $id;
         $page = Page::find($id);
         $theme = DB::table('themes')->where_active('1')->first(); 
         $dir = path('root').'cms_user/themes/views/themes/'.$theme->name.'/'; 

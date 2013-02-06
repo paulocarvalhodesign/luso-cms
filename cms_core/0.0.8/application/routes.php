@@ -121,8 +121,8 @@
     
 
 
-    Route::get('edit',array('uses'=>'edit@index'));
-    Route::get('edit/publish',array('uses'=>'edit@publish'));
+    Route::get('edit/(:num)',array('uses'=>'edit@index'));
+    Route::get('edit/publish/(:num)',array('uses'=>'edit@publish'));
 
 
 

@@ -62,7 +62,7 @@ class Admin_Controller extends Dashboard_Controller {
         }else{
             $results = '';
         }
-
+        
   
     
      $view = View::make('path: '.ADMIN_THEME_PATH.'admin.blade.php')

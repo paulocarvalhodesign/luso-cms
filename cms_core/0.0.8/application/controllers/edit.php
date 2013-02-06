@@ -26,10 +26,10 @@ class Edit_Controller extends Base_Controller {
  
 
 
-	public function get_index()
+	public function get_index($id)
 	{
 
-		$page_id =  CMS::decrypt($_GET['token']);
+		$page_id =  $id;
 
 
 
@@ -56,9 +56,9 @@ class Edit_Controller extends Base_Controller {
 
 	}
 
-	public function get_publish(){
+	public function get_publish($id){
 
-		$page_id =  CMS::decrypt($_GET['token']);
+		$page_id =  $id;
         $page = Page::find($page_id);
         $page->edit_mode = 'false';       
         $page->save();
