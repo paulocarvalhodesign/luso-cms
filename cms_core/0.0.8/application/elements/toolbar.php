@@ -62,10 +62,8 @@ Logged in as:<br/>
   </div>
 
  <div class="preloader"><img src="<?php echo url('public/images/loader.gif');?>"/></div>
-  <script>
-  $(document).ready(function() {
-    $(".cms_toolbar_options a").click(function() {
-     $('.preloader').show().delay(2000).fadeOut();
-    });
-  }); 
-  </script>
+  
+  <?php include('preloader.php');?>
+
+
+  

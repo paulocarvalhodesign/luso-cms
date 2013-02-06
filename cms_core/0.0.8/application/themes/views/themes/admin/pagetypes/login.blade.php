@@ -71,13 +71,7 @@
   {{ HTML::script('global/bootstrap/js/bootstrap.min.js') }}  
   {{ HTML::script('themes/admin/js/app.js') }} 
 
-  <script>
-  $(document).ready(function() {
-    $("form input[type=submit]").click(function() {
-     $('.preloader').show().delay(2000).fadeOut();
-    });
-  }); 
-  </script>
+  <?php include('preloader.php');?>
   
 </body>
 </html>
