@@ -532,9 +532,9 @@ td{
 	box-shadow:inset -1px -1px 1px #fff;
 }
 .logout_button  a{
-	color:#111;
+	color:#fff;
 	font-size:12px;
-	text-shadow: 1px 1px 1px #fff;
+	text-shadow: 1px 1px 1px #111;
 	background:#d5251b;
 	border-radius:4px;
 	box-shadow:1px 1px 0px #111,2px 2px 0px #111;
@@ -547,15 +547,15 @@ td{
 }
 
 .frontend_btn   {
-	color:#111;
+	color:#fff!important;
 	font-size:12px;
-	text-shadow: 1px 1px 1px #fff;
+	text-shadow: 1px 1px 1px #111;
 	background:#3b95ce;
 	border-radius:4px;
      box-shadow:1px 1px 0px #111,2px 2px 0px #111;
 	padding:4px 8px;
-	right:74px;
-	top:-2px;
+	right:120px;
+	top:-1px;
 	position:absolute;
 	display:block;
 	}
