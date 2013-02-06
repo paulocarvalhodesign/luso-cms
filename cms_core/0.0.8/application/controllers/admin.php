@@ -56,10 +56,19 @@ class Admin_Controller extends Dashboard_Controller {
 
         if(!empty($ga_email) && !empty($ga_password) && !empty($ga_profile_id))
         {
+          try{
+       
         $ga = new gapi($ga_email,$ga_password);
         $ga->requestReportData($ga_profile_id, array('date'),array('pageviews', 'uniquePageviews', 'exitRate', 'avgTimeOnPage', 'entranceBounceRate', 'newVisits'), 'date');
         $results = $ga->getResults();  
+         
+          }catch(Exception $e){
+
+            $results = '';
+
+          }
         }else{
+           
             $results = '';
         }
         
