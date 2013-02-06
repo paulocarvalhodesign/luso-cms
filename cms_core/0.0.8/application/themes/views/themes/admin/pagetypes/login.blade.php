@@ -13,7 +13,7 @@
     {{ HTML::style('themes/admin/css/login.css') }}
  
 </head>
-<div class="preloader"><img src="<?php echo url('public/images/loader.gif');?>"/></div>
+<div class="preloader"><img src="<?php echo url('public/images/360.gif');?>"/></div>
 <body class="login_page sign_up">
     <div class="container">
       

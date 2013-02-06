@@ -10,7 +10,7 @@
  * 
  */
 ?>
-<div class="preloader"><img src="<?php echo url('public/images/loader.gif');?>"/></div>
+<div class="preloader"><img src="<?php echo url('public/images/360.gif');?>"/></div>
 <div class="span12">
 	<div class="span6">
 

@@ -156,7 +156,7 @@ html.sign_up, body.sign_up{
 }
 .preloader{
 	position:fixed;
-	background:rgba(222,222,222,0.95);
+	background: url('../img/black_linen_v2.png');
 	width:100%;
 	height:100%;
 	left:0px;
