@@ -114,7 +114,7 @@
 	z-index:1000;
 	border:1px dashed #8CC63F;
 	color:#8CC63F!important;
-	text-shadow:1px 1px 1px #111!important;
+	text-shadow:none!important;
 	font-family:verdana!important;
 	font-size:12px;
 }
@@ -390,21 +390,24 @@ iframe{
 .add_block a { text-shadow:1px 1px 1px #111111 !important; }
 .user_img_toolbar img{border-radius:50px;border: 2px solid #fff;}
 .modal-header h3, .modal-header h4{
-	background:#8CC63F;
-	padding:8px;
-	border-radius:5px;
-	font-size: 12px;
-	color:#fff;
-	text-shadow:1px 1px 1px #111;
-	text-transform: uppercase;;
+	background:#8CC63F!important;
+	padding:8px!important;
+	border-radius:5px!important;
+	font-size: 12px!important;
+	color:#fff!important;
+	text-shadow:1px 1px 1px #111!important;
+	text-transform: uppercase!important;
+	top:0px!important;
+
 
 }
 .modal-header .close{
-	color:#111;
+	color:#111!important;
 	font-size:42px!important;
-	position:relative;
-	top:9px;
-	right:3px;
+	position:relative!important;
+	top:12px!important;
+	right:3px!important;
+	z-index: 30;
 }
 .dropdown-menu {
     background-clip: padding-box;
@@ -491,6 +494,7 @@ iframe{
 	left:0px;
 	display:none;
 	z-index:20000;
+	opacity:0.2;
 
 
 }

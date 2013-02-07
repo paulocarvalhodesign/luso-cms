@@ -10,7 +10,7 @@
  * 
  */
 ?>
-<?php include('preloader.php');?>
+
 
 <center  class="version">
               Luso CMS v-<?php echo CMS_VERSION ;?> 

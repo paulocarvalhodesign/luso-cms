@@ -471,13 +471,13 @@ td{
 	border-radius:50px;
 	width:40px;height:40px;
 	position:absolute;
-	right:35px;
+	right:10px;
 	top:0px;
 	z-index:3;
 }
 .user_details{
 	position:absolute;
-	right:55px;
+	right:20px;
 	top:6px;
 	font-size:12px;
 	background: url('../img/black_linen_v2.png');
@@ -540,10 +540,10 @@ td{
 	box-shadow:1px 1px 0px #111,2px 2px 0px #111;
 	position:absolute;
 	padding:4px 8px;
-	right:40px;
+	right:10px;
 	top:63px;
 	display:block;
-	z-index:5;
+	z-index:3!important;
 }
 
 .frontend_btn   {
@@ -601,6 +601,7 @@ h4 i{position:relative;top:5px;}
 	left:0px;
 	display:none;
 	z-index:20000!important;
+	opacity:0.2;
 }
 .preloader img{
 	position:absolute;

@@ -61,9 +61,7 @@ Logged in as:<br/>
 
   </div>
 
- <div class="preloader"><img src="<?php echo url('public/images/360.gif');?>"/></div>
-  
-  <?php include('preloader.php');?>
+
 
 
   

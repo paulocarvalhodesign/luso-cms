@@ -479,34 +479,57 @@ class Files_Controller extends Dashboard_Controller {
          $input = Input::all();
          $set = Input::get('set');
          $setname = Input::get('set');
-
          $ext = File::extension($input['file']['name']);
          $extension =  strtolower ( $ext );
          $file = trim($input['file']['name']);
          $filename = str_replace(" ","_", $file);
 
 
-        
-
-         $directory = path('root').'public/filemanager/compressed/';
-         $temp = path('root').'public/filemanager/compressed/temp/';
+         try
          
+         {
+           $directory = path('root').'public/filemanager/compressed/';
+           $temp = path('root').'public/filemanager/compressed/temp/';
+         }
+
+        catch(exception $e)
+        {
+
+            Session::flash('info', '
+                      <div class="alert alert-danger">
+                      <button type="button" class="close" data-dismiss="alert">×</button>
+                      <span class="error">Permitions error :: '.$e->getMessage().'</span>
+                      </div>
 
 
+
+            ');
+         }
+
+
+         try
+         
+         {
 
 
          $upload_success = Input::upload('file', $directory, $filename);
+        
+         
+         }
+        
+         catch(exception $e){
 
-         Session::flash('info', '
-                    <div class="alert alert-info">
+          Session::flash('info', '
+                    <div class="alert alert-danger">
                     <button type="button" class="close" data-dismiss="alert">×</button>
-                    <span class="error">Zip file uploaded!</span>
+                    <span class="error">Upload failed :: '.$e->getMessage().'</span>
                     </div>
 
 
 
           ');
 
+         }
          
         
 
@@ -528,7 +551,7 @@ class Files_Controller extends Dashboard_Controller {
             
 
 
-            if ($filetype != "." && $filetype != ".." && $filetype != "__MACOSX") {
+            if ($filetype != "." && $filetype != ".." && $filetype != "__MACOSX" && $filetype != ".gitignore") {
 
               if(
                 $extension == 'jpg'  ||
@@ -594,6 +617,13 @@ class Files_Controller extends Dashboard_Controller {
                } 
             else{
 
+             Session::flash('info', '
+                    <div class="alert alert-info">
+                    <button type="button" class="close" data-dismiss="alert">×</button>
+                    <span class="error">Zip file uploaded and files added!</span>
+                    </div>
+
+            ');
                  
             }
 
@@ -620,8 +650,8 @@ class Files_Controller extends Dashboard_Controller {
           }
             
           }
-          File::delete($directory.$filename);
-          File::rmdir($temp);
+          
+          File::rmdir($directory);
           File::mkdir($temp); 
 
           } else {
@@ -632,6 +662,7 @@ class Files_Controller extends Dashboard_Controller {
           }
 
          return Redirect::to('files');
+        
 
        }
 
