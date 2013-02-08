@@ -27,28 +27,12 @@ class Cms
    * @return string
    */
    
-	public static function salt(){
-	return  'ewpoufhw[eofuhwe[fu';
-	}
-    public static function encrypt($text)
-    {
-    	
-    	
-    	return strtr(base64_encode($text.CMS::salt()), '+/=', '-_,');
-	}
-    
-
-    public static function decrypt($text)
-    {
-    	
-    	return base64_decode(strtr($text.CMS::salt(), '-_,', '+/='));
-    }
-
-
+	
 	public static function last()
 	{
 		
-		$uri = Request::getUri();
+		$url = Request::getUri();
+		$uri = trim($url, "/");
 		$last = explode('/', $uri);
  	
  		return $segments = end($last);
