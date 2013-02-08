@@ -59,7 +59,7 @@
 
          </div>
          <br/>
-           {{  Elements::get('preloader') }}
+         
            {{  Elements::get('admin_footer') }}
         </div>
         <div class="span4"></div>  

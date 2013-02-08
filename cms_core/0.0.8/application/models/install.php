@@ -254,6 +254,16 @@ static function Insert_db(){
       
     ));
     DB::table('blocks')->insert(array(
+      'icon' => 'icon-picture',
+      'block_name'=>'galleria',
+      'block_slug'=>'galleria',
+      'block_version'=>'1.0',
+      'block_active'=>'1',
+      'block_table'=>'galleriablock',
+      'core'=>'false'
+      
+    ));
+    DB::table('blocks')->insert(array(
       'icon' => 'icon-envelope',
       'block_name'=>'form',
       'block_slug'=>'form',
