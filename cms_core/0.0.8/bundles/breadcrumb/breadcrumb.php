@@ -379,12 +379,13 @@ class Breadcrumb
 
 			if ($key == $last_key && $last_not_link == true)
 			{
-				$result .= $segment;
+				$result .= ucfirst($segment);
 			}
 			else
 			{
 				$tmp_uri .= static::$segments_raw[$key] . '/';
-				$result .= HTML::link($tmp_uri, $segment, $extra_attrib);
+				
+				$result .= HTML::link(trim($tmp_uri, "/"), ucfirst($segment), $extra_attrib);
 			}
 		}
 		
@@ -399,12 +400,12 @@ class Breadcrumb
 		{
 			if ($key == $last_key)
 			{
-				$result .= '<li class="active">' . $segment . '</li>';
+				$result .= '<li class="active">' . ucfirst($segment) . '</li>';
 			}
 			else
 			{
-				$tmp_uri .= static::$segments_raw[$key] . '/';
-				$result .= '<li>' . HTML::link($tmp_uri, $segment) . ' <span class="divider">' . trim($separator) . '</span></li>';
+				$tmp_uri .= static::$segments_raw[$key] . '';
+				$result .= '<li>' . HTML::link($tmp_uri, ucfirst($segment)) . ' <span class="divider">' . trim($separator) . '</span></li>';
 			}
 		}
 		
