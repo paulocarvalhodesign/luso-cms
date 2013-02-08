@@ -31,8 +31,8 @@ class Cms
 	public static function last()
 	{
 		
-		$url = Request::getUri();
-		$uri = trim($url, "/");
+		$uri = Request::getUri();
+		//$uri = trim($url, "/");
 		$last = explode('/', $uri);
  	
  		return $segments = end($last);
@@ -330,6 +330,7 @@ class Cms
 	    $pages = DB::table('pages')
 	        ->where_parent_id($parent_id)
 	        ->where_exclude_from_navigation(0)
+	        ->order_by('order','asc')
 	        ->get();
 
 	    // Loop through the pages
