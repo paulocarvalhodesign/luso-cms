@@ -137,7 +137,7 @@
           <div class="span12">
 
         {{ Area::globalRender('footer', $page_id, '1') }}
-      <p>Radio Braga &copy; {{ date('Y') }}, powered by <a href="http://lusocms.org">Luso CMS</a></p>
+      <p> &copy; {{ date('Y') }}, <a href="http://lusocms.org">Luso CMS</a></p>
           </div>
         </div>
      </div>
