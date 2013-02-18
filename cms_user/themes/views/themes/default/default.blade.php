@@ -9,7 +9,7 @@
 
 
 <!doctype html>
-<html lang="en">
+<html lang="{{$lang}}">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -17,7 +17,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <meta name="description" content="{{ $description }}">
     <meta name="keywords" content="{{ $keywords }}" />
-   
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700' rel='stylesheet' type='text/css'>
  
 
    
@@ -37,11 +37,14 @@
     <body class="theme">
 
 @endif
-   
-      
+    <br/>
+
+    
+    
+       <div class="container">
         <div  class="header_wrapper">
         <header>
-             <div class="social_bar_top">
+             <div class="social_bar_top shadow">
                  <div class="container">
                     <div class="row-fluid">
                         <div class="span12">
@@ -49,6 +52,7 @@
                                 <div class="logo">
                                      
                                       {{ Area::globalRender('logo', $page_id, '1') }}
+                                      
                                 </div>
                                   
                             </div>
@@ -60,30 +64,36 @@
                       </div>
                     </div>        
                 </div>
-             </div> 
+             </div>
+
           <div class="container">
             <div class="row-fluid">
-                
                 <div class="span12">
-                    <div class="span8">  
+                <div class="span8">
+                    
                  {{ Area::globalRender('navigation', $page_id, '1') }}  
-                    </div>           
-                    <div class="span4">
-                      
-                     
-
-                    </div>
+                  </div> 
+                  <div class="span4">
+                    
+                 {{ Area::globalRender('search', $page_id, '1') }}  
+                  </div> 
                 </div>
           </div>  
         </header>
        </div>
-      
+      </div>
       <br/>
 
       <div class="main"> 
        <div class="container">
         <div class="row-fluid">
-            
+          <div class="span12">
+              {{ Area::render('slider', $page_id) }}
+          </div>
+        </div>
+        <br/>
+         <div class="row-fluid">
+            <div class="span12">
             <div class="span8">
                                
 
@@ -97,31 +107,44 @@
                
                     {{ Area::render('main_right', $page_id) }}  
              
-            </div>    
+            </div>  
+            </div>  
         </div>
       </div>
-     </div> 
-   
-  <div  class="footer_wrapper">
-     <div class="container">
-        <div class="row-fluid">
-          
-        </div>
-     </div>
-  </div>
-
-   <div class="copyright">
+    
+    <br/>
+    
     <div class="container">
+
+   <div class="copyright shadow">
+    <div class="container">
+       <div class="row-fluid">
+          <div class="span12">
+               <div class="span3 border_right">
+          {{ Area::globalRender('top_footer_left', $page_id, '2') }}
+               </div>
+                <div class="span6">
+          {{ Area::globalRender('top_footer_center', $page_id, '2') }}
+               </div>
+                <div class="span3 border_left">
+          {{ Area::globalRender('top_footer_right', $page_id, '2') }}
+               </div>
+
+          </div>
+        </div>
+
         <div class="row-fluid">
+          <div class="span12">
+
         {{ Area::globalRender('footer', $page_id, '1') }}
-      <p>All rights reserved &copy; Paulo Carvalho {{ date('Y') }}, powered by <a href="http://lusocms.org">Luso CMS</a>, open source cms.</p>
-       
+      <p>Radio Braga &copy; {{ date('Y') }}, powered by <a href="http://lusocms.org">Luso CMS</a></p>
+          </div>
         </div>
      </div>
     </div>  
-
+  </div>
     
-
+ <br/>
  {{  Elements::get('footer_required') }}    
 
 

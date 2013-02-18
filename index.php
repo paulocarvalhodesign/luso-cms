@@ -33,7 +33,7 @@ define('LARAVEL_START', microtime(true));
 // --------------------------------------------------------------
 // Set the core Laravel path constants.
 // --------------------------------------------------------------
-require 'cms_core/'.CMS_VERSION.'/paths.php';
+require 'cms_core/lusocms/paths.php';
 
 // --------------------------------------------------------------
 // Unset the temporary web variable.

@@ -1,0 +1,66 @@
+{
+    "hash": "31cb175437faa6a1cf89a8d6aebe4b1f",
+    "packages": [
+        {
+            "name": "lusocms",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/paulocarvalhodesign/lusocms",
+                "reference": "master"
+            },
+            "type": "library",
+            "time": "2013-02-18 15:01:33"
+        },
+        {
+            "name": "paulocarvalhodesign/gapi-php",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/paulocarvalhodesign/gapi-php.git",
+                "reference": "d20bd9250fc981ccb19f20f4145d2fe55a6a7fb0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/paulocarvalhodesign/gapi-php/zipball/d20bd9250fc981ccb19f20f4145d2fe55a6a7fb0",
+                "reference": "d20bd9250fc981ccb19f20f4145d2fe55a6a7fb0",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "time": "2013-02-15 15:49:36",
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Gapi": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL"
+            ],
+            "authors": [
+                {
+                    "name": "Paulo Carvalho",
+                    "email": "me@paulocarvalhodesign.com"
+                }
+            ],
+            "description": "Gapi-php is a new version of the Gapi-php class, for accessing Google Analytics accounts.",
+            "homepage": "http://paulocarvalhodesign.com",
+            "keywords": [
+                "2.4",
+                "google analytics"
+            ]
+        }
+    ],
+    "packages-dev": null,
+    "aliases": [
+
+    ],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "paulocarvalhodesign/gapi-php": 20,
+        "lusocms": 20
+    }
+}

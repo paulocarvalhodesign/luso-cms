@@ -1,0 +1,27 @@
+{
+    "repositories": [
+            
+            {
+            "type": "package",
+            "package": {
+            "name": "lusocms",
+            "version": "dev-master",
+            "source": {
+            "url": "https://github.com/paulocarvalhodesign/lusocms",
+            "type": "git",
+            "reference": "master"
+            }
+            }
+            }
+            ],
+        "config" : {
+        "vendor-dir" : "cms_core"
+    }    ,
+        "require": {
+        "paulocarvalhodesign/gapi-php": "dev-master",
+       
+        "lusocms": "dev-master"
+    }
+
+}
+
