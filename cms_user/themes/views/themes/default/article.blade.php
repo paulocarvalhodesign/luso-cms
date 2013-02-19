@@ -98,7 +98,7 @@
     <div class="container">
         <div class="row-fluid">
         {{ Area::globalRender('footer', $page_id, '1') }}
-      <p> &copy; {{ date('Y') }}, <a href="http://lusocms.org">Luso CMS</a></p>
+       <p>All rights reserved &copy; Paulo Carvalho {{ date('Y') }}, powered by <a href="http://lusocms.org">Luso CMS</a>, open source cms.</p>
        
         </div>
      </div>

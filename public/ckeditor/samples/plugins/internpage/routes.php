@@ -1,1 +1,0 @@
-<?php $route["home"] = "";$route["404"] = "404";$route["500"] = "500";$route["Maintenance Mode"] = "maintenance-mode";
