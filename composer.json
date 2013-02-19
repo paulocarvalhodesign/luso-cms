@@ -12,14 +12,25 @@
             "reference": "master"
             }
             }
+            },
+            {
+            "type": "package",
+            "package": {
+            "name": "vendor/gapi",
+            "version": "dev-master",
+            "source": {
+            "url": "https://github.com/paulocarvalhodesign/gapi-php",
+            "type": "git",
+            "reference": "master"
+            }
+            }
             }
             ],
         "config" : {
         "vendor-dir" : "cms_core"
     }    ,
         "require": {
-        "paulocarvalhodesign/gapi-php": "dev-master",
-       
+        "vendor/gapi": "dev-master",
         "lusocms": "dev-master"
     }
 
