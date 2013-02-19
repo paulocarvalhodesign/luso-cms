@@ -14,6 +14,9 @@
 - More to come...
 
 ##Quick Install
+
+-Get Composer.
+
 -To actually get Composer, we need to do two things. The first one is installing Composer (again, this means downloading it into your project):
 
 $ curl -s https://getcomposer.org/installer | php
