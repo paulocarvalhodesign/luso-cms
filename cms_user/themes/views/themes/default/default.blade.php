@@ -52,7 +52,7 @@
                                 <div class="logo">
                                      
                                       {{ Area::globalRender('logo', $page_id, '1') }}
-                                      
+                                    
                                 </div>
                                   
                             </div>

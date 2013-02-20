@@ -24,14 +24,27 @@
             "reference": "master"
             }
             }
+            },
+            {
+            "type": "package",
+            "package": {
+            "name": "public",
+            "version": "dev-master",
+            "source": {
+            "url": "https://github.com/paulocarvalhodesign/lusocms-core-assets",
+            "type": "git",
+            "reference": "master"
+            }
+            }
             }
             ],
         "config" : {
         "vendor-dir" : "cms_core"
     }    ,
         "require": {
-        "vendor/gapi": "dev-master",
-        "lusocms": "dev-master"
+        "dandydev/gapi-php": "dev-master",
+        "lusocms": "dev-master",
+        "public": "dev-master"
     }
 
 }
