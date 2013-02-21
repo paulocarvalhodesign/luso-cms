@@ -9,7 +9,7 @@
             "source": {
             "url": "https://github.com/paulocarvalhodesign/lusocms",
             "type": "git",
-            "reference": "master"
+            "reference": "1e59111fcd378309c4027e0c881e1405748f060c"
             }
             }
             },
@@ -33,7 +33,7 @@
             "source": {
             "url": "https://github.com/paulocarvalhodesign/lusocms-core-assets",
             "type": "git",
-            "reference": "master"
+            "reference": "a429f59e59d477c82f033822bda5fe4f7c6641ca"
             }
             }
             }
