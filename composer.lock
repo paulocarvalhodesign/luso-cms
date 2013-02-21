@@ -1,0 +1,78 @@
+{
+    "hash": "fdae96ca116692c9db346909a99d8208",
+    "packages": [
+        {
+            "name": "dandydev/gapi-php",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/DandyDev/gapi-php.git",
+                "reference": "3c9f665294538760b537beffe2ab5006dd688a20"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/DandyDev/gapi-php/zipball/3c9f665294538760b537beffe2ab5006dd688a20",
+                "reference": "3c9f665294538760b537beffe2ab5006dd688a20",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "time": "2012-11-28 12:13:09",
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Gapi": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL"
+            ],
+            "authors": [
+                {
+                    "name": "Daan Debie",
+                    "email": "debie.daan@gmail.com"
+                }
+            ],
+            "description": "Gapi-php is a new version of the Gapi-php class, for accessing Google Analytics accounts.",
+            "homepage": "http://dandydev.net",
+            "keywords": [
+                "2.4",
+                "google analytics"
+            ]
+        },
+        {
+            "name": "lusocms",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/paulocarvalhodesign/lusocms",
+                "reference": "master"
+            },
+            "type": "library",
+            "time": "2013-02-19 13:34:08"
+        },
+        {
+            "name": "public",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/paulocarvalhodesign/lusocms-core-assets",
+                "reference": "master"
+            },
+            "type": "library",
+            "time": "2013-02-19 14:19:26"
+        }
+    ],
+    "packages-dev": null,
+    "aliases": [
+
+    ],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "dandydev/gapi-php": 20,
+        "lusocms": 20,
+        "public": 20
+    }
+}
