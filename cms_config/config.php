@@ -1,5 +1,6 @@
 <?php
 
+
 $database = array(
 			'driver'   => 'mysql',
 			'host'     => "%HOSTNAME%",
@@ -9,4 +10,3 @@ $database = array(
 			'charset'  => 'utf8',
 			'prefix'   => '',
 		);
-
