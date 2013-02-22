@@ -1,5 +1,5 @@
 {
-    "hash": "b4e60a5bbff20095fa2a06ee501ab16c",
+    "hash": "5aff63ce21fcfdb4df034c021b2a1aad",
     "packages": [
         {
             "name": "dandydev/gapi-php",
@@ -48,10 +48,10 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/paulocarvalhodesign/lusocms",
-                "reference": "1e59111fcd378309c4027e0c881e1405748f060c"
+                "reference": "1e0d7faee7fb2170a24ae2e6a63588d2353e42c5"
             },
             "type": "library",
-            "time": "2013-02-21 14:04:30"
+            "time": "2013-02-22 16:09:03"
         },
         {
             "name": "public",
