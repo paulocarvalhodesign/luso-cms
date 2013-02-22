@@ -1,0 +1,69 @@
+[
+    {
+        "name": "dandydev/gapi-php",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/DandyDev/gapi-php.git",
+            "reference": "3c9f665294538760b537beffe2ab5006dd688a20"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/DandyDev/gapi-php/zipball/3c9f665294538760b537beffe2ab5006dd688a20",
+            "reference": "3c9f665294538760b537beffe2ab5006dd688a20",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.0"
+        },
+        "time": "2012-11-28 12:13:09",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-0": {
+                "Gapi": "lib/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GPL"
+        ],
+        "authors": [
+            {
+                "name": "Daan Debie",
+                "email": "debie.daan@gmail.com"
+            }
+        ],
+        "description": "Gapi-php is a new version of the Gapi-php class, for accessing Google Analytics accounts.",
+        "homepage": "http://dandydev.net",
+        "keywords": [
+            "2.4",
+            "google analytics"
+        ]
+    },
+    {
+        "name": "public",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/paulocarvalhodesign/lusocms-core-assets",
+            "reference": "a429f59e59d477c82f033822bda5fe4f7c6641ca"
+        },
+        "type": "library",
+        "installation-source": "source"
+    },
+    {
+        "name": "lusocms",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/paulocarvalhodesign/lusocms",
+            "reference": "1e59111fcd378309c4027e0c881e1405748f060c"
+        },
+        "type": "library",
+        "installation-source": "source"
+    }
+]

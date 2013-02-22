@@ -96,7 +96,7 @@
             <div class="span12">
             <div class="span8">
                                
-
+                 
                     {{ Area::render('main_left', $page_id) }} 
                    
            </div>  
