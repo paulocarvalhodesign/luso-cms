@@ -1,0 +1,173 @@
+.login_page{
+	background: url('../img/black_linen_v2.png');
+	font-family: 'Quantico', sans-serif;
+}
+.login{
+	position:relative;
+	margin-top:40%;
+	background:#ededed;
+	padding: 5px 20px;
+	box-shadow:0px 0px 3px #c5c5c5;
+}
+.login input[type=checkbox]{
+	
+
+
+}
+.cms_logo{
+	
+	padding-left:10px;
+	color:#8CC63F;
+	text-shadow:1px 1px 0px #111, 2px 2px 0px #111;
+	font-family: 'Quantico', sans-serif;
+	font-weight:700;
+	position:relative;
+	top:20px;
+}
+.cms_logo img{
+	position:relative;
+	top:0px;
+	width:30px;
+	height:30px;
+	background:#fff;
+	border-radius:50px;
+	padding:6px;
+
+}
+
+.login label{
+	margin-left:70px;
+	text-shadow:1px 1px 1px #fff;
+
+}
+.remember_me{
+	padding-left:0px;
+}
+.remember_me input[type=checkbox]{
+	position:relative;
+	top:-2px;
+	margin-right:5px;
+}
+.login input[type=text], .login input[type=password]{
+	border-radius:4px;
+	background: #f2f2f2;
+	border:none;
+	margin-left:70px;
+	box-shadow:inset 0px 1px 2px #c5c5c5;
+}
+.login input[type=submit]{
+	margin-left:70px;
+}
+.login_header{
+	color:#d04928;
+	position:relative;
+	top:-33px;
+	left:80px;
+	text-transform: uppercase;
+	text-shadow:1px 1px 1px #fff;
+}
+.alert-error{
+	position:fixed!important;
+	top:1%;
+	right:1%;
+	width:200px;
+}
+html.sign_up, body.sign_up{
+    background: url('../img/black_linen_v2.png');
+    }
+
+.box{
+	margin:10% auto;
+	background: #dedede;
+	border-radius:8px;
+	padding:20px;
+	box-shadow:0px 0px 25px #111, 0px 0px 45px #111;
+	position:relative;
+}
+
+.box input[type=text], .box input[type=password]{
+	width:95%;
+	height:25px;
+	border-radius:6px;
+	background:#fff;
+	border:none;
+	box-shadow:inset 0px -1px 1px #939393;
+	border:1px solid #f2f2f2 ;
+}
+.box label{
+	text-transform: uppercase;
+	text-shadow:1px 1px 1px #fff;
+	font-weight: bold;
+}
+.step_header{
+	text-transform: uppercase;
+	position:relative;
+	top:-48px;
+	color:#d04928;
+	text-shadow:1px 1px 1px #000;
+	text-align: center;
+
+}
+.step_one{
+	
+}
+.step_one span{
+	font-size:10px;
+	top:25px;
+	text-align:center;
+}
+.step_two{
+	left:45px;
+}
+.step_three{
+	left:14px;
+}
+.step_four{
+	left:120px;
+}
+.step_login{
+	left:25px;
+	font-size:2em;
+	top:-83px;
+}
+
+.version{
+	color:#dedede;
+	text-shadow:1px 1px 1px #000;
+	font-size:0.75em;
+	margin-top:0%;
+}
+.version a{color:#8CC63F;}
+.login_page form, .sign_up form{
+	position:relative;
+	}
+#logo{
+	
+	text-align:center;
+}	
+.write_error{
+	padding:5px;
+	background:red;
+	border-radius:5px;
+	color:#fff;
+	text-shadow:1px 1px 1px #000;
+	text-align: center;
+	margin:5px 0px; 
+}
+.preloader{
+	position:fixed;
+	background: url('../img/black_linen_v2.png');
+	width:100%;
+	height:100%;
+	left:0px;
+	display:none;
+	z-index:20000!important;
+}
+.preloader img{
+	position:absolute;
+	left:45%;
+	top:45%;
+	width:48px;
+	height:48px;
+}
+

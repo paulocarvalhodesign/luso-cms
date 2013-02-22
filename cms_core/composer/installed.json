@@ -61,7 +61,7 @@
         "source": {
             "type": "git",
             "url": "https://github.com/paulocarvalhodesign/lusocms",
-            "reference": "1e59111fcd378309c4027e0c881e1405748f060c"
+            "reference": "1e0d7faee7fb2170a24ae2e6a63588d2353e42c5"
         },
         "type": "library",
         "installation-source": "source"
