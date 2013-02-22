@@ -9,18 +9,6 @@
             "source": {
             "url": "https://github.com/paulocarvalhodesign/lusocms",
             "type": "git",
-            "reference": "1e59111fcd378309c4027e0c881e1405748f060c"
-            }
-            }
-            },
-            {
-            "type": "package",
-            "package": {
-            "name": "vendor/gapi",
-            "version": "dev-master",
-            "source": {
-            "url": "https://github.com/paulocarvalhodesign/gapi-php",
-            "type": "git",
             "reference": "master"
             }
             }
@@ -32,6 +20,24 @@
             "version": "dev-master",
             "source": {
             "url": "https://github.com/paulocarvalhodesign/lusocms-core-assets",
+            "type": "git",
+            "reference": "master"
+            }
+            }
+            }
+            ],
+        "config" : {
+        "vendor-dir" : "cms_core"
+    }    ,
+        "require": {
+        "dandydev/gapi-php": "dev-master",
+        "lusocms": "@dev",
+        "public": "dev-master"
+    }
+
+}
+
+ps://github.com/paulocarvalhodesign/lusocms-core-assets",
             "type": "git",
             "reference": "a429f59e59d477c82f033822bda5fe4f7c6641ca"
             }
