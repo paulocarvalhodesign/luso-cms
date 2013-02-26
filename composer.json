@@ -9,19 +9,7 @@
             "source": {
             "url": "https://github.com/paulocarvalhodesign/lusocms",
             "type": "git",
-            "reference": "1e0d7faee7fb2170a24ae2e6a63588d2353e42c5"
-            }
-            }
-            },
-            {
-            "type": "package",
-            "package": {
-            "name": "public",
-            "version": "dev-master",
-            "source": {
-            "url": "https://github.com/paulocarvalhodesign/lusocms-core-assets",
-            "type": "git",
-            "reference": "a429f59e59d477c82f033822bda5fe4f7c6641ca"
+            "reference": "6ad49f9f0a617d9737c9804f7c55d82c1b089cc1"
             }
             }
             }
@@ -31,8 +19,8 @@
     }    ,
         "require": {
         "dandydev/gapi-php": "dev-master",
-        "lusocms": "@dev",
-        "public": "@dev"
+        "lusocms": "@dev"
+       
     }
 
 }
